@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>River View - Home</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+
+    <link rel="stylesheet" href="css/ol.css" type="text/css">
+    <link rel="stylesheet" href="css/ol3-layerswitcher.css" type="text/css">
+    <!-- Custom CSS -->
+    <link href="css/business-frontpage.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+
+    <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+  </head>
+
+  <body id="page-top">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+
+          <a class="logo page-scroll" href="#page-top">
+            <img src="img/logo-white.png" class="logo-white" />
+            <img src="img/logo-color.png" class="logo-color" />
+          </a>
+
+          <button type="button" class="navbar-toggle collapsed" data-target="#main-nav">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+
+        <div class="navbar-collapse" id="main-nav" aria-expanded="false">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a class="page-scroll" href="#riverview-video">Nuestra App</a>
+            </li>
+            <li>
+              <a class="page-scroll" href="#internet-of-things">Internet of Things</a>
+            </li>
+            <li>
+              <a class="page-scroll" href="#big-data">Big Data</a>
+            </li>
+            <li>
+              <a class="page-scroll" href="#comunidad">Comunidad</a>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+
+    <header>
+      <div class="header-content-top">
+        <div class="header-content">
+          <div class="container-fluid">
+            <div class="row text-right text-center-520">
+              <div class="col-sm-9 col-md-9 col-sm-offset-3 col-md-offset-3">
+                <h1>Todo lo que necesitas para disfrutar de la pesca.</h1>
+                <p>Sigue los mejores lugares cerca de ti, consulta cuáles son sus condiciones actuales y entra dentro del río desde tu móvil.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#riverview-main" class="page-scroll mouse-icon">
+          <img src="img/icon-mouse.png" />
+        </a>
+      </div>
+      <div class="header-content-bottom">
+        <div class="container-fluid">
+          <div class="row row-relative">
+            <img src="img/mobile.png" class="mobile-image" />
+            <div class="col-sm-5 col-sm-offset-7 social-share">
+              <div class="row inline-container">
+                <div class="inline valignmiddle"><strong>Social Share:</strong></div>
+
+                <div class="inline valignmiddle">
+                  <div class="fb-like" data-href="https://www.facebook.com/ClicandFish" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+                </div>
+                <div class="inline valignmiddle tw">
+                  <p class="twitter-like"><a href="https://twitter.com/ClicAndFish" class="twitter-follow-button" data-show-screen-name="false" data-show-count="true" data-lang="en">Follow @twitter</a></p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Content -->
+    <section id="riverview-main">
+      <div class="container-fluid" id="regiones">
+        <div class="row">
+          <div class="col-sm-12 hide-overflow">
+            <h2 class="section-heading"><span id="textregiones">Ríos</span></h2>
+          </div>
+        </div>
+
+        <div class="row" id="mapgeneralrow">
+          <div class ="col-sm-12" style="text-align:center;">
+            Haz clic sobre el punto del que quieras ver RiverView y sus condiciones en tiempo real
+          </div>
+          <div id="map_general_block" class="col-lg-12">
+            <div id="map_general" style="height:500px;">
+
+            </div>
+            <div id="tramo_info">
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row" id="maprow">
+          <div class="row">
+
+            <div class ="col-lg-10"  style="text-align:center;">
+              Haz clic sobre el punto del río del que quieras ver su foto 360º y también puedes moverte adelante y atrás con las flechas de foto
+            </div>
+            <div class="col-lg-2 pull-right">
+              <a class="pull-right"
+                 href="javascript:void(0)"
+                 ontouchstart="backtogeneralmap()"
+                 onclick="backtogeneralmap()">Volver</a>
+            </div>
+          </div>
+          <div class="row">
+
+            <div id="mapblock" class="col-lg-4">
+              <div id="map" class="map" style="height:500px;"></div>
+              <div id="map_title" class="transp_label">
+                Porma Medio (León)
+              </div>
+              <div id="map_info" >
+                &nbsp;
+              </div>
+              <div id="map_legend">
+                <img id="legendImg" alt="logo" onmouseover="onHoverLegend();"
+                     onmouseout="offHoverLegend();"src="img/leyendaicon.png"/>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div id="panoramablock">
+                <div id="panorama"></div>
+                <div class="transp_label" id="panorama_title_pos">
+                  <span ></span><img  src="img/location.png"/></span>
+                <span id="panorama_title" >
+                  Porma Medio (León)
+                </span>
+              </div>
+
+              <div id="panorama_top" class="blackshadow">
+                <img data-toggle="tooltip" title="Temperatura exterior" src="img/icon-temperatura-exterior.png"/>
+                <span data-toggle="tooltip" title="Temperatura exterior" id="temp_val" class="tag_value">25 ºC
+                </span>
+
+                <img data-toggle="tooltip" title="Humedad" src="img/icon-humedad.png"/>
+                <span data-toggle="tooltip" title="Humedad" id="hum_val" class="tag_value" >60 %
+                </span>
+
+                <img data-toggle="tooltip" title="Presión" src="img/icon-presion-atmosferica.png"/>
+                <span data-toggle="tooltip" title="Presión" id="pres_val"  class="tag_value" >760 mmHg
+                </span>
+
+              </div>
+
+              <div id="panorama_bottom" class="blackshadow">
+                <img data-toggle="tooltip" title="Temperatura Aforo" src="img/icon-temperatura-del-agua.png" />
+                <span data-toggle="tooltip" title="Temperatura Aforo"id="water_temp_val"  class="tag_value">12 ºC
+                </span>
+
+                <img data-toggle="tooltip" title="Caudal Aforo" src="img/icon-caudal.png"/>
+                <span data-toggle="tooltip" title="Caudal Aforo" id="EAQU01"  class="tag_value">10 m/s
+                </span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div><!-- fin row -->
+
+      <div class="row" id="imagesrow">
+        <div id="textregiones2" class="col-lg-12"  style="text-align:center;">
+          Esta es la información en tiempo real de:
+        </div>
+        <div id="gif_izq_block" class="col-lg-9  col-lg-offset-3">
+          <!-- <img id="gif_izq" class="img-responsive" src="img/Loading_icon.gif"/> -->
+          <img id="gif_dch" class="img-responsive" src="img/Loading_icon.gif"/>
+          <div id="gif_top" class="blackshadow">
+            <img data-toggle="tooltip" title="Temperatura boya" src="img/icon-temperatura-del-agua.png"/>
+            <span data-toggle="tooltip" title="Temperatura boya" id="temp_boya"  class="tag_value">25 ºC </span>
+            <img data-toggle="tooltip" title="Temperatrua exterior boya" src="img/icon-temperatura-exterior.png" />
+            <span data-toggle="tooltip" title="Temperatura exterior boya" id="temp_ext"  class="tag_value">25 ºC</span>
+
+
+          </div>
+
+        </div>
+<!--      <div id="gif_dch_block" class="col-lg-6">
+            <img id="gif_izq" class="img-responsive" src="img/Loading_icon.gif"/>
+            <img id="gif_dch" class="img-responsive" src="img/Loading_icon.gif"/>
+            <div id="gif_top" class="blackshadow">
+              <img data-toggle="tooltip" title="Temperatrua exterior boya" src="img/icon-temperatura-exterior.png" />
+              <span data-toggle="tooltip" title="Temperatura exterior boya" id="temp_ext"  class="tag_value">25 ºC
+              </span>
+
+            </div>
+-->
+        <div class="col-lg-12 text-center">
+          <span id="fechaupdate"></span>
+          <a class="text-center"
+             href="javascript:void(0)"
+             onclick="_refresh()">Refresh</a>
+        </div>
+      </div>
+    </div>
+  </section>
+<section id="riverview-main">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 hide-overflow">
+        <h2 class="section-heading"><span>RiverView</span></h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <div class="col-md-12  col-c-box col-revi" id="realidad-virtual">
+          <div class="col-m-box">
+
+            <h2 class="section-heading-in"><span>Realidad Virtual</span></h2>
+            <p>Recorrido por el río mediante realidad virtual, como si estuvieras allí mismo. Podrás ver los mejores accesos y tramos para pescar. </p>
+          </div>
+          <div class="overlay"></div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <div class="col-md-12  col-c-box col-int" id="internet-of-things">
+          <div class="col-m-box">
+            <h2 class="section-heading-in"><span>Internet of Things</span></h2>
+            <p>Mediante nuestra App puedes ver en tiempo real lo que está pasando dentro del agua y también las condiciones ambientales fuera. </p>
+            <ul class="icon-list">
+              <li>
+                <a href="#">
+                  <span class="c-icon c-icon-humedad "></span>
+                  <span class="c-text">Humedad</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="c-icon c-icon-profundidad"></span>
+                  <span class="c-text">Profundidad</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="c-icon c-icon-meteo"></span>
+                  <span class="c-text">Meteo</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="c-icon c-icon-fase-lunar"></span>
+                  <span class="c-text">Fase lunar</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <span class="c-icon c-icon-caudal"></span>
+                  <span class="c-text">Caudal</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="c-icon c-icon-temperatura-del-agua"></span>
+                  <span class="c-text">Temperatura del agua</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="c-icon c-icon-ancho-del-cauce"></span>
+                  <span class="c-text">Ancho del cauce</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="c-icon c-icon-velocidad-del-viento"></span>
+                  <span class="c-text">Velocidad del viento</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="c-icon c-icon-temperatura-exterior"></span>
+                  <span class="c-text">Temperatura exterior</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="c-icon c-icon-presion-atmosferica"></span>
+                  <span class="c-text">Presión atmosférica</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="overlay"></div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <div class="col-md-12  col-c-box col-bigd" id="big-data">
+          <div class="col-m-box">
+            <h2 class="section-heading-in"><span>Big Data</span></h2>
+            <p>Mediante un algoritmo inteligente obtendrás recomendaciones sobre los mejores momentos para pescar y los señuelos con mayor probabilidad de captura.</p>
+
+            <ul class="icon-list icon-list-4">
+              <li>
+                <a href="#">
+                  <span class="c-icon c-icon-especie"></span>
+                  <span class="c-text">Especie</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="c-icon c-icon-fecha-y-hora"></span>
+                  <span class="c-text">Fecha y hora</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="c-icon c-icon-senuelo"></span>
+                  <span class="c-text">Señuelo</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="c-icon c-icon-probabilidad-de-captura"></span>
+                  <span class="c-text">Probabilidad de captura</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="overlay"></div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <div class="col-md-12  col-c-box col-comu" id="comunidad">
+          <div class="col-m-box">
+            <h2 class="section-heading-in"><span>Comunidad</span></h2>
+            <p>Encuentra compañeros de pesca, comparte experiencias, opina, convive y disfruta de tu pasión por la pesca con expertos y aficionados de cualquier parte.</p>
+          </div>
+          <div class="overlay"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="riverview-video">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 hide-overflow">
+        <h2 class="section-heading"><span>Nuestra App</span></h2>
+      </div>
+    </div>
+    <div class="icon-play"></div>
+  </div>
+  <video class="bg-video video-full-width" autoplay muted loop src="videos/bg-video.mp4" poster="videos/videoPoster.jpg">
+    <source src="videos/bg-video.mp4" type="video/mp4">
+    <source src="videos/bg-video.webm" type="video/webm">
+  </video>
+
+  <div class="modal fade video-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-full">
+      <div class="modal-content">
+        <div class="modal-body">
+          <video class="video-in-modal video-full-width" controls loop
+                 src="videos/cnfvideo.mp4">
+            <source src="videos/cnfvideo.mp4" type="video/mp4">
+            <!-- <source src="videos/mainVideo.webm" type="video/webm">-->
+          </video>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+
+</section>
+<!--
+<section id="riverview-extra">
+<div class="container-fluid">
+<div class="row">
+<div class="col-sm-12 hide-overflow">
+<h2 class="section-heading"><span>RiverView</span></h2>
+</div>
+<div class="col-sm-12 text-center">
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+</div>
+</div>
+</div>
+</section>
+-->
+<footer>
+  <div class="container-fluid">
+    <div class="icon-container">
+      <a href="https://www.facebook.com/ClicandFish" class="f-icon f-facebook"></a>
+      <a href="https://twitter.com/ClicAndFish" class="f-icon f-twitter"></a>
+      <a href="https://plus.google.com/107428047253868315823/posts" class="f-icon f-google-plus"></a>
+      <a href="https://www.pinterest.com/clicandfish" class="f-icon f-pinterest"></a>
+      <a href="https://instagram.com/clicandfish" class="f-icon f-instagram"></a>
+      <a href="https://www.youtube.com/user/ClicAndFish" class="f-icon f-youtube"></a>
+      <a href="https://vimeo.com/user23168600" class="f-icon f-vimeo"></a>
+    </div>
+    <p class="copyright-text">Copyright &copy; Clic and Fish 2015</p>
+  </div>
+</footer>
+
+<!-- /.container -->
+
+
+
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/jquery.fittext.js"></script>
+<script src="js/wow.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="js/ol.js"></script>
+<script src="js/ol3-layerswitcher.js"></script>
+<script src="js/three.min.js"></script>
+<script src="js/panorama.js"></script>
+<script src="js/mapa.js"></script>
+<script src="js/api.js"></script>
+
+<script src="js/init.js"></script>
+
+
+<!--  twitter   -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<script type="text/javascript">
+  (function () {
+    var $buoop = {vs:{i:8,f:15,o:15,s:5.1,n:9},onshow:function(infos){$('body').addClass('old-browser');},test:false};
+    $buoop.ol = window.onload;
+    window.onload= function () {
+      try {if ($buoop.ol) $buoop.ol();}catch (e) {}
+    }
+  })();
+</script>
+<!-- facebook -->
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+<script >
+  //should go inside your <head> tag
+  function onHoverLegend()
+  {
+    $("#legendImg").attr('src', 'img/leyenda.png');
+  }
+
+  function offHoverLegend()
+  {
+    $("#legendImg").attr('src', 'img/leyendaicon.png');
+  }
+  _refresh = function()
+  {
+    set_material(panfold+pad(pano_id,4,0)+".jpg");
+    api_getmagnitude(boya_id, "temp", "temp_boya");
+    api_getmagnitude(boya_id, "flow", "flow_boya");
+    api_getmagnitude(ext_id, "temp", "temp_ext");
+    d = new Date();
+    $("#gif_dch").attr("src", "http://82.98.149.211/clicnfish/uploads/"+ext_id+".gif?"+d.getTime());
+    $("#gif_izq").attr("src", "http://82.98.149.211/clicnfish/uploads/"+boya_id+".gif?"+d.getTime());
+    api_getaforo(aforo_id,"EAQU01");
+    api_getmeteo(meteo_id);
+  }
+  $(document).ready(function(){
+
+
+    $('[data-toggle="tooltip"]').tooltip();
+
+    init_mapa();
+    init();
+    animate();
+    $("#maprow").hide();
+    $("#imagesrow").hide();
+    $("#tramo_info").hide();
+    $("#map_info").hide();
+    //refresh();
+    //esto es un apaño
+    $.getJSON(host + "/sensors/5651da8d09389ac70b041ea2/temp/last", function (data){
+      $("#water_temp_val").html ( data.value );
+    });
+
+  });
+</script>
+
+</body>
+
+</html>
