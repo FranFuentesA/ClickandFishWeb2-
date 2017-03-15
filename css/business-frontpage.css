@@ -1,0 +1,287 @@
+/*!
+* Start Bootstrap - Business Frontpage HTML Template (http://startbootstrap.com)
+* Code licensed under the Apache License v2.0.
+* For details, see http://www.apache.org/licenses/LICENSE-2.0.
+*/
+@font-face {
+  font-family: helveticacondensed;
+  src: url("../img/HelveticaLTStd-UltraComp.otf") /* EOT file for IE */
+}
+@font-face {
+  font-family: helveticacondensed;
+  src: url("../img/HelveticaLTStd-UltraComp.ttf") /* TTF file for CSS3 browsers */
+}
+body {
+  /* padding-top: 50px;  Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+  height: 100%;
+}
+/*h1 {
+  color: #338d3f;
+  text-align: center;
+}
+h1, h2 {
+  font-family: 'helveticacondensed', Fallback, sans-serif;
+}*/
+/* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
+/*.navbar-brand{
+  font-family: 'helveticacondensed', Fallback, sans-serif;
+  font-size: 40px;
+  color: black;
+  width: 300px;
+  padding: 2px;
+}
+.navbar {
+  background-color: transparent;
+  background: transparent;
+  border-color: transparent;
+}
+
+.navbar li { color: #000 }
+
+.navbar-inverse .navbar-nav>li>a{
+  color: #9d9d9d;
+}
+.navbar-inverse .navbar-nav>li>a:hover {
+  color: #9d9d9d;
+  background-color: transparent;
+}*/
+.shrink{
+  /*background-color: blue;*/
+  background-color: white;
+  background: white;
+  border-color: wite;
+}
+
+.hidden_a{
+  opacity:0;
+}
+.visible_a{
+  opacity:1;
+}
+.colored_band{
+  background:rgba(207, 224, 207, 0.37);
+}
+.uncolored_band{
+  background: url('../img/background.jpg') center center no-repeat scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+
+}
+.business-header {
+  /*height: 100vh;*/
+  height: 600px;
+  background: url('../img/1hAaa35.jpg') center top no-repeat scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+.vertical-center {
+  /*min-height: 30%;  Fallback for browsers do NOT support vh unit */
+  min-height: 300px; /* These two lines are counted as one :-)       */
+  /* max-height: 400vh;*/
+  display: flex;
+  align-items: center;
+}
+#lema_big{
+  color: #fff;
+  font-size: 50px;
+  font-size: 4vw;
+  -webkit-filter: drop-shadow(6px 6px 20px black);
+}
+#lema_small{
+  color: #fff;
+  font-size: 20px;
+  font-size: 2vw;
+  -webkit-filter: drop-shadow(6px 6px 20px black);
+}
+.whiteshadow{
+  color: #000000;
+  -webkit-filter: drop-shadow(6px 6px 20px white);
+}
+.blackshadow{
+  //color: #ffffff;
+  //-webkit-filter: drop-shadow(6px 6px 20px black);
+  border-radius: 5px;
+  padding: 5px;
+  color: #fff;
+  background-color: rgba(33, 141, 63, 0.69);
+
+}
+
+#container_video_logo{
+  position: relative;
+
+}
+#container_video {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.video_blur {
+  -webkit-filter: blur(15px);
+  -moz-filter: blur(15px);
+  -o-filter: blur(15px);
+  -ms-filter: blur(15px);
+  filter: blur(15px);
+}
+#videobcg {
+  width: 100%;
+  height: auto;
+}
+
+.img-container {
+  position: absolute;
+  top: 170px;  left: 40%;  //to place it as you want.
+}
+.tag_value{
+  padding: 0px 10px 0px 0px;
+}
+#panoramablock {
+  position: relative;
+}
+
+#panoramablock.fullscreen{
+    z-index: 9999;
+    width: 100%;
+    position: fixed;
+    top: 80px;
+    left: 0;
+ }
+
+#panorama_top{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+#panorama_bottom{
+  position: absolute;
+  bottom : 15px;
+  left: 10px;
+}
+#backbutton{
+  position: absolute;
+  top:10px;
+  right: 10px;
+}
+#panorama_title_pos{
+  position: absolute;
+  top : 10px;
+  right: 10px;
+}
+
+#panorama_icon_full{
+  position: absolute;
+  cursor: pointer;
+  bottom : 15px;
+  right: 10px;
+}
+
+#panorama_icon_full .buttonFullScreen{
+  background-color: transparent;
+  border: none;color: white;
+  text-align: center;
+  /*padding: 5px 10px;*/
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0px 0px;
+  cursor: pointer;
+}
+
+#gif_izq_block{
+  position: relative;
+}
+
+#gif_dch_block{
+  position: relative;
+}
+#gif_top{
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+#video_izq_block{
+  position: relative;
+}
+
+#video_dch_block{
+  position: relative;
+}
+
+.transp_label{
+  border-radius: 5px;
+  padding: 5px;
+  color: #fff;
+  background-color: rgba(33, 141, 63, 0.69);
+}
+/*.tooltip{
+  border-radius: 5px;
+  padding: 5px;
+  color: #fff;
+  background-color: rgba(33, 141, 63, 0.69);
+}*/
+
+#gif_refresh{
+   position: absolute;
+  bottom: 20px;
+  right:40px;
+}
+#mapblock{
+  position: relative;
+}
+
+#map_title{
+  position: absolute;
+  top: 10px;
+  left: 60px;
+  width: 40%;
+
+}
+#map_legend{
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+}
+#map_info{
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  top: 10px;
+  left: 25px;
+  color: #fff;
+  background-color: rgba(33, 141, 63, 0.69);
+
+}
+#map_general_block{
+  position: relative;
+}
+
+#tramo_info{
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  top: 10px;
+  left: 100px;
+  color: #fff;
+  background-color: rgba(33, 141, 63, 0.69);
+
+}
+
+/* Customize the text color and shadow color and to optimize text legibility. */
+
+.tagline {
+  text-shadow: 0 0 10px #000;
+  color: #fff;
+}
+
+.img-center {
+  margin: 0 auto;
+}
+
+footer {
+  margin: 50px 0;
+}
