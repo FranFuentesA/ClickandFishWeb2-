@@ -21,6 +21,7 @@
 
 /*section*/
 
+
     .tituloDeSeccion1 {
         background-color: #5E8533;
         text-align: center;
@@ -28,6 +29,7 @@
         color: #ffffff !important;
         height: 160px;
         margin-bottom: 2.5%;
+        width: 100%;
     }
 
     .tituloDeSeccion1 h1 {
@@ -37,20 +39,28 @@
 
     /*divisiones*/
 
-    .espacio1, .espacio2, .espacio3, .espacio4 p {
-        font-size: 25px;
+    .espacio1, .espacio2, .espacio3, .espacio4 {
         color: #B5B4B4;
         line-height: 30px;
-        text-align: justify;
         vertical-align: top;
         display: table-cell;
-        padding: 2.5%;
+        padding: 2.5% 0 ;
+
+    }
+    .espacio1 p , .espacio2 p , .espacio3 p ,.espacio4 p {
+        margin: 20% 0;
+        text-align: justify;
+        display: inline-block;
+        max-height: 10% ;
+        padding: 0 15% ;
     }
 
-    .containerSeccion1 ul {
+
+    .containerSeccion1 h2  {
         list-style: none;
         color: #5E8533;
         text-align: center;
+        font-weight: 900;
     }
 
     .containerSeccion1 {
@@ -108,7 +118,9 @@
         margin-bottom: 5%;
     }
 
-@media (max-width: 1170px) and (min-width: 920px) {
+/*@media (min-width: @screen-md-min) { ... }*/
+
+@media (max-width: 992px) {
 
     .logoSecP1{
         content:url("../img/icono_recomendacion@2x.png");
@@ -145,7 +157,7 @@
     }
 
 }
-@media (max-width: 920px) and (min-width: 768px) {
+@media (max-width: 768px) {
 
     .logoSecP1{
         content:url("../img/icono_recomendacion.png");
@@ -169,7 +181,7 @@
         content:url("../img/comunidad.png");
     }
     .logoSecP1, .logoSecP3, .logoSecP4 {
-          paddingleft: 40%;
+        paddingleft: 40%;
     }
     .logoSecP2 {
         padding-left:  45%;
@@ -182,4 +194,5 @@
     }
 
 }
+
 
