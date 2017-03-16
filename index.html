@@ -18,6 +18,27 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css" type="text/css">
 
+    <!-- Social share scripts-->
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.8";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script>
+        !function(d,s,id){
+            var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+            if(!d.getElementById(id)){
+                js=d.createElement(s);
+                js.id=id;js.src=p+'://platform.twitter.com/widgets.js';
+                fjs.parentNode.insertBefore(js,fjs);
+            }
+        }(document, 'script', 'twitter-wjs');
+    </script>
+
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -40,10 +61,12 @@
             <img class="ios" src="img/app_store@3x.png">
         </div>
     </div>
-    <div class="compartirRedesSociales">
-        <p>Comparte: </p>
-        <img src="" alt="">
-        <img src="" alt="">
+    <div class="socialShare">
+        Social Share:
+
+        <div class="fb-like" data-href="https://www.facebook.com/ClicandFish" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+
+        <a href="https://twitter.com/ClicAndFish" class="twitter-follow-button" data-show-screen-name="false" data-show-count="true" data-lang="en"></a>
     </div>
 </header>
 
@@ -142,5 +165,8 @@
 </section>
 
 <!-- Líneas Manuel-->
+<footer class="">
+
+</footer>
 </body>
 </html>
