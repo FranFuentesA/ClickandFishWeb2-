@@ -8,7 +8,6 @@
     position: absolute;
     left: 5%;
     top: 5.25%;
-
 }
 
 .navbar-btn {
@@ -21,36 +20,166 @@
 }
 
 /*section*/
-.tituloDeSeccion1 {
-    background-color: #5E8533;
-    text-align: center ;
-    font-weight: 900;
-    color: #ffffff !important;
-    height: 160px;
-    margin-bottom: 5%;
+
+    .tituloDeSeccion1 {
+        background-color: #5E8533;
+        text-align: center;
+        font-weight: 900;
+        color: #ffffff !important;
+        height: 160px;
+        margin-bottom: 2.5%;
+    }
+
+    .tituloDeSeccion1 h1 {
+        line-height: 160px;
+        font-size: 50px;
+    }
+
+    /*divisiones*/
+
+    .espacio1, .espacio2, .espacio3, .espacio4 p {
+        font-size: 25px;
+        color: #B5B4B4;
+        line-height: 30px;
+        text-align: justify;
+        vertical-align: top;
+        display: table-cell;
+        padding: 2.5%;
+    }
+
+    .containerSeccion1 ul {
+        list-style: none;
+        color: #5E8533;
+        text-align: center;
+    }
+
+    .containerSeccion1 {
+        padding: 2.5%;
+    }
+
+    /*logos*/
+    .logoSecP1, .logoSecP3, .logoSecP4 {
+        position:relative;
+        width: auto;
+        height: 200px;
+        padding-left: 30%;
+    }
+
+    .logoSecP2{
+        position:relative;
+        width: auto;
+        height: 200px;
+        padding-left: 45%;
+    }
+
+    /*Seccion 2 titulo*/
+
+    .tituloDeSeccion2 {
+        background-color: #E7E7E7;
+        text-align: center;
+        font-weight: 900;
+        color: #55782E !important;
+        height: 160px;
+        margin-bottom: 2.5%;
+    }
+
+    .tituloDeSeccion2 h1 {
+        line-height: 160px;
+        font-size: 50px;
+    }
+
+    .logoSecS1, .logoSecS2, .logoSecS3 {
+        width: 90%;
+        height: auto;
+        display: block;
+        text-align: center;
+    }
+
+    .container2, .espacio5, .espacio6, .espacio7, .seccionSegunda2 {
+        background-color: #E7E7E7;
+        margin-bottom: 1%;
+        padding-left: 3%;
+    }
+
+    .container2 h3 {
+        color: #5E8533;
+        text-align: center;
+        font-weight: 900;
+        margin-bottom: 5%;
+    }
+
+@media (max-width: 1170px) and (min-width: 920px) {
+
+    .logoSecP1{
+        content:url("../img/icono_recomendacion@2x.png");
+    }
+    .logoSecP2{
+        content:url("../img/icono_camaras@2x.png");
+    }
+    .logoSecP3{
+        content:url("../img/icono_recomendacion@2x.png");;
+    }
+    .logoSecP4{
+        content:url("../img/icono_pez@2x.png");
+    }
+    .logoSecS1{
+        content:url("../img/360@2x.png");
+    }
+    .logoSecS2{
+        content:url("../img/sub@2x.png");
+    }
+    .logoSecS3{
+        content:url("../img/comunidad@2x.png");
+    }
+    .logoSecP1, .logoSecP3, .logoSecP4 {
+        padding-left:  40%;
+    }
+    .logoSecP2 {
+        padding-left:  45%;
+    }
+    .espacio1, .espacio2, .espacio3, .espacio4 {
+        margin-top: 5%;
+    }
+    .espacio1, .espacio2, .espacio3, .espacio4 p{
+        padding: 0 10%;
+    }
+
+}
+@media (max-width: 920px) and (min-width: 768px) {
+
+    .logoSecP1{
+        content:url("../img/icono_recomendacion.png");
+    }
+    .logoSecP2{
+        content:url("../img/icono_camaras.png");
+    }
+    .logoSecP3{
+        content:url("../img/icono_recomendacion.png");;
+    }
+    .logoSecP4{
+        content:url("../img/icono_pez.png");
+    }
+    .logoSecS1{
+        content:url("../img/360.png");
+    }
+    .logoSecS2{
+        content:url("../img/sub.png");
+    }
+    .logoSecS3{
+        content:url("../img/comunidad.png");
+    }
+    .logoSecP1, .logoSecP3, .logoSecP4 {
+          paddingleft: 40%;
+    }
+    .logoSecP2 {
+        padding-left:  45%;
+    }
+    .espacio1, .espacio2, .espacio3, .espacio4 {
+        margin-top: 5%;
+    }
+    .espacio1, .espacio2, .espacio3, .espacio4 p{
+        padding: 0 10%;
+    }
+
 }
 
-.tituloDeSeccion1 h1 {
-    line-height: 160px;
-    font-size: 50px;
-}
-/*divisiones*/
-.espacio1 {
-
-}
-
-/*Seccion 2 titulo*/
-
-.tituloDeSeccion2 {
-    background-color: #5E8533;
-    text-align: center ;
-    font-weight: 900;
-    color: #ffffff !important;
-    height: 160px;
-    margin-bottom: 5%;
-}
-
-.tituloDeSeccion2 h1 {
-    line-height: 160px;
-    font-size: 50px;
-}
