@@ -12,11 +12,30 @@
     <link rel="stylesheet" href="css/ol.css" type="text/css">
     <link rel="stylesheet" href="css/ol3-layerswitcher.css" type="text/css">
 
-    <!-- Custom CSS -->
-    <link href="css/business-frontpage.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <!-- Social share scripts-->
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.8";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script>
+        !function(d,s,id){
+            var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+            if(!d.getElementById(id)){
+                js=d.createElement(s);
+                js.id=id;js.src=p+'://platform.twitter.com/widgets.js';
+                fjs.parentNode.insertBefore(js,fjs);
+            }
+        }(document, 'script', 'twitter-wjs');
+    </script>
 
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -27,7 +46,7 @@
 
 <!-- Líneas Manuel -->
 <header>
-    <img src="img/banner.jpg" class="portada">
+    <img src="img/portadarecortada.jpg" class="portada">
     <img src="img/logo@3x.png" class="logo">
     <img src="img/menu_despl@3x.png" class="btn-nav">
     <div class="banner row">
@@ -40,15 +59,16 @@
             <img class="ios" src="img/app_store@3x.png">
         </div>
     </div>
-    <div class="compartirRedesSociales">
-        <p>Comparte: </p>
-        <img src="" alt="">
-        <img src="" alt="">
+    <div class="socialShare">
+        Social Share:
+
+        <div class="fb-like" data-href="https://www.facebook.com/ClicandFish" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+
+        <a href="https://twitter.com/ClicAndFish" class="twitter-follow-button" data-show-screen-name="false" data-show-count="true" data-lang="en"></a>
     </div>
 </header>
 
 <!-- Lineas Fran  -->
-
 <section class="seccionPrimera">
     <div class="tituloDeSeccion1">
         <h1>otra forma de vivir la pesca</h1>
@@ -120,5 +140,24 @@
         </div>
     </div>
 </section>
-    </body>
+
+<!-- Líneas Manuel-->
+<footer>
+    <div class="container-fluid">
+        <div class="icon-container">
+            <a href="https://www.facebook.com/ClicandFish" class="f-icon f-facebook"></a>
+            <a href="https://twitter.com/ClicAndFish" class="f-icon f-twitter"></a>
+            <a href="https://instagram.com/clicandfish" class="f-icon f-instagram"></a>
+            <a href="https://www.youtube.com/user/ClicAndFish" class="f-icon f-youtube"></a>
+            <a href="https://vimeo.com/user23168600" class="f-icon f-vimeo"></a>
+        </div>
+        <p>
+            <a class="Política de Cookies" href=PoliticaCookies.html>Política de Cookies&nbsp;</a>
+            <a class="Aviso Legal" href=AVISOLEGAL.html>&nbsp;&nbsp;Aviso Legal&nbsp;&nbsp;</a>
+            <a class="Política de Privacidad" href=PoliticaPrivacidad.html>&nbsp;Política de Privacidad</a>
+        </p>
+        <p class="copyright-text">clicandfish &copy; 2017</p>
+    </div>
+</footer>
+</body>
 </html>
