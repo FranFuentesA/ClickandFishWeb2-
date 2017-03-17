@@ -16,7 +16,7 @@
     top: 5%;
     height: 12.5%;
     width: auto;
-    opacity: .8;
+    opacity: 1;
 }
 
 .banner{
@@ -310,3 +310,57 @@
 }
 
 /* Footer */
+footer {
+    text-align: center;
+    background: url(../img/footer-bg.jpg);
+    padding: 2% 0 0 0;
+    color: #ffffff;
+}
+
+footer .icon-container {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ffffff;
+}
+
+footer .icon-container .f-icon {
+    width: 33px;
+    height: 33px;
+    display: inline-block;
+    color: #ffffff;
+    margin: 0 5px;
+}
+
+footer .icon-container .f-facebook {
+    background: url(../img/f-facebook.png) no-repeat center center;
+}
+
+footer .icon-container .f-twitter {
+    background: url(../img/f-twitter.png) no-repeat center center;
+}
+
+footer .icon-container .f-google-plus {
+    background: url(../img/f-google-plus.png) no-repeat center center;
+}
+
+footer .icon-container .f-linkedin {
+    background: url(../img/f-linkedin.png) no-repeat center center;
+}
+
+footer .icon-container .f-pinterest {
+    background: url(../img/f-pinterest.png) no-repeat center center;
+}
+
+footer .icon-container .f-linkedin {
+    background: url(../img/f-linkedin.png) no-repeat center center;
+}
+
+footer .icon-container .f-instagram {
+    background: url(../img/f-instagram.png) no-repeat center center;
+}
+footer .icon-container .f-youtube {
+    background: url(../img/f-youtube.png) no-repeat center center;
+}
+footer .icon-container .f-vimeo {
+    background: url(../img/f-vimeo.png) no-repeat center center;
+}
