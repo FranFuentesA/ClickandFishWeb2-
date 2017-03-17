@@ -1,4 +1,10 @@
-/* Header */
+html {
+    min-width: 0;
+}
+
+/*
+ * -------------------- HEADER --------------------
+ */
 .portada {
     width: 100%;
 }
@@ -109,7 +115,7 @@
     }
 }
 
-@media (min-width: 728px) and (max-width: 940px) {
+@media (max-width: 940px) {
     .logo {
         width: 50%;
     }
@@ -146,8 +152,9 @@
     }
 }
 
-
-/*section*/
+/*
+ * -------------------- SECTION --------------------
+ */
 
 .titulosSeccionP{
     height: 110px;
@@ -169,7 +176,7 @@
     font-size: 50pt;
 }
 
-    /*divisiones*/
+/* Divisiones */
 
 .espacio1, .espacio2, .espacio3, .espacio4 {
     color: #B5B4B4;
@@ -179,6 +186,7 @@
     padding: 2.5% 0 ;
 
 }
+
 .espacio1 p , .espacio2 p , .espacio3 p , .espacio4 p {
     text-align: justify;
     display: inline-block;
@@ -186,7 +194,6 @@
     padding: 0 15% ;
     font-size: 18pt;
 }
-
 
 .containerSeccion1 h2  {
     list-style: none;
@@ -199,7 +206,7 @@
     padding: 2.5%;
 }
 
-/*logos*/
+/* Logos */
 .logoSecP1, .logoSecP3, .logoSecP4 {
     position:relative;
     width: auto;
@@ -214,7 +221,7 @@
     padding-left: 40%;
 }
 
-/*Seccion 2 titulo*/
+/* Sección 2 "título" */
 
 .tituloDeSeccion2 {
     background-color: #E7E7E7;
@@ -350,30 +357,27 @@
     }
 }
 
-/* Footer */
+/*
+ * -------------------- FOOTER --------------------
+ */
 footer {
     text-align: center;
-    background: url(../img/footer-bg.jpg);
+    background: rgb(94, 134, 51);
     padding: 2% 0 0 0;
-    color: #ffffff;
 }
 
 footer .icon-container {
     margin-bottom: 10px;
     padding-bottom: 10px;
-    border-bottom: 1px solid #ffffff;
 }
 
 footer .icon-container .f-icon {
-    width: 33px;
-    height: 33px;
-    display: inline-block;
-    color: #ffffff;
-    margin: 0 5px;
+    width: 1.5%;
+    height: auto;
 }
 
 footer .icon-container .f-facebook {
-    background: url(../img/f-facebook.png) no-repeat center center;
+    background: url(../img/facebook@3x.png) no-repeat center center;
 }
 
 footer .icon-container .f-twitter {
