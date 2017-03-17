@@ -1,4 +1,10 @@
-/* Header */
+html {
+    min-width: 0;
+}
+
+/*
+ * -------------------- HEADER --------------------
+ */
 .portada {
     width: 100%;
 }
@@ -109,7 +115,7 @@
     }
 }
 
-@media (min-width: 728px) and (max-width: 940px) {
+@media (max-width: 940px) {
     .logo {
         width: 50%;
     }
@@ -146,8 +152,9 @@
     }
 }
 
-
-/*section*/
+/*
+ * -------------------- SECTION --------------------
+ */
 
 .titulo{
     height: 110px;
@@ -168,7 +175,7 @@
     font-size: 50px;
 }
 
-    /*divisiones*/
+/* Divisiones */
 
 .espacio1, .espacio2, .espacio3, .espacio4 {
     color: #B5B4B4;
@@ -178,13 +185,13 @@
     padding: 2.5% 0 ;
 
 }
+
 .espacio1 p , .espacio2 p , .espacio3 p , .espacio4 p {
     text-align: justify;
     display: inline-block;
     max-height: 10% ;
     padding: 0 15% ;
 }
-
 
 .containerSeccion1 h2  {
     list-style: none;
@@ -197,7 +204,7 @@
     padding: 2.5%;
 }
 
-/*logos*/
+/* Logos */
 .logoSecP1, .logoSecP3, .logoSecP4 {
     position:relative;
     width: auto;
@@ -212,7 +219,7 @@
     padding-left: 40%;
 }
 
-/*Seccion 2 titulo*/
+/* Sección 2 "título" */
 
 .tituloDeSeccion2 {
     background-color: #E7E7E7;
@@ -326,7 +333,9 @@
     }
 }
 
-/* Footer */
+/*
+ * -------------------- FOOTER --------------------
+ */
 footer {
     text-align: center;
     background: rgb(94, 134, 51);
