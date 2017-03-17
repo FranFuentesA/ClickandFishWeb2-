@@ -149,12 +149,12 @@
 
 /*section*/
 
-.titulo{
+.titulosSeccionP{
     height: 110px;
 }
 
 .tituloDeSeccion1 {
-    background-color: #5E8533;
+    background-color: #5E8633;
     text-align: center;
     font-weight: 900;
     color: #ffffff !important;
@@ -165,7 +165,8 @@
 
 .tituloDeSeccion1 h1 {
     line-height: 160px;
-    font-size: 50px;
+    color:#ffffff;
+    font-size: 50pt;
 }
 
     /*divisiones*/
@@ -183,6 +184,7 @@
     display: inline-block;
     max-height: 10% ;
     padding: 0 15% ;
+    font-size: 18pt;
 }
 
 
@@ -218,14 +220,16 @@
     background-color: #E7E7E7;
     text-align: center;
     font-weight: 900;
-    color: #55782E !important;
     height: 160px;
     margin-bottom: 2.5%;
+    font-size: 22pt !important;
+
 }
 
 .tituloDeSeccion2 h1 {
     line-height: 160px;
-    font-size: 50px;
+    color: #5E8633 !important;
+
 }
 
 .logoSecS1, .logoSecS2, .logoSecS3 {
@@ -248,7 +252,21 @@
     margin-bottom: 5%;
 }
 
-@media (max-width: 992px) {
+@font-face {
+    font-family: 'robotoblack';
+    src: url('Roboto-Black-webfont.eot');
+    src: url('Roboto-Black-webfont.eot?#iefix') format('embedded-opentype'),
+    url('Roboto-Black-webfont.woff') format('woff'),
+    url('Roboto-Black-webfont.ttf') format('truetype'),
+    url('Roboto-Black-webfont.svg#robotoblack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+@media (max-width: 981px) {
 
     .titulo{
         height: 90px;
@@ -268,12 +286,18 @@
     }
     .logoSecS1{
         content:url("../img/360@2x.png");
+        height: 200px;
+        width: 200px;
     }
     .logoSecS2{
         content:url("../img/sub@2x.png");
+        height: 200px;
+        width: 200px;
     }
     .logoSecS3{
         content:url("../img/comunidad@2x.png");
+        height: 200px;
+        width: 200px;
     }
     .logoSecP1, .logoSecP3, .logoSecP4 {
         padding-left:  40%;
