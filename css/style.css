@@ -312,27 +312,22 @@
 /* Footer */
 footer {
     text-align: center;
-    background: url(../img/footer-bg.jpg);
+    background: rgb(94, 134, 51);
     padding: 2% 0 0 0;
-    color: #ffffff;
 }
 
 footer .icon-container {
     margin-bottom: 10px;
     padding-bottom: 10px;
-    border-bottom: 1px solid #ffffff;
 }
 
 footer .icon-container .f-icon {
-    width: 33px;
-    height: 33px;
-    display: inline-block;
-    color: #ffffff;
-    margin: 0 5px;
+    width: 1.5%;
+    height: auto;
 }
 
 footer .icon-container .f-facebook {
-    background: url(../img/f-facebook.png) no-repeat center center;
+    background: url(../img/facebook@3x.png) no-repeat center center;
 }
 
 footer .icon-container .f-twitter {
