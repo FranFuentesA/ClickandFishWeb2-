@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
+    <title>Clic &amp; Fish</title>
+
+    <!-- Fonts -->
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto-MediumItalic">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto-Black">
@@ -15,17 +17,11 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
 
-    <!-- Plugin CSS -->
-    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
-    <link rel="stylesheet" href="css/ol.css" type="text/css">
-    <link rel="stylesheet" href="css/ol3-layerswitcher.css" type="text/css">
-
-
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css" type="text/css">
 
     <!-- Social share scripts-->
-    <script>
+    <script class="scriptFacebook">
         (function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
@@ -34,7 +30,7 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
-    <script>
+    <script class="Twitter">
         !function(d,s,id){
             var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
             if(!d.getElementById(id)){
@@ -44,11 +40,6 @@
             }
         }(document, 'script', 'twitter-wjs');
     </script>
-
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
 <body>
 
@@ -153,21 +144,39 @@
 
 <!-- Líneas Manuel-->
 <footer>
-    <div class="container-fluid row">
-        <div class="icon-container col-lg-4">
-            <a href="https://www.facebook.com/ClicandFish" class="f-icon f-facebook"></a>
-            <a href="https://twitter.com/ClicAndFish" class="f-icon f-twitter"></a>
-            <a href="https://instagram.com/clicandfish" class="f-icon f-instagram"></a>
-            <a href="https://www.youtube.com/user/ClicAndFish" class="f-icon f-youtube"></a>
-            <a href="https://vimeo.com/user23168600" class="f-icon f-vimeo"></a>
-        </div>
-        <p class="col-lg-4">
-            <a class="Política de Cookies" href=PoliticaCookies.html>Política de Cookies&nbsp;</a>
-            <a class="Aviso Legal" href=AVISOLEGAL.html>&nbsp;&nbsp;Aviso Legal&nbsp;&nbsp;</a>
-            <a class="Política de Privacidad" href=PoliticaPrivacidad.html>&nbsp;Política de Privacidad</a>
-        </p>
-        <p class="copyright-text col-lg-4">clicandfish &copy; 2017</p>
-    </div>
+        <section class="contactoRedesSociales">
+            <div class="facebook">
+                <a href="https://www.facebook.com/ClicandFish">
+                    <img src="img/facebook@3x.png">
+                </a>
+            </div>
+            <div class="twitter">
+                <a href="https://twitter.com/ClicAndFish">
+                    <img src="img/twitter@3x.png">
+                </a>
+            </div>
+            <div class="instagram">
+                <a href="https://instagram.com/clicandfish">
+                    <img src="img/instagram@3x.png">
+                </a>
+            </div>
+            <div class="youtube">
+                <a href="https://www.youtube.com/user/ClicAndFish">
+                    <img src="img/youtube@3x.png">
+                </a>
+            </div>
+            <div class="vimeo">
+                <a href="https://vimeo.com/user23168600">
+                    <img src="img/vimeo@3x.png">
+                </a>
+            </div>
+        </section>
+        <section class="avisos">
+            <div class="PolíticaCookies"><a href="PoliticaCookies.html">Política de Cookies</a></div>
+            <div class="AvisoLegal"><a href="AVISOLEGAL.html">Aviso Legal</a></div>
+            <div class="PolíticaPrivacidad"><a href="PoliticaPrivacidad.html">Política de Privacidad</a></div>
+        </section>
+        <section class="copyright">clicandfish &copy; 2017</section>
 </footer>
 </body>
 </html>
