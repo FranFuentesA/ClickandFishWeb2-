@@ -1,7 +1,3 @@
-html {
-    min-width: 0;
-}
-
 /*
  * -------------------- HEADER --------------------
  */
@@ -479,51 +475,83 @@ p {
  * -------------------- FOOTER --------------------
  */
 footer {
-    text-align: center;
     background: rgb(94, 134, 51);
-    padding: 2% 0 0 0;
+    padding: 2% 0;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
 }
 
-footer .icon-container {
-    margin-bottom: 10px;
-    padding-bottom: 10px;
+.contactoRedesSociales {
+    padding: 2%;
+    width: 550px;
+    display: flex;
+    justify-content: space-around;
 }
 
-footer .icon-container .f-icon {
-    width: 1.5%;
+.contactoRedesSociales > div a img{
+    width:70%;
     height: auto;
 }
 
-footer .icon-container .f-facebook {
-    background: url(../img/facebook@3x.png) no-repeat center center;
+.avisos{
+    padding: 2% 0;
+    width: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center
 }
 
-footer .icon-container .f-twitter {
+.avisos div {
+    margin: 0 2%;
+}
+
+.avisos div a {
+    color: #fff;
+}
+
+.copyright {
+    padding: 2% 0;
+    width: 550px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+
+
+
+
+
+.i-twitter {
     background: url(../img/f-twitter.png) no-repeat center center;
 }
 
-footer .icon-container .f-google-plus {
+.i-google-plus {
     background: url(../img/f-google-plus.png) no-repeat center center;
 }
 
-footer .icon-container .f-linkedin {
+.i-linkedin {
     background: url(../img/f-linkedin.png) no-repeat center center;
 }
 
-footer .icon-container .f-pinterest {
+.i-pinterest {
     background: url(../img/f-pinterest.png) no-repeat center center;
 }
 
-footer .icon-container .f-linkedin {
+.i-linkedin {
     background: url(../img/f-linkedin.png) no-repeat center center;
 }
 
-footer .icon-container .f-instagram {
+.i-instagram {
     background: url(../img/f-instagram.png) no-repeat center center;
 }
-footer .icon-container .f-youtube {
+.i-youtube {
     background: url(../img/f-youtube.png) no-repeat center center;
 }
-footer .icon-container .f-vimeo {
+.i-vimeo {
     background: url(../img/f-vimeo.png) no-repeat center center;
 }
