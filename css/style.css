@@ -463,41 +463,38 @@ p {
 footer {
     background: rgb(94, 134, 51);
     padding: 2% 0;
+    font-family:'Roboto', arial, serif;
+    font-size: large;
     color: #fff;
     text-align: center;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
 }
-
 .contactoRedesSociales {
     padding: 2%;
     width: 550px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
-
 .contactoRedesSociales > div a img{
     width:70%;
     height: auto;
 }
-
 .avisos{
     padding: 2% 0;
     width: 550px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center
+    align-items: center;
 }
-
 .avisos div {
     margin: 0 2%;
 }
-
 .avisos div a {
     color: #fff;
 }
-
 .copyright {
     padding: 2% 0;
     width: 550px;
@@ -507,37 +504,47 @@ footer {
     flex-direction: column;
 }
 
-
-
-
-
-
-.i-twitter {
-    background: url(../img/f-twitter.png) no-repeat center center;
+@media (max-width: 1650px) {
+    .contactoRedesSociales, .avisos, .copyright {
+        width: 1000px;
+    }
 }
-
-.i-google-plus {
-    background: url(../img/f-google-plus.png) no-repeat center center;
+@media (max-width: 728px) {
+    .contactoRedesSociales > div a img{
+        width:50%;
+        height: auto;
+    }
+    .facebook a img {
+        content: url("../img/facebook@2x.png");
+    }
+    .twitter a img {
+        content: url("../img/twitter@2x.png");
+    }
+    .instagram a img {
+        content: url("../img/instagram@2x.png");
+    }
+    .youtube a img {
+        content: url("../img/youtube@2x.png");
+    }
+    .vimeo a img {
+        content: url("../img/vimeo@2x.png");
+    }
 }
-
-.i-linkedin {
-    background: url(../img/f-linkedin.png) no-repeat center center;
-}
-
-.i-pinterest {
-    background: url(../img/f-pinterest.png) no-repeat center center;
-}
-
-.i-linkedin {
-    background: url(../img/f-linkedin.png) no-repeat center center;
-}
-
-.i-instagram {
-    background: url(../img/f-instagram.png) no-repeat center center;
-}
-.i-youtube {
-    background: url(../img/f-youtube.png) no-repeat center center;
-}
-.i-vimeo {
-    background: url(../img/f-vimeo.png) no-repeat center center;
+@media (max-width: 480px) {
+    .contactoRedesSociales {
+        padding: 4%;
+    }
+    .contactoRedesSociales > div a img{
+        width:70%;
+        height: auto;
+    }
+    .avisos {
+        padding: 4% 0;
+    }
+    .avisos div {
+        width: 200px;
+    }
+    .copyright {
+        padding: 4% 0;
+    }
 }
