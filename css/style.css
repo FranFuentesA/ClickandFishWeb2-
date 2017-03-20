@@ -153,15 +153,15 @@ html {
 }
 
 /*
- * -------------------- SECTION --------------------
+ * -------------------- SECTION 1 --------------------
  */
 
-.titulo{
+.titulosSeccionP{
     height: 110px;
 }
 
 .tituloDeSeccion1 {
-    background-color: #5E8533;
+    background-color: #5E8633;
     text-align: center;
     font-weight: 900;
     color: #ffffff !important;
@@ -171,8 +171,9 @@ html {
 }
 
 .tituloDeSeccion1 h1 {
+    color:#ffffff;
+    font-size: 50pt;
     line-height: 160px;
-    font-size: 50px;
 }
 
 /* Divisiones */
@@ -191,6 +192,7 @@ html {
     display: inline-block;
     max-height: 10% ;
     padding: 0 15% ;
+    font-size: 18pt;
 }
 
 .containerSeccion1 h2  {
@@ -208,31 +210,33 @@ html {
 .logoSecP1, .logoSecP3, .logoSecP4 {
     position:relative;
     width: auto;
-    height: 200px;
-    padding-left: 30%;
-}
+    height:  200px;
+    margin : 2% 28%;
+  }
 
 .logoSecP2{
     position:relative;
     width: auto;
     height: 200px;
-    padding-left: 40%;
+    margin : 2% 38%
 }
 
-/* Sección 2 "título" */
+/*
+ * -------------------- SECTION 2 --------------------
+ */
 
 .tituloDeSeccion2 {
     background-color: #E7E7E7;
     text-align: center;
     font-weight: 900;
-    color: #55782E !important;
     height: 160px;
     margin-bottom: 2.5%;
+    font-size: 22pt !important;
 }
 
 .tituloDeSeccion2 h1 {
     line-height: 160px;
-    font-size: 50px;
+    color: #5E8633 !important;
 }
 
 .logoSecS1, .logoSecS2, .logoSecS3 {
@@ -240,12 +244,12 @@ html {
     height: auto;
     display: block;
     text-align: center;
+    margin-bottom: 10%;
 }
 
 .container2, .espacio5, .espacio6, .espacio7, .seccionSegunda2 {
     background-color: #E7E7E7;
     margin-bottom: 1%;
-    padding: 0 3%;
 }
 
 .container2 h3 {
@@ -255,60 +259,61 @@ html {
     margin-bottom: 5%;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
 
-    .titulo{
-        height: 90px;
+    .logoSecS1 ,.logoSecS2 ,.logoSecS3 {
+        /*position: absolute;  podría ser relative */
+        width: 600px;
+        height: auto;
+        left: 100px;
+        top: 50px;
+        margin: 100px 26%;
     }
 
-    .logoSecP1{
+}
+
+@media (max-width: 991px) {
+
+    .logoSecP1, .logoSecP3 {
+        position:relative;
+        width: 20%;
+        height: auto;
+        margin : 2% 42%;
+    }
+    .logoSecP4{
+        position:relative;
+        width: 20%;
+        height:  auto;
+        margin : 2% 40%;
+    }
+
+    .logoSecP2{
+        position:relative;
+        width: 16%;
+        height: auto;
+        margin: 2% 44%;
+    }
+
+    .logoSecS1 ,.logoSecS2 ,.logoSecS3 {
+        /*position: absolute;  podría ser relative */
+        width: 500px;
+        height: auto;
+        left: 100px;
+        top: 50px;
+        margin: 0 56% 10% 21%;
+    }
+
+    .logoSecP1 {
         content:url("../img/icono_recomendacion@2x.png");
     }
     .logoSecP2{
         content:url("../img/icono_camaras@2x.png");
     }
     .logoSecP3{
-        content:url("../img/icono_recomendacion@2x.png");;
+        content:url("../img/icono_recomendacion@2x.png");
     }
     .logoSecP4{
         content:url("../img/icono_pez@2x.png");
-    }
-    .logoSecS1{
-        content:url("../img/360@2x.png");
-    }
-    .logoSecS2{
-        content:url("../img/sub@2x.png");
-    }
-    .logoSecS3{
-        content:url("../img/comunidad@2x.png");
-    }
-    .logoSecP1, .logoSecP3, .logoSecP4 {
-        padding-left:  40%;
-    }
-    .logoSecP2 {
-        padding-left:  45%;
-    }
-    .espacio1, .espacio2, .espacio3, .espacio4 {
-        margin-top: 5%;
-    }
-    .espacio1, .espacio2, .espacio3, .espacio4 {
-        padding: 0 10%;
-    }
-
-}
-@media (max-width: 768px) {
-
-    .logoSecP1{
-        content:url("../img/icono_recomendacion.png");
-    }
-    .logoSecP2{
-        content:url("../img/icono_camaras.png");
-    }
-    .logoSecP3{
-        content:url("../img/icono_recomendacion.png");
-    }
-    .logoSecP4{
-        content:url("../img/icono_pez.png");
     }
     .logoSecS1{
         content:url("../img/360.png");
@@ -319,18 +324,108 @@ html {
     .logoSecS3{
         content:url("../img/comunidad.png");
     }
-    .logoSecP1, .logoSecP3, .logoSecP4 {
-        paddingleft: 40%;
+
+}
+
+@media (max-width: 767px) {
+
+    .tituloDeSeccion1, .tituloDeSeccion2{
+        height: 62px;
     }
-    .logoSecP2 {
-        padding-left:  45%;
+
+    .logoSecP1,.logoSecP3 ,.logoSecP4 {
+        display: table;
+        width: 140px;
+        margin: 2% 40.5%;
+    }
+
+    .logoSecS1 ,.logoSecS2 ,.logoSecS3 {
+        /*position: absolute;  podría ser relative */
+        width: 200px;
+        height: 200px;
+        left: 100px;
+        top: 50px;
+        margin: 0 56% 20% 26%;
+    }
+
+    .tituloDeSeccion1 h1{
+        line-height: 70px;
+        font-size: 25px;
+    }
+
+    .tituloDeSeccion2 h1{
+        line-height: 35px;
+        font-size: 20pt;
+        padding: 0 5%;
+    }
+
+    .seccionSegunda2{
+        padding-top: 5%;
+    }
+
+    .seccionSegunda2 h3{
+        font-size: 10pt;
+    }
+
+    .espacio1 p, .espacio2 p, .espacio3 p, .espacio4 p{
+        font-size: 7pt;
+        padding: 0 10%;
+    }
+    .titulosSeccionP h2{
+        font-size: 8pt;
+    }
+    .titulosSeccionP {
+        height: 35px;
+    }
+    .logoSecP1 {
+        content: url("../img/icono_360.png");
+        height: auto;
+        width: 25%;
+    }
+    .logoSecP2{
+        content:url("../img/icono_camaras.png");
+        height: auto;
+        width: 20%;
+        margin: 2% 42.5%;
+    }
+    .logoSecP3{
+        content:url("../img/icono_recomendacion.png");
+        height: auto;
+        width: 25%;
+    }
+    .logoSecP4{
+        content:url("../img/icono_pez.png");
+        height: auto;
+        width: 25%;
+    }
+    .logoSecS1{
+        content:url("../img/360.png");
+        width: 50%;
+        height: auto;
+    }
+    .logoSecS2{
+        content:url("../img/sub.png");
+        width: 50%;
+        height: auto;
+    }
+    .logoSecS3{
+        content:url("../img/comunidad.png");
+        width: 50%;
+        height: auto;
     }
     .espacio1, .espacio2, .espacio3, .espacio4 {
         margin-top: 5%;
+        line-height: 16px;
     }
-    .espacio1, .espacio2, .espacio3, .espacio4 p{
-        padding: 0 10%;
+
+    .espacio1 p, .espacio2 p, .espacio3 p, .espacio4 p{
+        padding: 0 15%;
+
     }
+    .espacio5, .espacio6, .espacio7{
+        text-align: center;
+    }
+
 }
 
 /*
