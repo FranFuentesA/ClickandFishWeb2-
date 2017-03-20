@@ -288,7 +288,7 @@ p {
         height: auto;
         left: 100px;
         top: 50px;
-        margin: 100px 26%;
+        margin: 100px 20%;
     }
 
 }
@@ -336,7 +336,7 @@ p {
     }
 
     .logoSecP1 {
-        content:url("../img/icono_recomendacion@2x.png");
+        content:url("../img/icono_360@2.png");
     }
     .logoSecP2{
         content:url("../img/icono_camaras@2x.png");
