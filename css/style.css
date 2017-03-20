@@ -156,6 +156,25 @@ html {
  * -------------------- SECTION 1 --------------------
  */
 
+/*
+ * ---------------------- FUENTES --------------------
+ */
+
+p {
+    font-family:'Roboto', arial, serif;
+}
+
+.claseTemporal h1 {
+    font-family:'Roboto-Black', arial, serif;
+}
+.titulosSeccionP h2{
+    font-family:'Roboto-MediumItalic', arial, serif;
+}
+
+.tituloDeSeccion1 h1,.tituloDeSeccion2 h1{
+    font-family:'Roboto-Black', arial, serif;
+}
+
 .titulosSeccionP{
     height: 110px;
 }
@@ -237,6 +256,7 @@ html {
 .tituloDeSeccion2 h1 {
     line-height: 160px;
     color: #5E8633 !important;
+    font-size:50pt;
 }
 
 .logoSecS1, .logoSecS2, .logoSecS3 {
@@ -250,6 +270,7 @@ html {
 .container2, .espacio5, .espacio6, .espacio7, .seccionSegunda2 {
     background-color: #E7E7E7;
     margin-bottom: 1%;
+    padding-left:1.3%;
 }
 
 .container2 h3 {
@@ -271,6 +292,17 @@ html {
     }
 
 }
+@media (max-width: 1440px) {
+    .tituloDeSeccion2 h1, .tituloDeSeccion1 h1 {
+        font-size: 40pt;
+    }
+}
+@media (max-width: 1170px){
+    .tituloDeSeccion2 h1, .tituloDeSeccion1 h1 {
+        font-size:30pt;
+    }
+}
+
 
 @media (max-width: 991px) {
 
@@ -336,7 +368,7 @@ html {
     .logoSecP1,.logoSecP3 ,.logoSecP4 {
         display: table;
         width: 140px;
-        margin: 2% 40.5%;
+        margin: 2% 38.5%;
     }
 
     .logoSecS1 ,.logoSecS2 ,.logoSecS3 {
@@ -346,16 +378,17 @@ html {
         left: 100px;
         top: 50px;
         margin: 0 56% 20% 26%;
+
     }
 
     .tituloDeSeccion1 h1{
         line-height: 70px;
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .tituloDeSeccion2 h1{
         line-height: 35px;
-        font-size: 20pt;
+        font-size: 17pt;
         padding: 0 5%;
     }
 
@@ -380,7 +413,7 @@ html {
     .logoSecP1 {
         content: url("../img/icono_360.png");
         height: auto;
-        width: 25%;
+        width: 30%;
     }
     .logoSecP2{
         content:url("../img/icono_camaras.png");
