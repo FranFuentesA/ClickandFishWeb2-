@@ -5,6 +5,20 @@ html {
 /*
  * -------------------- HEADER --------------------
  */
+
+
+.SecPortada{
+    position: relative;
+    margin-bottom: 5%;
+}
+
+.logoMovilPortada{
+    position: absolute;
+    bottom: -5%;
+    width: 30%;
+    height: auto;
+}
+
 .portada {
     width: 100%;
 }
@@ -154,7 +168,7 @@ html {
 
 /*
  * -------------------- SECTION 1 --------------------
- */
+
 
 /*
  * ---------------------- FUENTES --------------------
