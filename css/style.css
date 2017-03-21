@@ -20,6 +20,7 @@
     .logoMovilPortada {
         bottom: -10%;
         width: 35%;
+        content:url("../img/mockup 12@2x.png");
     }
 }
 
@@ -389,7 +390,7 @@ p {
 
 
     .tituloDeSeccion1 {
-        height: 62px;
+        height: 80px;
         width: 100%;
     }
 
@@ -414,7 +415,7 @@ p {
     }
 
     .tituloDeSeccion1 h1{
-        line-height: 90px;
+        line-height: 80px;
         font-size: 35px;
     }
     .tituloDeSeccion2{
@@ -498,6 +499,9 @@ p {
 @media (max-width: 480px){
     .tituloDeSeccion2 p{
         font-size: 20pt !important;
+    }
+    .tituloDeSeccion1 h1{
+        font-size: 25px;
     }
 }
 
