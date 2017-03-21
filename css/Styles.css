@@ -523,7 +523,7 @@ footer {
     padding: 2%;
     width: 550px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .contactoRedesSociales > div a img{
     width:70%;
@@ -531,7 +531,7 @@ footer {
 }
 .avisos{
     padding: 2% 0;
-    width: 550px;
+    width: 800px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -545,7 +545,7 @@ footer {
 }
 .copyright {
     padding: 2% 0;
-    width: 550px;
+    width: 300px;
     display: flex;
     justify-content: center;
     align-content: center;
