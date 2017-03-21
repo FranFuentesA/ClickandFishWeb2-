@@ -374,13 +374,13 @@ p {
         content:url("../img/icono_pez@2x.png");
     }
     .logoSecS1{
-        content:url("../img/360.png");
+        content:url("../img/360@2x.png");
     }
     .logoSecS2{
-        content:url("../img/sub.png");
+        content:url("../img/sub@2x.png");
     }
     .logoSecS3{
-        content:url("../img/comunidad.png");
+        content:url("../img/comunidad@2x.png");
     }
 
 }
@@ -458,7 +458,7 @@ p {
         content:url("../img/icono_camaras.png");
         height: auto;
         width: 20%;
-        margin: 2% 42.5%;
+        margin: 2% 41.5%;
     }
     .logoSecP3{
         content:url("../img/icono_recomendacion.png");
