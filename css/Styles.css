@@ -1,9 +1,26 @@
 /*
  * -------------------- HEADER --------------------
  */
+
 .seccionPortada{
     position: relative;
     margin-bottom: 5%;
+}
+.logo {
+    width: 25%;
+    position: absolute;
+    left: 5%;
+    top: 5.25%;
+}
+.botonNavegacion {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    height: 12.5%;
+    width: auto;
+}
+.imagenPortada {
+    width: 100%;
 }
 .logoMovil{
     position: absolute;
@@ -11,32 +28,21 @@
     width: 30%;
     height: auto;
 }
+
 @media (max-width: 940px){
+    .imagenPortada {
+        content:url("../img/portadaAlargada.jpg");
+    }
     .logoMovil {
-        bottom: -10%;
-        width: 35%;
+        bottom: -5%;
+        width: 45%;
         content:url("../img/mockup@2x.png");
     }
 }
-.imagenPortada {
-    width: 100%;
-}
 
-.logo {
-    width: 25%;
-    position: absolute;
-    left: 5%;
-    top: 5.25%;
-}
 
-.btn-nav {
-    position: absolute;
-    right: 5%;
-    top: 5%;
-    height: 12.5%;
-    width: auto;
-    opacity: .8;
-}
+
+
 
 .banner{
     padding: 0 5%;
@@ -95,7 +101,7 @@
         top: 5.5%;
     }
 
-    .btn-nav {
+    .botonNavegacion {
         content: url("../img/menu_despl.png");
         height: 6.75%;
         top: 5%;
@@ -133,7 +139,7 @@
         width: 50%;
     }
 
-    .btn-nav {
+    .botonNavegacion {
         content: url("../img/menu_despl@2x.png");
         height: 8.25%;
     }
