@@ -22,21 +22,23 @@
 
     <!-- Social share scripts-->
     <script class="scriptFacebook">
-        (function(d, s, id) {
+        (function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
+            js = d.createElement(s);
+            js.id = id;
             js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.8";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
     <script class="scriptTwitter">
-        !function(d,s,id){
-            var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
-            if(!d.getElementById(id)){
-                js=d.createElement(s);
-                js.id=id;js.src=p+'://platform.twitter.com/widgets.js';
-                fjs.parentNode.insertBefore(js,fjs);
+        !function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+            if (!d.getElementById(id)) {
+                js = d.createElement(s);
+                js.id = id;
+                js.src = p + '://platform.twitter.com/widgets.js';
+                fjs.parentNode.insertBefore(js, fjs);
             }
         }(document, 'script', 'twitter-wjs');
     </script>
@@ -49,25 +51,22 @@
         <img src="img/portadaRecortada.jpg" class="imagenPortada">
         <img src="img/mockup@3x.png" class="logoMovil">
     </section>
-    <section class="SecSubPortada">
-        <div class="banner row">
-            <div class="claseTemporal col-sm-12 col-md-12 col-lg-7">
-                <h1>tu herramienta, tu pesca</h1>
-                <p>vistas de tramos en 360º, cámaras exteriores y subacuáticas, comunidad y mucho más...</p>
-            </div>
-            <div class="tiendas col-sm-12 col-md-12 col-lg-5">
-                <img class="android" src="img/google_play@3x.png">
-                <img class="ios" src="img/app_store@3x.png">
-            </div>
+    <section class="seccionPortada2">
+        <div class="eslogan">
+            <h1>tu herramienta, tu pesca</h1>
+            <p>vistas de tramos en 360º, cámaras exteriores y subacuáticas, comunidad y mucho más...</p>
         </div>
-
-        <div class="socialShare">
-            Social Share:
-
-            <div class="fb-like" data-href="https://www.facebook.com/ClicandFish" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
-
-            <a href="https://twitter.com/ClicAndFish" class="twitter-follow-button" data-show-screen-name="false" data-show-count="true" data-lang="en"></a>
+        <div class="tiendas">
+            <img class="android" src="img/google_play@3x.png">
+            <img class="iOS" src="img/app_store@3x.png">
         </div>
+    </section>
+    <section class="seccionPortada3">
+        Social Share:
+        <div class="fb-like" data-href="https://www.facebook.com/ClicandFish" data-layout="button_count"
+             data-action="like" data-show-faces="false" data-share="false"></div>
+        <a href="https://twitter.com/ClicAndFish" class="twitter-follow-button" data-show-screen-name="false"
+           data-show-count="true" data-lang="en"></a>
     </section>
 </header>
 
@@ -77,7 +76,7 @@
     </div>
     <div class="containerSeccion1">
         <div class="row">
-            <div class= "espacio1 col-xs-12 col-sm-12 col-md-6 col-lg-3">
+            <div class="espacio1 col-xs-12 col-sm-12 col-md-6 col-lg-3">
                 <img src="img/icono_360@3x.png" class="logoSecP1"/>
                 <div class="titulosSeccionP">
                     <h2>tus tramos preferidos en 360º</h2>
@@ -87,7 +86,7 @@
                     nulla porro quam ratione reprehenderit saepe vel.
                 </p>
             </div>
-            <div class= "espacio2 col-xs-12 col-sm-12 col-md-6 col-lg-3">
+            <div class="espacio2 col-xs-12 col-sm-12 col-md-6 col-lg-3">
                 <img src="img/icono_camaras@3x.png" class="logoSecP2"/>
                 <div class="titulosSeccionP">
                     <h2>cámaras exteriores y subacuáticas</h2>
@@ -97,7 +96,7 @@
                     nulla porro quam ratione reprehenderit saepe vel.
                 </p>
             </div>
-            <div class= "espacio3 col-xs-12 col-sm-12 col-md-6 col-lg-3">
+            <div class="espacio3 col-xs-12 col-sm-12 col-md-6 col-lg-3">
                 <img src="img/icono_recomendacion@3x.png" class="logoSecP3"/>
                 <div class="titulosSeccionP">
                     <h2>recomendaciones basadas en datos históricos</h2>
@@ -107,7 +106,7 @@
                     nulla porro quam ratione reprehenderit saepe vel.
                 </p>
             </div>
-            <div class= "espacio4 col-xs-12 col-sm-12 col-md-6 col-lg-3">
+            <div class="espacio4 col-xs-12 col-sm-12 col-md-6 col-lg-3">
                 <img src="img/icono_pez@3x.png" class="logoSecP4"/>
                 <div class="titulosSeccionP">
                     <h2>tu comunidad de pesca</h2>
@@ -128,15 +127,15 @@
     </div>
     <div class="row">
         <div class="container2">
-            <div class= "espacio5  col-sm-12 col-md-12 col-lg-4 ">
+            <div class="espacio5  col-sm-12 col-md-12 col-lg-4 ">
                 <h3>360º/mapa</h3>
                 <img src="img/360@3x.png" class="logoSecS1"/>
             </div>
-            <div class= "espacio6 col-sm-12 col-md-12 col-lg-4">
+            <div class="espacio6 col-sm-12 col-md-12 col-lg-4">
                 <h3>Cámaras Ext. &Sub.</h3>
                 <img src="img/sub@3x.png" class="logoSecS2"/>
             </div>
-            <div class= "espacio7 col-sm-12 col-md-12 col-lg-4">
+            <div class="espacio7 col-sm-12 col-md-12 col-lg-4">
                 <h3>Comunidad</h3>
                 <img src="img/comunidad@3x.png" class="logoSecS3"/>
             </div>
