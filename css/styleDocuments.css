@@ -1,0 +1,177 @@
+@media (max-width: 7680px) {
+    body {
+        font-size: 85px;
+    }
+}
+@media (max-width: 6912px) {
+    body {
+        font-size: 80px;
+    }
+}
+@media (max-width: 6144px) {
+    body {
+        font-size: 75px;
+    }
+}
+@media (max-width: 3840px) {
+    body {
+        font-size: 70px;
+    }
+}
+@media (max-width: 3584px) {
+    body {
+        font-size: 65px;
+    }
+}
+@media (max-width: 3328px) {
+    body {
+        font-size: 60px;
+    }
+}
+@media (max-width: 2560px) {
+    body {
+        font-size: 55px;
+    }
+}
+@media (max-width: 2432px) {
+    body {
+        font-size: 50px;
+    }
+}
+@media (max-width: 2304px) {
+    body {
+        font-size: 45px;
+    }
+}
+@media (max-width: 1920px) {
+    body {
+        font-size: 40px;
+    }
+}
+@media (max-width: 1792px) {
+    body {
+        font-size: 35px;
+    }
+}
+@media (max-width: 1664px) {
+    body {
+        font-size: 30px;
+    }
+}
+@media (max-width: 1280px) {
+    body {
+        font-size: 28px;
+    }
+}
+@media (max-width: 1194px) {
+    body {
+        font-size: 26px;
+    }
+}
+@media (max-width: 1129px) {
+    body {
+        font-size: 24px;
+    }
+}
+@media (max-width: 1024px) {
+    body {
+        font-size: 22px;
+    }
+}
+@media (max-width: 640px) {
+    body {
+        font-size: 20px;
+    }
+}
+@media (max-width: 608px) {
+    body {
+        font-size: 18px;
+    }
+}
+@media (max-width: 576px) {
+    body {
+        font-size: 16px;
+    }
+}
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+}
+@media (max-width: 470px) {
+    body {
+        font-size: 12px;
+    }
+}
+@media (max-width: 460px) {
+    body {
+        font-size: 11px;
+    }
+}
+@media (max-width: 426px) {
+    body {
+        font-size: 10px;
+    }
+}
+@media (max-width: 392px) {
+    body {
+        font-size: 9px;
+    }
+}
+@media (max-width: 358px) {
+    body {
+        font-size: 8px;
+    }
+}
+@media (max-width: 256px) {
+    body {
+        font-size: 7px;
+    }
+}
+
+body{
+    padding: 5% 20% 20% 20%;
+    font-family: 'Roboto', arial, serif;
+}
+
+#contenedorPrincipal{
+    width: 100%;
+    height: auto;
+}
+
+h1{
+    color: #5DA2D9;
+    margin-bottom: 5%;
+    text-align: center;
+     font-size: 1em;
+    text-decoration: underline;
+}
+h2{
+    color: #5DA2D9;
+    margin: 5% 0 2.5% 0;
+    font-size: .9em;
+}
+
+p{
+    margin-bottom: 0.08in;
+    text-align: justify;
+    font-size: 0.7em;
+    line-height: 1.5em;
+}
+
+span{
+    font-weight: bold;
+}
+
+#copyright{
+    margin-top: 10%;
+    font-style: italic;
+    font-weight: bold;
+}
+
+a{
+    color: #5DA2D9;
+}
+
+
+

@@ -602,7 +602,7 @@ body {
         height: 200px;
         left: 100px;
         top: 50px;
-        margin: 0 56% 20% 26%;
+        margin: 0 6% 20% 15%;
 
     }
 
@@ -626,18 +626,22 @@ body {
     }
 
     .seccionSegunda2 h3 {
-        font-size: 10pt;
+        font-size: 14pt;
     }
 
-    .espacio1 p, .espacio2 p, .espacio3 p, .espacio4 p {
-
+    .espacio1 p, .espacio2 p, .espacio4 p {
         font-size: 10pt;
         padding: 2.5% 15%;
+    }
 
+    .espacio3 p{
+        font-size: 10pt;
+        padding: 6% 15%;
     }
 
     .titulosSeccionP h2 {
         font-size: 13pt;
+        padding: 0 8%;
     }
 
     .titulosSeccionP {
@@ -671,19 +675,19 @@ body {
 
     .logoSecS1 {
         content: url("../img/360.png");
-        width: 50%;
+        width: 70%;
         height: auto;
     }
 
     .logoSecS2 {
         content: url("../img/sub.png");
-        width: 50%;
+        width: 70%;
         height: auto;
     }
 
     .logoSecS3 {
         content: url("../img/comunidad.png");
-        width: 50%;
+        width: 70%;
         height: auto;
     }
 
