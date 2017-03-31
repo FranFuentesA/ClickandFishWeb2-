@@ -79,9 +79,19 @@
         font-size: 22px;
     }
 }
-@media (max-width: 640px) {
+@media (max-width: 896px) {
+    body {
+        font-size: 21px;
+    }
+}
+@media (max-width: 768px) {
     body {
         font-size: 20px;
+    }
+}
+@media (max-width: 640px) {
+    body {
+        font-size: 19px;
     }
 }
 @media (max-width: 608px) {
@@ -91,42 +101,42 @@
 }
 @media (max-width: 576px) {
     body {
-        font-size: 16px;
+        font-size: 17px;
     }
 }
 @media (max-width: 480px) {
     body {
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 @media (max-width: 470px) {
     body {
-        font-size: 12px;
+        font-size: 15px;
     }
 }
 @media (max-width: 460px) {
     body {
-        font-size: 11px;
+        font-size: 14px;
     }
 }
 @media (max-width: 426px) {
     body {
-        font-size: 10px;
+        font-size: 13px;
     }
 }
 @media (max-width: 392px) {
     body {
-        font-size: 9px;
+        font-size: 12px;
     }
 }
 @media (max-width: 358px) {
     body {
-        font-size: 8px;
+        font-size: 11px;
     }
 }
 @media (max-width: 256px) {
     body {
-        font-size: 7px;
+        font-size: 10px;
     }
 }
 
@@ -364,8 +374,8 @@ body {
     }
 }
 
-/*-------------------- SECTION 1 --------------------*/
-/* Fuentes */
+/*-------------------- SECCIÓN 1 --------------------*/
+/*----- FUENTES -----*/
 .claseTemporal h1 {
     font-family: 'Roboto-Black', arial, serif;
 }
@@ -399,7 +409,7 @@ body {
     line-height: 160px;
 }
 
-/* Divisiones */
+/*----- DIVISIONES -----*/
 .tituloDeSeccion2 {
     display: flex;
     flex-wrap: wrap;
@@ -416,6 +426,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 2.5% 0;
+
 }
 
 .espacio1 p, .espacio2 p, .espacio3 p, .espacio4 p {
@@ -437,7 +448,7 @@ body {
     padding: 2.5%;
 }
 
-/* Logos */
+/*----- LOGOS -----*/
 .logoSecP1, .logoSecP3, .logoSecP4 {
     position: relative;
     width: auto;
@@ -456,9 +467,7 @@ body {
     }
 }
 
-/*
- * -------------------- SECTION 2 --------------------
- */
+/*-------------------- SECCIÓN 2 --------------------*/
 .tituloDeSeccion2 div {
     background-color: #E7E7E7;
     text-align: center;
@@ -639,7 +648,6 @@ body {
     }
 
     .tituloDeSeccion2 div {
-        width: 500px;
         font-size: 20pt;
     }
 
@@ -828,11 +836,11 @@ footer {
 
     .Avisos {
         padding: 5% 0;
-        font-size: 0.9em;
+        font-size: 1.5em;
     }
 
     .Copyright {
-        font-size: 0.9em;
+        font-size: 1.5em;
     }
 }
 
