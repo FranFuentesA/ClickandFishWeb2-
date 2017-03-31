@@ -434,7 +434,6 @@ a{
 }
 
 /*--------------------- Estilos Politica de PRivacidad----------------------*/
-
 #contPrinPoliPriva h1,#contPrinPoliPriva h2{
     color: #5E8633;
 }
@@ -452,6 +451,7 @@ a{
     color: #5E8633;
     text-decoration: none;
 }
+
 #tituloDescripcion{
     text-align: justify;
 }
@@ -509,10 +509,29 @@ a{
         margin-bottom: 5%;
         text-decoration: none;
     }
+    
     #botonesRedireccion{
         justify-content: center;
     }
 }
 
+@media (max-width: 640px) {
+    #menuCondiciones {
+        margin-top: -5%;
+    }
 
+    #tituloPortada {
+        font-size: 1.7em;
+    }
 
+    #textoPortada {
+        font-size: 1.15em;
+        line-height: 1.25em;
+    }
+
+    #botonesRedireccion a {
+        flex-basis: 100%;
+        width: 100%;
+        font-size: 1.5em;
+    }
+}
