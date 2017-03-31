@@ -3,11 +3,54 @@
 
 
 <HEAD>
+
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" type="image/png" href="img/Clic-&-Fish.png">
     <link rel="stylesheet" href="css/styleDocuments.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i" rel="stylesheet">
+    <!-- Efectos -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"
+            charset="utf-8">
+    </script>
 
     <TITLE>Politica De Pivacidad</TITLE>
+
+    <script id="scriptScrollBotonPrivacidad">
+
+        $(function(){
+
+            $('a[href*=#poliPriva]').click(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+                    && location.hostname == this.hostname) {
+                    var $target = $(this.hash);
+                    $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+                    if ($target.length) {
+                        var targetOffset = $target.offset().top;
+                        $('html,body').animate({scrollTop: targetOffset}, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+    </script>
+    <script id="scriptScrollCondiUso">
+
+        $(function(){
+
+            $('a[href*=#condiUso]').click(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+                    && location.hostname == this.hostname) {
+                    var $target = $(this.hash);
+                    $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+                    if ($target.length) {
+                        var targetOffset = $target.offset().top;
+                        $('html,body').animate({scrollTop: targetOffset}, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+    </script>
 
 </HEAD>
 
@@ -21,9 +64,10 @@
             Términos y Condiciones Generales y Condiciones de la Suscripción.</p>
     </div>
     <div id="botonesRedireccion">
-        <a href="#poliPriva"> <input type="button" id="botonPoliPriva" class="button" value="Aviso Legal y Politica de Privacidad"></a>
-        <a  href="#condiUso"> <input type="button" id="botonCondUso" class="button" value="Condiciones de uso"></a>
+        <a href="#poliPriva"><input type="button" id="botonPoliPriva" class="button" value="Aviso Legal y Politica de Privacidad"></a>
+        <a href="#condiUso"><input type="button" id="botonCondUso" class="button" value="Condiciones de uso"></a>
     </div>
+
 </div>
 
 <div class="contenedorPrincipal" id="contPrinPoliPriva">
