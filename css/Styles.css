@@ -629,16 +629,6 @@ body {
         margin: 2% 38.5%;
     }
 
-    .logoSecS1, .logoSecS2, .logoSecS3 {
-        /*position: absolute;  podría ser relative */
-        width: 200px;
-        height: 200px;
-        left: 100px;
-        top: 50px;
-        margin: 0 6% 20% 15%;
-
-    }
-
     .tituloDeSeccion1 h1 {
         line-height: 80px;
         font-size: 35px;
@@ -651,7 +641,6 @@ body {
     .tituloDeSeccion2 div {
         width: 500px;
         font-size: 20pt;
-
     }
 
     .seccionSegunda2 {
