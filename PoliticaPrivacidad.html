@@ -1,8 +1,9 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
 
     <title>Politica de pivacidad</title>
 
@@ -10,7 +11,7 @@
     <link rel="icon" type="image/png" href="img/Clic-&-Fish.png">
 
     <!-- Estilos -->
-    <link rel="stylesheet" href="css/styleDocuments.css" type="text/css">
+    <link rel="stylesheet" href="css/EstilosDocumentosLegales.css" type="text/css">
 
     <!-- Fuentes -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i" rel="stylesheet">
@@ -19,11 +20,9 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"
             charset="utf-8">
     </script>
-    <script id="scriptScrollBotonPrivacidad">
-
+    <script id="scriptScrollPrivacidad">
         $(function () {
-
-            $('a[href*=#poliPriva]').click(function () {
+            $('a[href=#avisoLegalPoliticaPrivacidad]').click(function () {
                 if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
                     && location.hostname == this.hostname) {
                     var $target = $(this.hash);
@@ -37,11 +36,9 @@
             });
         });
     </script>
-    <script id="scriptScrollCondiUso">
-
+    <script id="scriptScrollUso">
         $(function () {
-
-            $('a[href*=#condiUso]').click(function () {
+            $('a[href=#condicionesUso]').click(function () {
                 if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
                     && location.hostname == this.hostname) {
                     var $target = $(this.hash);
@@ -57,145 +54,130 @@
     </script>
 </head>
 <body>
-<div id="menuCondiciones">
-    <div id="tituloDescripcion">
-        <h1 id="tituloPortada">Condiciones Clic &amp; Fish</h1>
-        <p id="textoPortada">En esta página puedes encontrar todas las condiciones de nuestro servicio, están divididas
-            en dos partes,
-            Términos y Condiciones Generales y Condiciones de la Suscripción.</p>
-    </div>
-    <div id="botonesRedireccion">
-        <a href="#poliPriva"><input type="button" id="botonPoliPriva" class="button"
-                                    value="Aviso Legal y Politica de Privacidad"></a>
-        <a href="#condiUso"><input type="button" id="botonCondUso" class="button" value="Condiciones de uso"></a>
-    </div>
-</div>
+<header id="menuCondiciones">
+    <h1>Condiciones Clic&amp;Fish</h1>
+    <p>
+        En esta página puedes encontrar todas las condiciones de nuestro servicio, están divididas en dos
+        partes: términos y condiciones generales, y condiciones de la suscripción.
+    </p>
+    <section>
+        <a href="#avisoLegalPoliticaPrivacidad" class="Boton" id="botonIzquierdo"><input type="button"
+                                                                                         value="Aviso Legal y Politica de Privacidad"></a>
+        <a href="#condicionesUso" class="Boton"><input type="button" value="Condiciones de uso"></a>
+    </section>
+</header>
 
-<div class="contenedorPrincipal" id="contPrinPoliPriva">
+<section>
 
-    <h1 id="poliPriva">AVISO LEGAL, POLITICA DE PRIVACIDAD Y CONDICIONES GENERALES DE USO</h1>
+    <h1 id="avisoLegalPoliticaPrivacidad">AVISO LEGAL, POLITICA DE PRIVACIDAD Y CONDICIONES GENERALES DE USO</h1>
 
-    <h2>1. Objeto.</h2>
+    <h2>1. Objeto</h2>
 
-    <p>La presente política de privacidad y condiciones generales de uso (en adelante, “Política de Privacidad”) se
-        aplica
-        al software
-        denominado “Clic &amp; Fish” (en adelante “la
-        Aplicación”), constituido por una Aplicación Móvil y un Portal
-        Web. La Aplicación es titularidad de <span>AQUADATA,S.L.</span> con
-        domicilio Social en la Calle Las Carbazas 5, Rioseco de
-        Tapia, CP: 24275 León, (España), con Número de Identificación
-        Fiscal B24655037 e inscrita en el Registro Mercantil de León, en el
-        Tomo 1260, folio 77, hoja LE-22386. La compañía es titular del
-        dominio <span>clicandfish.com</span> su dirección de correo electrónico a efectos de comunicaciones
-        electrónicas de usuarios y terceros es info@clicandfish.com. El
-        hecho de utilizar la Aplicación supone la aceptación de la presente
-        Política de Privacidad. </p>
+    <p>
+        La presente política de privacidad y condiciones generales de uso (en adelante, “Política de Privacidad”) se
+        aplica al software denominado “Clic &amp; Fish” (en adelante “la Aplicación”), constituido por una Aplicación
+        Móvil y un Portal Web. La Aplicación es titularidad de <span>AQUADATA,S.L.</span> con domicilio Social en la
+        Calle Las Carbazas 5, Rioseco de Tapia, CP: 24275 León, (España), con Número de Identificación Fiscal B24655037
+        e inscrita en el Registro Mercantil de León, en el Tomo 1260, folio 77, hoja LE-22386. La compañía es titular
+        del dominio <span>clicandfish.com</span> su dirección de correo electrónico a efectos de comunicaciones
+        electrónicas de usuarios y terceros es info@clicandfish.com. El hecho de utilizar la Aplicación supone la
+        aceptación de la presente Política de Privacidad.
+    </p>
 
-    <p>Los
-        datos de carácter personal que nos proporcione serán objeto de
-        tratamiento automatizado e incorporados a los ficheros automatizados
-        de AQUADATA, S.L siendo esta Sociedad titular y responsable de sus
-        propios ficheros, los cuales, conforme a lo establecido en la Ley
-        Orgánica 15/1999 de 13 de diciembre, de Protección de datos de
-        carácter Personal (en adelante, &quot;LOPD&quot;), se
-        informa que todos los datos personales que el Usuario facilite a
-        través de este Sitio Web, incluyendo su dirección IP, serán
-        incorporados y tratados en los ficheros titularidad de AQUADATA para
-        posibilitar la prestación de los servicios solicitados por el
-        Usuario y mantenerle comercialmente informado, incluso por medios
-        electrónicos, sobre las novedades, productos y servicios de AQUADATA
-        y las sociedades de su grupo empresarial dedicadas a su mismo sector
-        de actividad. </p>
+    <p>
+        Los datos de carácter personal que nos proporcione serán objeto de tratamiento automatizado e incorporados a los
+        ficheros automatizados de AQUADATA, S.L siendo esta Sociedad titular y responsable de sus propios ficheros, los
+        cuales, conforme a lo establecido en la Ley Orgánica 15/1999 de 13 de diciembre, de Protección de datos de
+        carácter Personal (en adelante, &quot;LOPD&quot;), se informa que todos los datos personales que el Usuario
+        facilite a través de este Sitio Web, incluyendo su dirección IP, serán incorporados y tratados en los ficheros
+        titularidad de AQUADATA para posibilitar la prestación de los servicios solicitados por el Usuario y mantenerle
+        comercialmente informado, incluso por medios electrónicos, sobre las novedades, productos y servicios de
+        AQUADATA y las sociedades de su grupo empresarial dedicadas a su mismo sector de actividad.
+    </p>
 
-    <p>Si el Usuario no desea recibir este tipo de comunicaciones, puede indicarlo en cualquier momento mediante correo
-        electrónico dirigido a info@clicandfish.com. </p>
+    <p>
+        Si el Usuario no desea recibir este tipo de comunicaciones, puede indicarlo en cualquier momento mediante correo
+        electrónico dirigido a <a href="mailto:info@clicandfish.com">info@clicandfish.com</a>.
+    </p>
 
-    <h2>2. Datos solicitados y almacenados. Uso de los datos.</h2>
+    <h2>2. Datos solicitados y almacenados. Uso de los datos</h2>
 
-    <p>AQUADATA S.L. solicitará, recopilará y procesará cualquier dato facilitado
-        por el usuario. Desde
-        informaciones que el usuario introduce en la Aplicación a través de
-        cualquier formulario electrónico ya sea durante el proceso de
-        registro del usuario en la Aplicación o durante el registro o uso
-        diario de la misma, hasta datos que el usuario ha introducido al
-        formar parte de redes sociales, concursos, promociones o encuestas.
-        También al ponerse en contacto con nosotros por teléfono, correo
-        electrónico o de cualquier otra forma, así como cuando nos informen
-        de algún problema en la Aplicación.
+    <p>
+        AQUADATA S.L. solicitará, recopilará y procesará cualquier dato facilitado por el usuario. Desde informaciones
+        que el usuario introduce en la Aplicación a través de cualquier formulario electrónico ya sea durante el proceso
+        de registro del usuario en la Aplicación o durante el registro o uso diario de la misma, hasta datos que el
+        usuario ha introducido al formar parte de redes sociales, concursos, promociones o encuestas. También al ponerse
+        en contacto con nosotros por teléfono, correo electrónico o de cualquier otra forma, así como cuando nos
+        informen de algún problema en la Aplicación.
     </p>
 
     <p>En concreto, AQUADATA S.L. recaba y/o almacena los siguientes datos que se indican a continuación.</p>
 
-    <p>1. Durante el proceso de registro y alta de usuario, AQUADATA, S.L. puede
-        recabar y almacenar información personal de cada usuario de la
-        Aplicación, necesaria para la prestación del servicio, verificación
-        de su identidad y evitar el uso no autorizado. Estos datos también
-        podrán ser utilizados para responder a cualquier comentario,
-        solicitud, consulta o pregunta de los usuarios. Nos referimos a: </p>
+    <p>
+        1. Durante el proceso de registro y alta de usuario, AQUADATA, S.L. puede recabar y almacenar información
+        personal de cada usuario de la Aplicación, necesaria para la prestación del servicio, verificación de su
+        identidad y evitar el uso no autorizado. Estos datos también podrán ser utilizados para responder a cualquier
+        comentario, solicitud, consulta o pregunta de los usuarios. Nos referimos a:
+    </p>
 
-    <p> a) Usuario</p>
+    <ol>
+        <li>Usuario</li>
+        <li>Contraseña</li>
+        <li>Correo electrónico</li>
+        <li>Identificador del terminal</li>
+        <li>Número de teléfono</li>
+    </ol>
 
-    <p> b) Contraseña</p>
-
-    <p> c) Correo electrónico</p>
-
-    <p> d) Identificador del terminal</p>
-
-    <p> e) Número de teléfono</p>
-
-    <p> 2. Durante la navegación y uso de la Aplicación, AQUADATA S.L. puede recabar y
+    <p>
+        2. Durante la navegación y uso de la Aplicación, AQUADATA S.L. puede recabar y
         almacenar información de su dispositivo para generar estadísticas
         de uso que permitan mejorar los productos o servicios y dar un mejor
         servicio, así como para operaciones de soporte y mantenimiento. Nos
-        referimos a: </p>
-
-    <p>a) El tipo y versión del Sistema Operativo </p>
-
-    <p> b) La dirección de Protocolo de Internet (“IP”) del dispositivo </p>
-
-    <p> c) El tipo de dominio </p>
-
-    <p> d) El tipo de navegador </p>
-
-    <p> e) Idioma </p>
-
-    <p> f) La marca y modelo de Smartphone/Tablet </p>
-
-    <p> g) Los datos de geolocalización del dispositivo </p>
-
-    <p> h) Los datos de uso de la Aplicación por parte de los usuarios. Se
-        podrá recabar información anónima sobre el uso de la Aplicación
-        con objeto de mejorar la calidad, fiabilidad y rendimiento de la
-        aplicación. </p>
-
-    <p> 3. Para el mantenimiento y seguimiento de la atención al usuario
-        AQUADATA S.L. puede mantener un registro de la correspondencia que
-        este haya mantenido AQUADATA S.L.. </p>
-
-    <p>4. Las respuestas del Usuario a encuestas o cuestionarios, como
-        evaluaciones sobre los servicios que comparta con otros miembros de
-        la comunidad podrán ser empleados para fines de análisis y estudio
-        de las conductas de los usuarios. </p>
-
-    <p> 5. Información que se pueda solicitar al Usuario cuando este informe
-        acerca de un problema con la Aplicación, como, por ejemplo, la causa
-        de tu solicitud de asistencia. </p>
-
-    <p> 6. Si el Usuario se registra a través de los métodos de autenticación de
-        redes sociales, una
-        vez registrado a través de la aplicación móvil o de las redes
-        sociales,
-        AQUADATA,
-        S.L tendrá acceso a ciertos datos personales (p. ej. nombre,
-        apellidos, foto, correo electrónico, número de amigos en Facebook,
-        etc.) de su cuenta en dicha red social, de acuerdo con los términos
-        y condiciones recogidos
-        en este articulado.
-
+        referimos a:
     </p>
 
-    <h2>3. Consentimiento sobre la incorporación de datos de carácter personal.</h2>
+    <ol>
+        <li>El tipo y versión del Sistema Operativo</li>
+        <li>La dirección de Protocolo de Internet (“IP”) del dispositivo</li>
+        <li>El tipo de dominio</li>
+        <li>El tipo de navegador</li>
+        <li>Idioma</li>
+        <li>La marca y modelo de Smartphone/Tablet</li>
+        <li>Los datos de geolocalización del dispositivo</li>
+        <li>Los datos de uso de la Aplicación por parte de los usuarios. Se
+            podrá recabar información anónima sobre el uso de la Aplicación
+            con objeto de mejorar la calidad, fiabilidad y rendimiento de la
+            aplicación.
+        </li>
+    </ol>
+
+    <p>
+        3. Para el mantenimiento y seguimiento de la atención al usuario
+        AQUADATA S.L. puede mantener un registro de la correspondencia que
+        este haya mantenido AQUADATA S.L.
+    </p>
+
+    <p>
+        4. Las respuestas del Usuario a encuestas o cuestionarios, como
+        evaluaciones sobre los servicios que comparta con otros miembros de
+        la comunidad podrán ser empleados para fines de análisis y estudio
+        de las conductas de los usuarios.
+    </p>
+
+    <p>
+        5. Información que se pueda solicitar al Usuario cuando este informe
+        acerca de un problema con la Aplicación, como, por ejemplo, la causa
+        de tu solicitud de asistencia.
+    </p>
+
+    <p>
+        6. Si el Usuario se registra a través de los métodos de autenticación de redes sociales, una vez registrado a
+        través de la aplicación móvil o de las redes sociales,AQUADATA,S.L tendrá acceso a ciertos datos personales (p.
+        ej. nombre, apellidos, foto, correo electrónico, número de amigos en Facebook, etc.) de su cuenta en dicha red
+        social, de acuerdo con los términos y condiciones recogidos en este articulado.
+    </p>
+
+    <h2>3. Consentimiento sobre la incorporación de datos de carácter personal</h2>
 
     <p> 3.1. AQUADATA S.L. informa a los usuarios que cumple con la normativa de
         protección de datos vigente y, en concreto, con la Ley Orgánica
@@ -289,7 +271,7 @@
         de facilitar los datos personales de registro. </p>
 
 
-    <h2>4. Veracidad de los Datos facilitados.</h2>
+    <h2>4. Veracidad de los Datos facilitados</h2>
 
     <p> 4.1. El Usuario manifiesta que todos los datos facilitados por él durante
         el proceso de Registro son ciertos y correctos, y se compromete a
@@ -313,7 +295,7 @@
         del carácter obligatorio y/o necesario de la entrega de los datos
         para el funcionamiento del servicio. </p>
 
-    <h2>5. Consentimiento sobre la cesión de Datos de carácter personal.</h2>
+    <h2>5. Consentimiento sobre la cesión de Datos de carácter personal</h2>
 
     <p>5.1. El Usuario asume, admite que conoce y consiente que AQUADATA S.L., al
         amparo de lo dispuesto en el artículo 21 del Real Decreto 1720/2007,
@@ -368,7 +350,7 @@
     <p> f) Cuando AQUADATA, S.L., o partes de SU negocio sean vendidas o
         transferidas a, fusionadas con, o adquiridas por, un tercero. </p>
 
-    <h2>6. Derechos del Usuario.</h2>
+    <h2>6. Derechos del Usuario</h2>
 
     <p> 6.1. El Usuario tiene derecho a oponerse al tratamiento de cualquiera de
         sus datos que no sean imprescindibles para la celebración del
@@ -399,7 +381,7 @@
         periodo que marquen las obligaciones legalmente establecidas al
         efecto y sólo para dar cumplimiento a exigencias legales. </p>
 
-    <h2>7. Remisión de Ofertas y/o Comunicaciones.</h2>
+    <h2>7. Remisión de Ofertas y/o Comunicaciones</h2>
 
     <p> 7.1. En cumplimiento de la Ley 34/2002 de Servicios de la Sociedad de la
         Información y Comercio Electrónico, AQUADATA S.L. exclusivamente
@@ -447,7 +429,7 @@
         exactitud, confiabilidad, no infracción u operación ininterrumpida
         y/o acceso. </p>
 
-    <h2>9. Reutilización de los datos.</h2>
+    <h2>9. Reutilización de los datos</h2>
 
     <p> Algunos
         de los datos empleados para la elaboración de la información
@@ -458,7 +440,7 @@
         datos, se podrá resolver enviando un correo electrónico a
         info@clicandfish.com. </p>
 
-    <h2>10. Enlaces.</h2>
+    <h2>10. Enlaces</h2>
 
     <p> 10.1. Enlaces a otros Sitios Web/Aplicaciones: En la Aplicación, el
         Usuario podrá encontrar enlaces a otros sitios web/aplicaciones
@@ -519,7 +501,7 @@
         productos y servicios, sus propios enlaces y/o cualquiera de sus
         contenidos, en general. </p>
 
-    <h2>11. Propiedad intelectual.</h2>
+    <h2>11. Propiedad intelectual</h2>
 
     <p> Todos los contenidos incluidos dentro de la Aplicación, entendiendo por
         estos a título meramente enunciativo los textos, imágenes,
@@ -590,7 +572,7 @@
         equipos informáticos del usuario porque éste haya accedido a la
         Aplicación o la haya utilizado de forma indebida o negligente. </p>
 
-    <h2>13. Modificación de la Política de Privacidad.</h2>
+    <h2>13. Modificación de la Política de Privacidad</h2>
 
     <p>13.1. La presente Política de Privacidad podrá ser modificada, alterada
         y/o sustituida, en cualquier momento, como consecuencia de posibles
@@ -617,7 +599,7 @@
         considera que acepta los términos y condiciones de la Política de
         Privacidad actualizada. </p>
 
-    <h2>14. Generalidades.</h2>
+    <h2>14. Generalidades</h2>
 
     <p> 14.1. El Usuario se compromete expresamente a indemnizar a AQUADATA S.L. y
         al resto de sociedades de su grupo, empleados, administradores,
@@ -658,43 +640,53 @@
         inaplicación no afectará a las otras disposiciones de la Política
         de Privacidad. </p>
 
-    <p> 14.6. El no ejercicio o ejecución por parte de AQUADATA S.L. de cualquier
+    <p>
+        14.6. El no ejercicio o ejecución por parte de AQUADATA S.L. de cualquier
         derecho o disposición contenida en esta Política de Privacidad no
         constituirá una renuncia al mismo, salvo reconocimiento y acuerdo
-        por escrito por su parte. </p>
+        por escrito por su parte.
+    </p>
 
-    <h2>15. Comentarios o preguntas.</h2>
+    <h2>15. Comentarios o preguntas</h2>
 
-    <p> Si usted tiene algún comentario, solicitud, consulta, o pregunta sobre
+    <p>
+        Si usted tiene algún comentario, solicitud, consulta, o pregunta sobre
         esta Política de Privacidad o el uso de cualquier Información
         Personal, póngase en contacto con AQUADATA S.L. en
-        info@clicandfish.com. </p>
+        info@clicandfish.com.
+    </p>
 
-    <h2>16. Renuncia a demanda colectiva.</h2>
+    <h2>16. Renuncia a demanda colectiva</h2>
 
-    <p> En la medida que lo permita la ley vigente, el Usuario y AQUADATA S.L.
+    <p>
+        En la medida que lo permita la ley vigente, el Usuario y AQUADATA S.L.
         acuerdan poder iniciar una demanda en contra del otro solamente a
         título personal, no como demandante o demandado colectivo, en
         ninguna demanda colectiva o de representación. Salvo que el Usuario
         y AQUADATA S.L. lo dispongan, ningún árbitro ni juez puede acumular
         más de una reclamación presentada por una persona ni presidir sobre
-        ninguna demanda colectiva o de representación. </p>
+        ninguna demanda colectiva o de representación.
+    </p>
 
-    <h2>17. Ley aplicable y jurisdicción competente.</h2>
+    <h2>17. Ley aplicable y jurisdicción competente</h2>
 
-    <P>El presente condicionado queda sujeto a la ley española, siendo ésta
+    <P>
+        El presente condicionado queda sujeto a la ley española, siendo ésta
         de aplicación en cuanto a su interpretación, modificación, efectos
-        y extinción. </p>
+        y extinción.
+    </p>
 
-    <P>Las Partes, con renuncia de cualquier otro fuero que pudiera
-        corresponderles, se someten para ;cualquier litigio, reclamación
+    <P>
+        Las Partes, con renuncia de cualquier otro fuero que pudiera
+        corresponderles, se someten para cualquier litigio, reclamación
         o procedimiento relativo a este Acuerdo, a los Juzgados y Tribunales
-        de León>. </p>
+        de León.
+    </p>
 
 
-    <h1 id="condiUso">CONDICIONES DE USO </h1>
+    <h1 id="condicionesUso">CONDICIONES DE USO </h1>
 
-    <h2>1. Cuestiones Generales.</h2>
+    <h2>1. Cuestiones Generales</h2>
 
     <p>En el caso de que el Usuario proceda a su registro para la contratación
         o adquisición de un servicio ofrecido en la Aplicación , el Usuario
@@ -763,7 +755,7 @@
         forma indebida o negligente.
     </p>
 
-    <h2>2. Registro en la Aplicación.</h2>
+    <h2>2. Registro en la Aplicación</h2>
 
     <p>Una vez registrado, el Usuario tendrá derecho a tener instalada la
         Aplicación en un solo terminal. Si el usuario necesitara utilizar
@@ -771,7 +763,7 @@
         dirección de correo electrónico: info@clicandfish.com.
     </p>
 
-    <h2>3. Objeto.</h2>
+    <h2>3. Objeto</h2>
 
     <p>AQUADATA, S.L le ofrece los servicios que se anuncian en la Aplicación ,
         conforme a lo establecido en las siguientes condiciones generales de
@@ -840,7 +832,7 @@
         exactitud, confiabilidad, no infracción u operación ininterrumpida
         y/o acceso. </p>
 
-    <h2>5. Entrada en vigor.</h2>
+    <h2>5. Entrada en vigor</h2>
 
     <p>Las presentes Condiciones Generales entrarán en vigor en el momento en
         el que el Usuario visite, descargue, se registre y/o acceda a la
@@ -856,7 +848,7 @@
         disposición de los usuarios con carácter previo a su posible
         contratación por parte de éstos. </p>
 
-    <h2>6.Precio y formas de pago.</h2>
+    <h2>6.Precio y formas de pago</h2>
 
     <p>El precio de cada uno de los servicios contratados vendrá determinado
         de manera clara en la Aplicación en la que será exhibido y se
@@ -869,7 +861,7 @@
         favor de AQUADATA, S.L.
     </p>
 
-    <h2>7. Periodo de prueba.</h2>
+    <h2>7. Periodo de prueba</h2>
 
     <P>7.1 La descarga y registro de la Aplicación constituye una suscripción al
         servicio que comienza con una prueba gratuita. El período de prueba
@@ -897,19 +889,19 @@
         totalidad de los servicios y datos que ofrece la aplicación será
         necesario proceder al contrato y pago del servicio de acceso a datos
         en cualquiera de sus dos modalidades: mensual o por temporada, o en
-        su caso a otras promociones. </p>
+        su caso a otras promociones.</p>
 
     <p>Una vez transcurrido el periodo de prueba si el usuario no realiza el
         contrato y pago acogiéndose a la modalidad de suscripción mensual o
         por temporada, o una vez finalizadas estas, el usuario sólo podrá
         usar la aplicación de forma limitada. </p>
 
-    <h2>8. Protección de datos.</h2>
+    <h2>8. Protección de datos</h2>
 
     <p>Remisión al texto sobre este particular en APARTADO nº 3: Aviso legal y
         Política de privacidad </p>
 
-    <h2>9.Notificaciones y preavisos.</h2>
+    <h2>9.Notificaciones y preavisos</h2>
 
     <p>Cualquier notificación o preaviso por cualquiera de las partes deberá
         remitirse por cualquier método que permita creer razonablemente que
@@ -919,7 +911,7 @@
     <p>Las notificaciones que el usuario o adquirente remita a AQUADATA, S.L
         podrá hacerlo a la siguiente dirección: info@clicandfish.com. </p>
 
-    <h2>10. Invalidez y nulidad parcial.</h2>
+    <h2>10. Invalidez y nulidad parcial</h2>
 
     <p>Si alguna de las disposiciones de este contrato fuera considerada nula o
         inaplicable (en su totalidad o en parte) por cualquier juzgado,
@@ -927,11 +919,11 @@
         inaplicación no afectará a las otras disposiciones del contrato,
         las cuales conservarán toda su vigencia. </p>
 
-    <h2>11.Ley aplicable y jurisdicción competente.</h2>
+    <h2>11.Ley aplicable y jurisdicción competente</h2>
 
     <P>El presente condicionado queda sujeto a la ley española, siendo ésta
         de aplicación en cuanto a su interpretación, modificación, efectos
-        y extinción. </p>
+        y extinción.</p>
 
     <P> Las Partes, con renuncia de cualquier otro fuero que pudiera
         corresponderles, se someten para cualquier litigio, reclamación
@@ -939,11 +931,11 @@
         de León. </p>
 
     <P>El usuario declara haber leído, conocer y aceptar las presentes
-        condiciones en toda su extensión. </p>
+        condiciones en toda su extensión.</p>
 
     <p id="copyright">Copyright © AQUADATA, S.L Todos los derechos reservados. Prohibida su
         reproducción total o parcial. 2017.
     </p>
-</div>
+</section>
 </body>
 </html>

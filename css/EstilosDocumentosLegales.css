@@ -1,0 +1,155 @@
+/*-------------------- Estilos generales --------------------*/
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 5%;
+    font-family: 'Roboto', arial, sans-serif;
+}
+
+h1 {
+    margin-bottom: 5%;
+    text-align: center;
+    font-size: 3vw;
+    color: #5E8633;
+    text-decoration: underline;
+}
+
+h2 {
+    margin-top: 5%;
+    font-size: 2.5vw;
+    color: #5E8633;
+}
+
+p {
+    text-align: justify;
+    font-size: 2vw;
+    line-height: 2.5vw;
+}
+
+span {
+    font-weight: bold;
+}
+
+a {
+    color: #5E8633;
+}
+
+ol {
+    font-size: 2vw;
+    list-style-type: lower-latin;
+}
+
+li {
+    margin: 0.25% 0;
+}
+
+#copyright {
+    margin-top: 10%;
+    font-size: 1.9vw;
+    font-style: italic;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3.5vw;
+    }
+
+    h2 {
+        font-size: 3vw;
+    }
+
+    p {
+        font-size: 2.5vw;
+        line-height: 3vw;
+    }
+
+    ol {
+        font-size: 2.5vw;
+    }
+}
+
+@media (max-width: 426px) {
+    h1 {
+        font-size: 4vw;
+    }
+
+    h2 {
+        font-size: 3.5vw;
+    }
+
+    p {
+        font-size: 3vw;
+        line-height: 3.5vw;
+    }
+
+    ol {
+        font-size: 3vw;
+    }
+}
+
+/*-------------------- Política de privacidad --------------------*/
+#menuCondiciones {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#menuCondiciones h1 {
+    margin: 0;
+    font-size: 5vw;
+    color: #5E8633;
+    text-decoration: none;
+}
+
+#menuCondiciones p {
+    margin: 5% 10%;
+}
+
+#menuCondiciones section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.Boton {
+    text-decoration: none;
+}
+
+.Boton input {
+    padding: 1vw;
+    background: transparent;
+    color: #5E8633;
+    border-color: #5E8633;
+    border-radius: 2vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+.Boton input:hover {
+    background: #5E8633;
+    color: #ffffff;
+}
+
+#botonIzquierdo {
+    margin-right: 5%;
+}
+
+@media (max-width: 768px) {
+    #menuCondiciones h1 {
+        font-size: 5.5vw;
+    }
+}
+
+@media (max-width: 426px) {
+    #menuCondiciones h1 {
+        font-size: 6vw;
+    }
+}
