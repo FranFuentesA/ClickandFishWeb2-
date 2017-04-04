@@ -140,6 +140,7 @@
     }
 
     #btnNav {
+        display:none;  /*---- Botón deshabilitado temporalmente ---*/
         position: absolute;
         right: 5.25%;
         padding-top: 2.75%;
@@ -147,6 +148,7 @@
     }
 
     #btnidioma {
+        display:none;  /*---- Botón deshabilitado temporalmente ---*/
         position: absolute;
         right: 14.25%;
         padding-top: 4.5%;
@@ -162,6 +164,7 @@
     }
 
     #btnNavScroll{
+        display:none;  /*---- Botón deshabilitado temporalmente ---*/
         position: absolute;
         right: 5.25%;
         padding-top: 2.75%;
@@ -169,6 +172,7 @@
     }
 
     #btnidiomaScroll{
+        display:none;  /*---- Botón deshabilitado temporalmente ---*/
         position: absolute;
         right: 14.25%;
         padding-top: 4.5%;
