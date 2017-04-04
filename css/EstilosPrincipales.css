@@ -10,401 +10,492 @@ body {
 /*-------------------- HEADER --------------------*/
 .Portada {
     position: relative;
-    margin-bottom: 3%;
+    margin-bottom: 5%;
 }
 
-#nav {
-    background-color: white;
-    position: absolute;
-    height: 21.5%;
-    width: 100%;
-    display: none;
-}
+    #btnNav {
+        display:none;  /*---- Botón deshabilitado temporalmente ---*/
+        position: absolute;
+        right: 5.25%;
+        padding-top: 2.75%;
+        width: 7.25%;
+    }
 
-#idioma {
-    position: absolute;
-    right: 13%;
-    top: 7%;
-    font-size: 3vw;
-    font-weight: bold;
-    color: white;
-
-    /* Se ocultará el botón de manera temporal */
-    /*
-    display: none;
-    */
-}
-
-#logo {
-    position: absolute;
-    left: 4.5%;
-    top: 6.75%;
-    width: 25.75%;
-}
-
-#botonNavegacion {
-    position: absolute;
-    right: 5.25%;
-    top: 5.75%;
-    height: 10.25%;
-    width: auto;
-
-    /* Se ocultará el botón de manera temporal */
-    /*
-    display: none;
-    */
-}
-
-#fondo {
-    width: 100%;
-}
-
-#movil {
-    position: absolute;
-    left: 2%;
-    bottom: -5%;
-    width: 30%;
-    height: auto;
-}
-
-@media (max-width: 940px) {
-    #idioma {
-        top: 9%;
-        right: 17%;
-        font-size: 4.5vw;
+    #btnidioma {
+        display:none;  /*---- Botón deshabilitado temporalmente ---*/
+        position: absolute;
+        right: 14.25%;
+        padding-top: 4.5%;
+        font-size: 3vw;
+        color: #ffffff;
     }
 
     #logo {
-        content: url("../img/logo@2x.png");
-        width: 50%;
+        position: absolute;
+        left: 4.5%;
+        padding-top: 3.75%;
+        width: 25.75%;
     }
 
-    #botonNavegacion {
-        content: url("../img/menu_despl@2x.png");
-        top: 6.75%;
-        height: 11%;
+    #btnNavScroll{
+        display:none;  /*---- Botón deshabilitado temporalmente ---*/
+        position: absolute;
+        right: 5.25%;
+        padding-top: 2.75%;
+        width: 7.25%;
     }
+
+    #btnidiomaScroll{
+        display:none;  /*---- Botón deshabilitado temporalmente ---*/
+        position: absolute;
+        right: 14.25%;
+        padding-top: 4.5%;
+        font-size: 3vw;
+        color: #000000;
+    }
+
+    #logoScroll{
+        position: absolute;
+        left: 4.5%;
+        padding-top: 3.75%;
+        width: 25.75%;
+    }
+
+    .menu {
+        position:relative;
+        display: block;
+        background-color: transparent;
+        z-index:1;
+        top:0;
+        height: 24%;
+        width:100%;
+    }
+
+    .menu-fixed{
+        display: none;
+    }
+
+    .menuScroll{
+        display: none;
+    }
+
+    .menuScroll-fixed{
+        position:fixed;
+        display: block;
+        background-color: #ffffff;
+        z-index:1;
+        top:0;
+        height: 5em;
+        width:100%;
+    }
+
+    .menu-fixed {
+        position:fixed;
+        display: block;
+        background-color: #ffffff;
+        z-index:1;
+        top:0;
+        height: 6em;
+        width:100%;
+    }
+
+    .ocultarSi{
+        display: none;
+        background: transparent;
+    }
+
+    /* ----------------------------------------------*/
 
     #fondo {
-        content: url("../img/portadaAlargada.jpg");
+        width: 100%;
     }
 
-    #movil {
+    #telefono {
+        position: absolute;
+        left: 2%;
         bottom: -5%;
-        width: 45%;
-        content: url("../img/mockup@2x.png");
-    }
-}
-
-@media (max-width: 480px) {
-    #nav {
-        display: block;
+        width: 30%;
+        height: auto;
     }
 
+    @media (max-width: 940px) {
+
+        #btnidioma  {
+            padding-top: 6.5%;
+            right: 19%;
+            font-size: 1.7em;
+        }
+
+        #logo {
+            content: url("../img/logo@2x.png");
+            width: 50%;
+        }
+
+        #btnNav {
+            content: url("../img/menu_despl@2x.png");
+            padding-top: 4%;
+            width: 11%;
+        }
+
+        #logoScroll{
+            width: 50%;
+        }
+
+        #btnNavScroll{
+            content: url("../img/menu_despl@2x.png");
+            padding-top: 4%;
+            width: 11%;
+        }
+
+        #btnidiomaScroll{
+            padding-top: 6.5%;
+            right: 19%;
+            font-size: 1.7em;
+        }
+
+        #fondo {
+            content: url("../img/portadaAlargada.jpg");
+        }
+
+        #telefono {
+            bottom: -5%;
+            width: 45%;
+            content: url("../img/mockup@2x.png");
+        }
+    } @media (max-width: 640px) {
     #idioma {
-        top: 9.25%;
-        font-size: 5vw;
+        top: 8.5%;
+    }
+} @media (max-width: 480px) {
+
+    .menu-fixed{
+        height: 10%;
+    }
+
+    #btnidioma {
         color: black;
+        top: 10%;
     }
 
     #logo {
         content: url("../img/logo-color.png");
     }
 
-    #botonNavegacion {
-        height: 12%;
+    #btnNav {
+        width: 12%;
     }
+
+    .menu{
+        background-color: #ffffff;
+    }
+
+    /*-----------------------------------*/
+    .btnNavScroll{
+        width: 12%;
+    }
+
+    .btnidiomaScroll{
+
+    }
+
+    .logoScroll{
+
+    }
+
 }
 
-.Referencias {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    flex-basis: 100%;
-}
-
-.Eslogan {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-basis: 65%;
-}
-
-.Eslogan h1 {
-    text-align: center;
-    font-size: 4vw;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: rgb(92, 92, 92);
-}
-
-.Eslogan p {
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.35vw;
-    font-style: italic;
-    color: rgb(94, 134, 51);
-}
-
-.Tiendas {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    flex-basis: 35%;
-}
-
-#android {
-    width: 35%;
-    height: auto;
-    margin-right: 5%;
-}
-
-#android img {
-    width: 100%;
-}
-
-#iOS {
-    width: 40%;
-    height: auto;
-}
-
-@media (max-width: 1280px) {
-    .Eslogan {
-        flex-basis: 100%;
+    .Referencias {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
         width: 100%;
-        margin-bottom: 4%;
+    }
+
+    .Eslogan {
+        flex-basis: 50%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .Eslogan h1 {
-        margin: 2% 15%;
-        font-size: 8vw;
+        color: rgb(92, 92, 92);
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.5em;
+        text-align: center;
     }
 
     .Eslogan p {
-        margin: 0 10%;
-        font-size: 2.5vw;
+        font-style: italic;
+        color: rgb(94, 134, 51);
+        font-weight: bold;
+        font-size: 0.5em;
+        text-align: center;
     }
 
     .Tiendas {
-        justify-content: center;
-        flex-basis: 100%;
-        width: 100%;
+        flex-basis: 50%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
     }
 
     #android {
-        width: 20%;
-        margin-right: 5%;
-    }
-
-    #iOS {
-        width: 23%;
-    }
-}
-
-.CompartirRedesSociales {
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    margin: 5% 0;
-}
-
-.CompartirRedesSociales p {
-    display: none;
-}
-
-.CompartirRedesSociales div, .CompartirRedesSociales a {
-    margin: 0 2%;
-}
-
-@media (max-width: 480px) {
-    .CompartirRedesSociales p {
-        display: none;
-    }
-}
-
-/*-------------------- SECCIÓN 1 --------------------*/
-/*----- FUENTES -----*/
-.claseTemporal h1 {
-    font-family: 'Roboto-Black', arial, serif;
-}
-
-.titulosSeccionP h2 {
-    font-family: 'Roboto-MediumItalic', arial, serif;
-}
-
-.tituloDeSeccion1 h1, .tituloDeSeccion2 p {
-    font-family: 'Roboto-Black', arial, serif;
-}
-
-.titulosSeccionP {
-    height: 110px;
-    margin: 10% 0;
-}
-
-.tituloDeSeccion1 {
-    background-color: #5E8633;
-    text-align: center;
-    font-weight: 900;
-    color: #ffffff !important;
-    height: 160px;
-    margin-bottom: 2.5%;
-    width: 100%;
-}
-
-.tituloDeSeccion1 h1 {
-    color: #ffffff;
-    font-size: 50pt;
-    line-height: 160px;
-}
-
-/*----- DIVISIONES -----*/
-.tituloDeSeccion2 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-top: 6%;
-    padding-bottom: 5%;
-}
-
-.espacio1, .espacio2, .espacio3, .espacio4 {
-    line-height: 30px;
-    vertical-align: top;
-    color: #B5B4B4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2.5% 0;
-
-}
-
-.espacio1 p, .espacio2 p, .espacio3 p, .espacio4 p {
-    text-align: justify;
-    display: inline-block;
-    max-height: 10%;
-    padding: 0 15%;
-    font-size: 18pt;
-}
-
-.containerSeccion1 h2 {
-    list-style: none;
-    color: #5E8533;
-    text-align: center;
-    font-weight: 900;
-}
-
-.containerSeccion1 {
-    padding: 2.5%;
-}
-
-/*----- LOGOS -----*/
-.logoSecP1, .logoSecP3, .logoSecP4 {
-    position: relative;
-    width: auto;
-    height: 200px;
-}
-
-.logoSecP2 {
-    position: relative;
-    width: auto;
-    height: 200px;
-}
-
-@media(max-width: 992px){
-    .titulosSeccionP {
-        margin: 5% 0;
-    }
-}
-
-/*-------------------- SECCIÓN 2 --------------------*/
-.tituloDeSeccion2 div {
-    background-color: #E7E7E7;
-    text-align: center;
-    font-weight: 900;
-    font-size: 50pt !important;
-    color: #5E8633;
-    margin-left: 1%;
-}
-
-.tituloDeSeccion2 h1 {
-    line-height: 160px;
-    color: #5E8633 !important;
-    font-size: 50pt;
-}
-
-.seccionSegunda2 .row {
-    margin-left: 2%;
-}
-
-.logoSecS1, .logoSecS2, .logoSecS3 {
-    width: 90%;
-    height: auto;
-    display: block;
-    text-align: center;
-    margin-bottom: 10%;
-}
-
-.seccionSegunda2 {
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    background-color: #E7E7E7;
-    margin-bottom: 1%;
-}
-
-.container2{
-    display:flex;
-    flex-flow:row wrap;
-    align-items:center;
-    justify-content:center;
-
-}
-
-.espacio5, .espacio6, .espacio7{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    background-color: #E7E7E7;
-    margin-bottom: 1%;
-    flex-basis: 30%;
-    width: 30%;
-}
-
-.container2 h3 {
-    color: #5E8533;
-    text-align: center;
-    font-weight: 900;
-    margin-bottom: 5%;
-}
-
-@media (max-width: 1200px) {
-
-    .logoSecS1, .logoSecS2, .logoSecS3 {
-        /*position: absolute;  podría ser relative */
-        width: 600px;
+        width: 35%;
         height: auto;
-        left: 100px;
-        top: 50px;
-        margin: 0 20% 10%;
     }
 
-    .espacio5, .espacio6, .espacio7{
-        flex-basis: 100%;
+    #android img {
         width: 100%;
     }
 
-}
+    #iOS {
+        width: 40%;
+        height: auto;
+    }
 
-@media (max-width: 1440px) {
+    @media (max-width: 1280px) {
+        .Eslogan {
+            flex-basis: 100%;
+            width: 100%;
+            margin-bottom: 4%;
+        }
+
+        .Eslogan h1 {
+            font-size: 3em;
+        }
+
+        .Eslogan p {
+            font-size: 1.5em;
+        }
+
+        .Tiendas {
+            justify-content: center;
+            flex-basis: 100%;
+            width: 100%;
+        }
+
+        #android {
+            width: 20%;
+            margin-right: 5%;
+        }
+
+        #iOS {
+            width: 23%;
+        }
+    }
+
+    .CompartirRedesSociales {
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        margin: 5% 0;
+    }
+
+    .CompartirRedesSociales p {
+        display: none;
+    }
+
+    .CompartirRedesSociales div, .CompartirRedesSociales a {
+        margin: 0 2%;
+    }
+
+    @media (max-width: 480px) {
+        .CompartirRedesSociales p {
+            display: none;
+        }
+    } /*-------------------- SECCIÓN 1 --------------------*/
+    /*----- FUENTES -----*/
+    .claseTemporal h1 {
+        font-family: 'Roboto-Black', arial, serif;
+    }
+
+    .titulosSeccionP h2 {
+        font-family: 'Roboto-MediumItalic', arial, serif;
+    }
+
+    .tituloDeSeccion1 h1, .tituloDeSeccion2 p {
+        font-family: 'Roboto-Black', arial, serif;
+    }
+
+    .titulosSeccionP {
+        height: 200px;
+        overflow: hidden;
+        display: inline-block;
+
+    }
+
+    .tituloDeSeccion1 {
+        background-color: #5E8633;
+        text-align: center;
+        font-weight: 900;
+        color: #ffffff !important;
+        height: 160px;
+        margin-bottom: 2.5%;
+        width: 100%;
+    }
+
+    .tituloDeSeccion1 h1 {
+        color: #ffffff;
+        font-size: 50pt;
+        line-height: 160px;
+    }
+
+    /*----- DIVISIONES -----*/
+    .tituloDeSeccion2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /*****************************/
+
+    #tt2l1 {
+        padding-top: 26%;
+    }
+
+    #tt2l2 {
+        padding-bottom: 20%;
+    }
+
+    /*****************************/
+
+    .espacio1, .espacio2, .espacio3, .espacio4 {
+        line-height: 30px;
+        vertical-align: top;
+        color: #B5B4B4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2.5% 0;
+
+    }
+
+    .espacio1 p, .espacio2 p, .espacio3 p, .espacio4 p {
+        text-align: justify;
+        display: inline-block;
+        max-height: 10%;
+        padding: 0 15%;
+        font-size: 18pt;
+    }
+
+    .containerSeccion1 h2 {
+        list-style: none;
+        color: #5E8533;
+        text-align: center;
+        font-weight: 900;
+        padding: 5%;
+    }
+
+    .containerSeccion1 {
+        padding: 2.5%;
+    }
+
+    /*----- LOGOS -----*/
+    .logoSecP1, .logoSecP3, .logoSecP4 {
+        position: relative;
+        width: auto;
+        height: 200px;
+    }
+
+    .logoSecP2 {
+        position: relative;
+        width: auto;
+        height: 200px;
+    }
+
+    @media (max-width: 992px) {
+        .titulosSeccionP {
+            margin: 5% 0;
+        }
+    } /*-------------------- SECCIÓN 2 --------------------*/
+    .tituloDeSeccion2 div {
+        background-color: #E7E7E7;
+        text-align: center;
+        font-weight: 900;
+        font-size: 50pt !important;
+        color: #5E8633;
+        margin-left: 1%;
+    }
+
+    .tituloDeSeccion2 h1 {
+        line-height: 160px;
+        color: #5E8633 !important;
+        font-size: 50pt;
+    }
+
+    .seccionSegunda2 .row {
+        margin-left: 2%;
+    }
+
+    .logoSecS1, .logoSecS2, .logoSecS3 {
+        width: 90%;
+        height: auto;
+        display: block;
+        text-align: center;
+        padding-bottom: 10%;
+    }
+
+    .seccionSegunda2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #E7E7E7;
+        margin-bottom: 1%;
+    }
+
+    .container2 {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .espacio5, .espacio6, .espacio7 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #E7E7E7;
+        margin-bottom: 1%;
+        flex-basis: 30%;
+        width: 30%;
+    }
+
+    .container2 h3 {
+        color: #5E8533;
+        text-align: center;
+        font-weight: 900;
+        margin-bottom: 5%;
+    }
+
+    @media (max-width: 1200px) {
+
+        .logoSecS1, .logoSecS2, .logoSecS3 {
+            /*position: absolute;  podría ser relative */
+            width: 600px;
+            height: auto;
+            left: 100px;
+            top: 50px;
+            margin: 0 20% 10%;
+        }
+
+        .espacio5, .espacio6, .espacio7 {
+            flex-basis: 100%;
+            width: 100%;
+        }
+
+    } @media (max-width: 1440px) {
     .tituloDeSeccion2 h1, .tituloDeSeccion1 h1 {
         font-size: 40pt;
     }
-}
-
-@media (max-width: 991px) {
+} @media (max-width: 991px) {
 
     .logoSecP1, .logoSecP3 {
         position: relative;
@@ -469,9 +560,7 @@ body {
         content: url("../img/comunidad@2x.png");
     }
 
-}
-
-@media (max-width: 767px) {
+} @media (max-width: 767px) {
 
     .tituloDeSeccion1 {
         height: 80px;
@@ -514,7 +603,7 @@ body {
         padding: 2.5% 15%;
     }
 
-    .espacio3 p{
+    .espacio3 p {
         font-size: 10pt;
         padding: 6% 15%;
     }
@@ -580,9 +669,7 @@ body {
         text-align: center;
     }
 
-}
-
-@media (max-width: 480px) {
+} @media (max-width: 480px) {
     .tituloDeSeccion2 p {
         font-size: 20pt !important;
     }

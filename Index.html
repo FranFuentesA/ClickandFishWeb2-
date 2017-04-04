@@ -40,6 +40,28 @@
         }(document, 'script', 'twitter-wjs');
     </script>
 
+    <!-- barra -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function(){
+            var altura = $('.menu').offset().top;
+
+            $(window).on('scroll', function(){
+                if ( $(window).scrollTop() > altura ){
+                    $('.menu').addClass('menu-fixed');
+                    $('.menuScroll').addClass('menuScroll-fixed');
+                    $('.ocultarNo').addClass('ocultarSi');
+
+                } else {
+                    $('.menu').removeClass('menu-fixed');
+                    $('.menuScroll').removeClass('menuScroll-fixed');
+                    $('.ocultarNo').removeClass('ocultarSi');
+                }
+            });
+
+        });</script>
+
+
     <!-- Efectos -->
     <script class="DeshabilitarZoom">
         document.addEventListener('gesturestart', function (e) {
@@ -50,12 +72,23 @@
 <body>
 <header>
     <section class="Portada">
-        <div id="nav"></div>
-        <div id="idioma">ES/EN</div>
-        <img id="logo" src="img/logo@3x.png">
-        <img id="botonNavegacion" src="img/menu_despl@3x.png">
+
+    <div class="menu">
+        <img id="logo" class="ocultarNo" src="img/logo@3x.png">
+        <img id="btnNav" class="ocultarNo" src="img/menu_despl@3x.png">
+        <div id="btnidioma" class="ocultarNo">ES/EN</div>
+    </div>
+
+    <div class="menuScroll">
+        <img id="logoScroll" src="img/logo-color.png">
+        <img id="btnNavScroll" src="img/menu_despl@3x.png">
+        <div id="btnidiomaScroll">ES/EN</div>
+    </div>
+
+
+
         <img id="fondo" src="img/portadaRecortada.jpg">
-        <img id="movil" src="img/mockup@3x.png">
+        <img id="telefono" src="img/mockup@3x.png">
     </section>
     <section class="Referencias">
         <div class="Eslogan">
@@ -78,6 +111,7 @@
            data-size="small" data-show-screen-name="false">Seguir</a>
     </section>
 </header>
+
 <section class="seccionPrimera">
     <div class="tituloDeSeccion1">
         <h1>otra forma de vivir tu pesca</h1>
@@ -129,8 +163,8 @@
 </section>
 <section class="seccionSegunda2">
     <div class="tituloDeSeccion2">
-        <div><p>desde donde quieras, </p></div>
-        <div><p>cuando te apetezca</p></div>
+        <div><p id="tt2l1">desde donde quieras, </p></div>
+        <div><p id="tt2l2">cuando te apetezca</p></div>
     </div>
 
     <div class="container2">
