@@ -100,7 +100,7 @@ body {
     background: transparent;
 }
 
-#fondo {
+#fondo img {
     width: 100%;
 }
 
@@ -143,9 +143,9 @@ body {
         font-size: 1.7em;
     }
 
-    #fondo {
+    /*#fondo {
         content: url("../img/portadaAlargada.jpg");
-    }
+    }*/
 
     #telefono {
         bottom: -5%;
@@ -670,7 +670,7 @@ footer {
 #ContactoRedesSociales {
     display: flex;
     justify-content: center;
-    flex-basis: 40%;
+    flex-basis: 35%;
 }
 
 .BotonesIconos {
@@ -771,14 +771,10 @@ footer {
 #Avisos {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    flex-basis: 40%;
+    flex-basis: 45%;
     font-size: 1.5vw;
-}
-
-#Avisos div {
-    margin: 0 2%;
 }
 
 #Avisos div a {
@@ -799,7 +795,7 @@ footer {
     font-size: 1.5vw;
 }
 
-@media (max-width: 1280px) {
+/*@media (max-width: 1024px) {
     footer {
         min-height: 20em;
     }
@@ -836,11 +832,15 @@ footer {
         justify-content: flex-end;
         font-size: 2.5vw;
     }
-}
+}*/
 
 @media (max-width: 768px) {
     footer {
-        min-height: 25em;
+        min-height: 40vh;
+    }
+
+    #ContactoRedesSociales, #Avisos, #Copyright {
+        flex-basis: 100%;
     }
 
     .BotonesIconos {
@@ -872,12 +872,13 @@ footer {
     }
 
     #Copyright {
+        justify-content: flex-end;
         font-size: 3.5vw;
     }
 }
 
 @media (max-width: 425px) {
     footer {
-        min-height: 15em;
+        min-height: 30vh;
     }
 }

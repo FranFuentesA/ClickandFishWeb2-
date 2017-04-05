@@ -1,0 +1,26 @@
+body {
+    /*width: 100vw;
+    height: 100vh;*/
+    background-color: black;
+}
+
+.mySlides {
+    width: 75%;
+    display: none;
+}
+
+.w3-left, .w3-right, .w3-badge {
+    cursor: pointer;
+}
+
+.w3-badge {
+    height: 13px;
+    width: 13px;
+    padding: 0;
+}
+
+.w3-content {
+    display: flex;
+    justify-content: center;
+    max-width: 45vw;
+}
