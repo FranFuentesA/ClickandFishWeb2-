@@ -8,7 +8,7 @@
     <title>Clic&amp;Fish</title>
 
     <!-- Icono -->
-    <link rel="icon" type="image/png" href="img/Clic-&-Fish.png">
+    <link rel="icon" type="image/png" href="img/icono_Click&Fish.png">
 
     <!-- Fuentes -->
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
@@ -18,22 +18,17 @@
     <link rel="stylesheet" href="css/EstilosPrincipales.css" type="text/css">
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script>
-        $(document).ready(function () {
-            var altura = $('.menu').offset().top;
-
-            $(window).on('scroll', function () {
-                if ($(window).scrollTop() > altura) {
-                    $('.menu').addClass('menu-fixed');
-                    $('.menuScroll').addClass('menuScroll-fixed');
-                    $('.ocultarNo').addClass('ocultarSi');
-
-                } else {
-                    $('.menu').removeClass('menu-fixed');
-                    $('.menuScroll').removeClass('menuScroll-fixed');
-                    $('.ocultarNo').removeClass('ocultarSi');
-                }
-            });
-        });</script>
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 1) {
+                $('.MenuBajado').addClass('MenuBajadoFijado');
+                $('.ocultarNo').addClass('ocultarSi');
+            }
+            else {
+                $('.MenuBajado').removeClass('MenuBajadoFijado');
+                $('.ocultarNo').removeClass('ocultarSi');
+            }
+        });
+    </script>
     <script class="DeshabilitarZoom">
         document.addEventListener('gesturestart', function (e) {
             e.preventDefault();
@@ -41,7 +36,7 @@
     </script>
 
     <!-- Botones sociales -->
-    <script class="scriptFacebook">
+    <script>
         (function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
@@ -51,7 +46,7 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
-    <script class="scriptTwitter">
+    <script>
         !function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
             if (!d.getElementById(id)) {
@@ -64,27 +59,35 @@
     </script>
 </head>
 <body>
+
 <header>
-    <section class="Portada">
+    <section id="Portada">
 
-        <div class="menu">
-            <img id="logo" class="ocultarNo" src="img/logo@3x.png">
-            <img id="btnNav" class="ocultarNo" src="img/menu_despl@3x.png">
-            <div id="btnidioma" class="ocultarNo">ES/EN</div>
+        <div class="Menu">
+            <picture>
+                <source srcset="img/clic_fish_logo_NEGRO.png" media="(max-width: 425px)">
+                <img src="img/logo@3x.png" class="ocultarNo" id="logo">
+            </picture>
+            <img id="botonNavegacion" class="ocultarNo" src="img/menu_despl@3x.png">
+            <div class="idioma ocultarNo">ES/EN</div>
         </div>
 
-        <div class="menuScroll">
-            <img id="logoScroll" src="img/clic_fish_logo_NEGRO.png">
-            <img id="btnNavScroll" src="img/menu_despl@3x.png">
-            <div id="btnidiomaScroll">ES/EN</div>
+        <div class="MenuBajado">
+            <img id="logoBajado" src="img/clic_fish_logo_NEGRO.png">
+            <img id="botonNavegacionBajado" src="img/menu_despl@3x.png">
+            <div class="idiomaBajado">ES/EN</div>
         </div>
 
-        <picture id="fondo">
-            <source srcset="img/portadaAlargada.jpg" media="(max-width: 940px)">
-            <img src="img/portadaRecortada.jpg">
+        <picture>
+            <source srcset="img/portadaAlargada.jpg" media="(max-width: 768px)">
+            <img src="img/portadaRecortada.jpg" id="fondo">
         </picture>
 
-        <img id="telefono" src="img/mockup@3x.png">
+        <picture>
+            <source srcset="img/mockup@2x.png" media="(max-width: 768px)">
+            <img src="img/mockup@3x.png" id="telefono">
+        </picture>
+
     </section>
     <section class="Referencias">
         <div class="Eslogan">
@@ -114,46 +117,46 @@
     </div>
     <div class="containerSeccion1">
 
-            <div class="espacio1">
-                <img src="img/icono_360@3x.png" class="logoSecP1"/>
+        <div class="espacio1">
+            <img src="img/icono_360@3x.png" class="logoSecP1"/>
 
-                    <h2>tus tramos preferidos en 360º</h2>
+            <h2>tus tramos preferidos en 360º</h2>
 
-                <p>Puedes recorrer el río desde dentro, como si estuvieras allí mismo. En cada tramo puedes revisar
-                    sus orillas, escoger los mejores accesos al río y descubrir los rincones más
-                    adecuados para tus preferencias.
-                </p>
-            </div>
-            <div class="espacio2">
-                <img src="img/icono_camaras@3x.png" class="logoSecP2" id="jojojo"/>
+            <p>Puedes recorrer el río desde dentro, como si estuvieras allí mismo. En cada tramo puedes revisar
+                sus orillas, escoger los mejores accesos al río y descubrir los rincones más
+                adecuados para tus preferencias.
+            </p>
+        </div>
+        <div class="espacio2">
+            <img src="img/icono_camaras@3x.png" class="logoSecP2" id="jojojo"/>
 
-                    <h2>cámaras exteriores y subacuáticas</h2>
+            <h2>cámaras exteriores y subacuáticas</h2>
 
-                <p>Mediante nuestras estaciones de captura puedes ver qué está pasando ahora mismo en cada tramo de río.
-                    Podrás consultar en todo momento tanto dentro como fuera del rio datos, tales como: la temperatura
-                    del agua,
-                    humedad, temperatura exterior, velocidad del viento y presión atmosferica.</p>
-            </div>
-            <div class="espacio3">
-                <img src="img/icono_recomendacion@3x.png" class="logoSecP3"/>
+            <p>Mediante nuestras estaciones de captura puedes ver qué está pasando ahora mismo en cada tramo de río.
+                Podrás consultar en todo momento tanto dentro como fuera del rio datos, tales como: la temperatura
+                del agua,
+                humedad, temperatura exterior, velocidad del viento y presión atmosferica.</p>
+        </div>
+        <div class="espacio3">
+            <img src="img/icono_recomendacion@3x.png" class="logoSecP3"/>
 
-                    <h2 id="jajaja">recomendaciones basadas en datos históricos</h2>
+            <h2 id="jajaja">recomendaciones basadas en datos históricos</h2>
 
-                <p>Repasando los datos de semanas, meses y temporadas pasadas, y observando lo que está pasando
-                    ahora mismo, podrás anticipar y escoger los mejores tramos y momentos para pescar y
-                    los señuelos con mayor probabilidad de captura.
-                </p>
-            </div>
-            <div class="espacio4">
-                <img src="img/icono_pez@3x.png" class="logoSecP4"/>
+            <p>Repasando los datos de semanas, meses y temporadas pasadas, y observando lo que está pasando
+                ahora mismo, podrás anticipar y escoger los mejores tramos y momentos para pescar y
+                los señuelos con mayor probabilidad de captura.
+            </p>
+        </div>
+        <div class="espacio4">
+            <img src="img/icono_pez@3x.png" class="logoSecP4"/>
 
-                    <h2>tu comunidad de pesca</h2>
+            <h2>tu comunidad de pesca</h2>
 
-                <p>Conoce nuevos compañeros de pesca, comparte experiencias, logros y consejos con ellos.
-                    Disfruta de tu pasión por la pesca, en nuevos ríos y tramos, con pescadores que sienten y piensan
-                    como tú.
-                </p>
-            </div>
+            <p>Conoce nuevos compañeros de pesca, comparte experiencias, logros y consejos con ellos.
+                Disfruta de tu pasión por la pesca, en nuevos ríos y tramos, con pescadores que sienten y piensan
+                como tú.
+            </p>
+        </div>
 
     </div>
 </section>
@@ -201,9 +204,10 @@
         <div><a href="PoliticaCookies.html">Política de Cookies</a></div>
         <div><a href="AvisoLegal.html">Aviso Legal</a></div>
         <div><a href="PoliticaPrivacidad.html">Política de Privacidad</a></div>
-        <div><a href="Ayuda.html">Ayuda</a></div>
+        <div id="no"><a href="Ayuda.html">Ayuda</a></div>
     </section>
     <section id="Copyright">Clic&amp;Fish &copy; 2017</section>
 </footer>
+
 </body>
 </html>

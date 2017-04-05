@@ -7,100 +7,98 @@ body {
     font-family: 'Roboto', arial, sans-serif;
 }
 
-/*-------------------- HEADER --------------------*/
-.Portada {
+/*-------------------- Cabecera --------------------*/
+#Portada {
     position: relative;
     margin-bottom: 5%;
 }
 
-#btnNav {
-    display: none; /*---- Botón deshabilitado temporalmente ---*/
+.Menu {
     position: absolute;
-    right: 5.25%;
-    padding-top: 2.75%;
-    width: 7.25%;
-}
-
-#btnidioma {
-    display: none; /*---- Botón deshabilitado temporalmente ---*/
-    position: absolute;
-    right: 14.25%;
-    padding-top: 4.5%;
-    font-size: 3vw;
-    color: #fff;
+    width: 100vw;
+    height: 10vw;
 }
 
 #logo {
     position: absolute;
-    left: 4.5%;
-    padding-top: 3.75%;
-    width: 25.75%;
+    top: 25%;
+    left: 5%;
+    height: 50%;
 }
 
-#btnNavScroll {
+#botonNavegacion {
     display: none; /*---- Botón deshabilitado temporalmente ---*/
     position: absolute;
-    right: 5.25%;
-    padding-top: 2.75%;
-    width: 7.25%;
+    top: 25%;
+    right: 5%;
+    height: 50%;
 }
 
-#btnidiomaScroll {
+.idioma {
     display: none; /*---- Botón deshabilitado temporalmente ---*/
+    /*display: flex;*/
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    right: 14.25%;
-    padding-top: 4.5%;
+    top: 25%;
+    right: 12.5%;
+    height: 50%;
     font-size: 3vw;
-    color: #000000;
+    font-weight: bold;
+    color: black;
 }
 
-#logoScroll {
+.MenuBajado {
+    opacity: 0;
+}
+
+.MenuBajadoFijado {
+    opacity: 1;
+    z-index: 1;
+    position: fixed;
+    width: 100vw;
+    height: 10vw;
+    background-color: #fff;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#logoBajado {
     position: absolute;
-    left: 4.5%;
-    padding-top: 2%;
-    width: 25vw;
+    top: 25%;
+    left: 5%;
+    height: 50%;
 }
 
-.menu {
-    position: relative;
-    display: block;
-    background-color: transparent;
-    z-index: 1;
-    top: 0;
-    height: 24%;
-    width: 100%;
+#botonNavegacionBajado {
+    display: none; /*---- Botón deshabilitado temporalmente ---*/
+    position: absolute;
+    top: 25%;
+    right: 5%;
+    height: 50%;
 }
 
-.menuScroll {
-    display: none;
-}
-
-.menuScroll-fixed {
-    position: fixed;
-    display: block;
-    background-color: #ffffff;
-    z-index: 1;
-    top: 0;
-    height: 5vw;
-    width: 100%;
-}
-
-.menu-fixed {
-    position: fixed;
-    display: block;
-    background-color: #ffffff;
-    z-index: 1;
-    top: 0;
-    height: 8vw;
-    width: 100%;
+.idiomaBajado {
+    display: none; /*---- Botón deshabilitado temporalmente ---*/
+    /*display: flex;*/
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 25%;
+    right: 12.5%;
+    height: 50%;
+    font-size: 3vw;
+    font-weight: bold;
+    color: black;
 }
 
 .ocultarSi {
     display: none;
-    background: transparent;
 }
 
-#fondo img {
+#fondo {
     width: 100%;
 }
 
@@ -112,77 +110,20 @@ body {
     height: auto;
 }
 
-@media (max-width: 940px) {
-
-    #btnidioma {
-        padding-top: 6.5%;
-        right: 19%;
-        font-size: 1.7em;
-    }
-
-    #logo {
-        content: url("../img/logo@2x.png");
-        width: 50%;
-    }
-
-    #btnNav {
-        content: url("../img/menu_despl@2x.png");
-        padding-top: 4%;
-        width: 11%;
-    }
-
-    #btnNavScroll {
-        content: url("../img/menu_despl@2x.png");
-        padding-top: 4%;
-        width: 11%;
-    }
-
-    #btnidiomaScroll {
-        padding-top: 6.5%;
-        right: 19%;
-        font-size: 1.7em;
-    }
-
-    /*#fondo {
-        content: url("../img/portadaAlargada.jpg");
-    }*/
-
+@media (max-width: 768px) {
     #telefono {
         bottom: -5%;
         width: 45%;
-        content: url("../img/mockup@2x.png");
     }
 }
 
-@media (max-width: 640px) {
-    #idioma {
-        top: 8.5%;
+@media (max-width: 425px) {
+    .Menu {
+        background-color: white;
     }
-}
 
-@media (max-width: 480px) {
-    #btnidioma {
+    .idioma {
         color: black;
-        top: 10%;
-    }
-
-    #logo {
-        content: url("../img/logo-color.png");
-        padding-top: 2%;
-        width: 25vw;
-    }
-
-    #btnNav {
-        width: 12%;
-    }
-
-    .menu {
-        background-color: #ffffff;
-        height: 8vw;
-    }
-
-    .btnNavScroll {
-        width: 12%;
     }
 }
 
@@ -328,7 +269,9 @@ body {
     color: #5E8533;
     font-size: 3.5vw;
     font-weight: bold;
+    /*
     margin-bottom: 5%;
+    */
 }
 
 .espacio1, .espacio2, .espacio3, .espacio4 {
@@ -398,7 +341,7 @@ body {
 }*/
 
 .logoSecS1, .logoSecS2, .logoSecS3 {
-    width: 90%;
+    width: 75%;
     height: auto;
     display: block;
     text-align: center;
@@ -795,45 +738,6 @@ footer {
     font-size: 1.5vw;
 }
 
-/*@media (max-width: 1024px) {
-    footer {
-        min-height: 20em;
-    }
-
-    #ContactoRedesSociales, #Avisos, #Copyright {
-        flex-basis: 100%;
-    }
-
-    .BotonesIconos {
-        margin: 0 4%;
-        width: 7vw;
-        height: 7vw;
-        border-radius: 7vw;
-    }
-
-    .BotonesIconos:hover span {
-        margin: -3.5vw;
-        width: 7vw;
-        height: 7vw;
-        border-radius: 7vw;
-    }
-
-    .BotonesIconos i {
-        width: 7vw;
-        line-height: 7vw;
-        font-size: 4.5vw;
-    }
-
-    #Avisos {
-        font-size: 2.5vw;
-    }
-
-    #Copyright {
-        justify-content: flex-end;
-        font-size: 2.5vw;
-    }
-}*/
-
 @media (max-width: 768px) {
     footer {
         min-height: 40vh;
@@ -881,4 +785,8 @@ footer {
     footer {
         min-height: 30vh;
     }
+}
+
+#no {
+    display: none;
 }
