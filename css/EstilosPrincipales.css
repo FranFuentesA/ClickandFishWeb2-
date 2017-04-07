@@ -4,7 +4,7 @@ body {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0 auto;
-    font-family: 'Roboto', arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 /*-------------------- Cabecera --------------------*/
@@ -27,7 +27,7 @@ body {
 }
 
 #botonNavegacion {
-    display: none; /*---- Botón deshabilitado temporalmente ---*/
+    /*display: none; !*---- Botón deshabilitado temporalmente ---*!*/
     position: absolute;
     top: 25%;
     right: 5%;
@@ -35,8 +35,10 @@ body {
 }
 
 .idioma {
-    display: none; /*---- Botón deshabilitado temporalmente ---*/
-    /*display: flex;*/
+    /*
+    display: none; !*---- Botón deshabilitado temporalmente ---*!
+    */
+    display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -45,7 +47,7 @@ body {
     height: 50%;
     font-size: 3vw;
     font-weight: bold;
-    color: black;
+    color: white;
 }
 
 .MenuBajado {
@@ -53,43 +55,60 @@ body {
 }
 
 .MenuBajadoFijado {
-    opacity: 1;
     z-index: 1;
     position: fixed;
     width: 100vw;
-    height: 10vw;
     background-color: #fff;
-    -webkit-transition: opacity 0.3s ease-in-out;
-    -moz-transition: opacity 0.3s ease-in-out;
-    -o-transition: opacity 0.3s ease-in-out;
-    transition: opacity 0.3s ease-in-out;
+    -webkit-box-shadow: 0 0.05vw 2.5vw 0.05vw rgba(0,0,0,0.75);
+    -moz-box-shadow: 0 0.05vw 2.5vw 0.05vw rgba(0,0,0,0.75);
+    box-shadow: 0 0.05vw 2.5vw 0.05vw rgba(0,0,0,0.75);
+    -webkit-animation: all 0.5s  both;
+    -moz-animation: all 0.5s  both;
+    animation: all 0.5s  both;
+    animation-name: menu;
+}
+
+@keyframes menu {
+    from {
+        height: 0;
+        opacity: 0;
+    }
+
+    to {
+        height: 5vw;
+        opacity: 1;
+    }
 }
 
 #logoBajado {
     position: absolute;
-    top: 25%;
+    top: 10%;
     left: 5%;
-    height: 50%;
+    height: 80%;
 }
 
 #botonNavegacionBajado {
-    display: none; /*---- Botón deshabilitado temporalmente ---*/
+    /*
+    display: none; !*---- Botón deshabilitado temporalmente ---*!
+    */
     position: absolute;
-    top: 25%;
+    top: 10%;
     right: 5%;
-    height: 50%;
+    height: 80%;
 }
 
 .idiomaBajado {
-    display: none; /*---- Botón deshabilitado temporalmente ---*/
-    /*display: flex;*/
+    /*
+    display: none; !*---- Botón deshabilitado temporalmente ---*!
+    */
+    display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 25%;
-    right: 12.5%;
-    height: 50%;
-    font-size: 3vw;
+    top: 10%;
+    right: 10%;
+    height: 80%;
+    font-size: 2vw;
     font-weight: bold;
     color: black;
 }
@@ -111,6 +130,32 @@ body {
 }
 
 @media (max-width: 768px) {
+    .Menu {
+        height: 15vw;
+    }
+
+    .idioma {
+        right: 15%;
+        font-size: 4vw;
+    }
+
+    @keyframes menu {
+        from {
+            height: 0;
+            opacity: 0;
+        }
+
+        to {
+            height: 10vw;
+            opacity: 1;
+        }
+    }
+
+    .idiomaBajado {
+        right: 15%;
+        font-size: 3vw;
+    }
+
     #telefono {
         bottom: -5%;
         width: 45%;
@@ -119,43 +164,71 @@ body {
 
 @media (max-width: 425px) {
     .Menu {
+        height: 20vw;
         background-color: white;
     }
 
     .idioma {
+        right: 17.5%;
         color: black;
+    }
+
+    @keyframes menu {
+        from {
+            height: 0;
+            opacity: 0;
+        }
+
+        to {
+            height: 15vw;
+            opacity: 1;
+        }
+    }
+
+    #logoBajado {
+        top: 20%;
+        height: 60%;
+    }
+
+    .idiomaBajado {
+        right: 16%;
+        font-size: 4vw;
+    }
+
+    #botonNavegacionBajado {
+        top: 20%;
+        height: 60%;
     }
 }
 
 .Referencias {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
     width: 100%;
 }
 
-.Eslogan {
-    flex-basis: 65%;
+.Texto {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-basis: 65%;
 }
 
-.Eslogan h1 {
-    color: rgb(92, 92, 92);
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 4.3vw;
-    text-align: center;
+.Texto h1 {
     margin: 0 auto;
+    text-align: center;
+    font-size: 4.3vw;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #5a5a5a;
 }
 
-.Eslogan p {
-    font-style: italic;
-    color: rgb(94, 134, 51);
-    font-weight: bold;
-    font-size: 1.45vw;
+.Texto p {
     text-align: center;
+    font-size: 1.45vw;
+    font-weight: 500;
+    font-style: italic;
+    color: #5E8633;
 }
 
 .Tiendas {
@@ -167,7 +240,7 @@ body {
 }
 
 #android {
-    width: 35%;
+    width: 42.5%;
     height: auto;
 }
 
@@ -176,38 +249,43 @@ body {
 }
 
 #iOS {
-    width: 40%;
+    width: 47.5%;
     height: auto;
 }
 
-@media (max-width: 1280px) {
-    .Eslogan {
+#iOS img {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .Texto {
         flex-basis: 100%;
         margin-bottom: 4%;
     }
 
-    .Eslogan h1 {
+    .Texto h1 {
+        margin: 0 15% 2.5% 15%;
         font-size: 8vw;
-        margin: 0 15%;
     }
 
-    .Eslogan p {
-        font-size: 3vw;
+    .Texto p {
         margin: 0 9%;
+        font-size: 2.6vw;
     }
 
     .Tiendas {
         justify-content: center;
+        align-items: flex-start;
         flex-basis: 100%;
     }
 
     #android {
-        width: 20%;
+        width: 25%;
         margin-right: 5%;
     }
 
     #iOS {
-        width: 23%;
+        width: 28%;
     }
 }
 
@@ -728,6 +806,10 @@ footer {
 #Avisos div a:hover {
     text-decoration: none;
     text-shadow: 0.3vw 0.3vw 0.5vw rgba(0, 0, 0, 1);
+    -webkit-transition: text-shadow 0.3s ease-in-out;
+    -moz-transition: text-shadow 0.3s ease-in-out;
+    -o-transition: text-shadow 0.3s ease-in-out;
+    transition: text-shadow 0.3s ease-in-out;
 }
 
 #Copyright {
@@ -785,8 +867,4 @@ footer {
     footer {
         min-height: 30vh;
     }
-}
-
-#no {
-    display: none;
 }

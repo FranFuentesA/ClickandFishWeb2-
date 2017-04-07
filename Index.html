@@ -11,28 +11,45 @@
     <link rel="icon" type="image/png" href="img/icono_Click&Fish.png">
 
     <!-- Fuentes -->
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:500,700,900" rel="stylesheet">
     <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 
     <!-- Estilos -->
     <link rel="stylesheet" href="css/EstilosPrincipales.css" type="text/css">
+
+    <!-- Efectos -->
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script>
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 1) {
-                $('.MenuBajado').addClass('MenuBajadoFijado');
-                $('.ocultarNo').addClass('ocultarSi');
-            }
-            else {
-                $('.MenuBajado').removeClass('MenuBajadoFijado');
-                $('.ocultarNo').removeClass('ocultarSi');
-            }
-        });
-    </script>
-    <script class="DeshabilitarZoom">
         document.addEventListener('gesturestart', function (e) {
             e.preventDefault();
         });
+    </script>
+    <script>
+        $(document).ready(function () {
+            var op;
+
+            if ($(window).width() < 425) {
+                op = 1;
+            }
+            else {
+                op = $('.Menu').outerHeight();
+            }
+
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > op) {
+                    $('.MenuBajado').addClass('MenuBajadoFijado');
+                    $('.ocultarNo').addClass('ocultarSi');
+                    $('.ocultado').removeClass('ocultarSi');
+                }
+                else {
+                    $('.MenuBajado').removeClass('MenuBajadoFijado');
+                    $('.ocultarNo').removeClass('ocultarSi');
+                    $('.ocultado').addClass('ocultarSi');
+                }
+            });
+        });
+
+
     </script>
 
     <!-- Botones sociales -->
@@ -65,32 +82,42 @@
 
         <div class="Menu">
             <picture>
-                <source srcset="img/clic_fish_logo_NEGRO.png" media="(max-width: 425px)">
-                <img src="img/logo@3x.png" class="ocultarNo" id="logo">
+                <source srcset="img/logo_negro.png" media="(max-width: 425px)">
+                <img src="img/logo_blanco.png" class="ocultarNo" id="logo">
             </picture>
-            <img id="botonNavegacion" class="ocultarNo" src="img/menu_despl@3x.png">
+            <picture>
+                <source srcset="img/menu_despl.png" media="(max-width: 425px)">
+                <source srcset="img/menu_despl@2x.png" media="(max-width: 768px)">
+                <img src="img/menu_despl@3x.png" class="ocultarNo" id="botonNavegacion">
+            </picture>
             <div class="idioma ocultarNo">ES/EN</div>
         </div>
 
         <div class="MenuBajado">
-            <img id="logoBajado" src="img/clic_fish_logo_NEGRO.png">
-            <img id="botonNavegacionBajado" src="img/menu_despl@3x.png">
-            <div class="idiomaBajado">ES/EN</div>
+            <img src="img/logo_negro.png" class="ocultado ocultarSi" id="logoBajado">
+            <picture>
+                <source srcset="img/menu_despl.png" media="(max-width: 425px)">
+                <source srcset="img/menu_despl@2x.png" media="(max-width: 768px)">
+                <img src="img/menu_despl@3x.png" class="ocultado ocultarSi" id="botonNavegacionBajado">
+            </picture>
+            <div class="idiomaBajado ocultado ocultarSi">ES/EN</div>
         </div>
 
         <picture>
-            <source srcset="img/portadaAlargada.jpg" media="(max-width: 768px)">
-            <img src="img/portadaRecortada.jpg" id="fondo">
+            <source srcset="img/portada.jpg" media="(max-width: 425px)">
+            <source srcset="img/portada@2x.jpg" media="(max-width: 768px)">
+            <img src="img/portada@3x.jpg" id="fondo">
         </picture>
 
         <picture>
+            <source srcset="img/mockup.png" media="(max-width: 425px)">
             <source srcset="img/mockup@2x.png" media="(max-width: 768px)">
             <img src="img/mockup@3x.png" id="telefono">
         </picture>
 
     </section>
     <section class="Referencias">
-        <div class="Eslogan">
+        <div class="Texto">
             <h1>tu herramienta, tu pesca</h1>
             <p>vistas de tramos en 360º, cámaras exteriores y subacuáticas, comunidad y mucho más...</p>
         </div>
@@ -99,7 +126,9 @@
                href="https://play.google.com/store/apps/details?id=com.aquadata.clicfish&utm_source=web&utm_medium=botondescarga&utm_campaign=permanente">
                 <img src="img/google_play@3x.png">
             </a>
-            <img id="iOS" src="img/app_store@3x.png">
+            <a href="https://itunes.apple.com/es/genre/ios/id36?mt=8" id="iOS">
+                <img src="img/app_store@3x.png">
+            </a>
         </div>
     </section>
     <section class="CompartirRedesSociales">
@@ -185,26 +214,26 @@
 <footer>
     <section id="ContactoRedesSociales">
         <a href="https://www.facebook.com/ClicandFish" class="BotonesIconos" id="facebook">
-            <i class="fa fa-facebook" aria-hidden="true"></i><span onclick="return false"></span>
+            <i class="fa fa-facebook" aria-hidden="true"></i><span onclick=""></span>
         </a>
         <a href="https://twitter.com/ClicAndFish" class="BotonesIconos" id="twitter">
-            <i class="fa fa-twitter" aria-hidden="true"></i><span onclick="return false"></span>
+            <i class="fa fa-twitter" aria-hidden="true"></i><span onclick=""></span>
         </a>
         <a href="https://instagram.com/clicandfish" class="BotonesIconos" id="instagram">
-            <i class="fa fa-instagram" aria-hidden="true"></i><span onclick="return false"></span>
+            <i class="fa fa-instagram" aria-hidden="true"></i><span onclick=""></span>
         </a>
         <a href="https://www.youtube.com/user/ClicAndFish" class="BotonesIconos" id="youtube">
-            <i class="fa fa-youtube-play" aria-hidden="true"></i><span onclick="return false"></span>
+            <i class="fa fa-youtube-play" aria-hidden="true"></i><span onclick=""></span>
         </a>
         <a href="https://vimeo.com/user23168600" class="BotonesIconos" id="vimeo">
-            <i class="fa fa-vimeo" aria-hidden="true"></i><span onclick="return false"></span>
+            <i class="fa fa-vimeo" aria-hidden="true"></i><span onclick=""></span>
         </a>
     </section>
     <section id="Avisos">
         <div><a href="PoliticaCookies.html">Política de Cookies</a></div>
         <div><a href="AvisoLegal.html">Aviso Legal</a></div>
         <div><a href="PoliticaPrivacidad.html">Política de Privacidad</a></div>
-        <div id="no"><a href="Ayuda.html">Ayuda</a></div>
+        <div><a href="Ayuda.html">Ayuda</a></div>
     </section>
     <section id="Copyright">Clic&amp;Fish &copy; 2017</section>
 </footer>
