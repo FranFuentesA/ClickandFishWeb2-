@@ -10,7 +10,7 @@ body {
 /*-------------------- Cabecera --------------------*/
 #Portada {
     position: relative;
-    margin-bottom: 5%;
+    margin-bottom: 3.5%;
 }
 
 .Menu {
@@ -27,7 +27,7 @@ body {
 }
 
 #botonNavegacion {
-    /*display: none; !*---- Botón deshabilitado temporalmente ---*!*/
+    display: none; /*---- Botón deshabilitado temporalmente ---*/
     position: absolute;
     top: 25%;
     right: 5%;
@@ -35,10 +35,8 @@ body {
 }
 
 .idioma {
-    /*
-    display: none; !*---- Botón deshabilitado temporalmente ---*!
-    */
-    display: flex;
+    display: none; /*---- Botón deshabilitado temporalmente ---*/
+    /*display: flex;*/
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -59,12 +57,12 @@ body {
     position: fixed;
     width: 100vw;
     background-color: #fff;
-    -webkit-box-shadow: 0 0.05vw 2.5vw 0.05vw rgba(0,0,0,0.75);
-    -moz-box-shadow: 0 0.05vw 2.5vw 0.05vw rgba(0,0,0,0.75);
-    box-shadow: 0 0.05vw 2.5vw 0.05vw rgba(0,0,0,0.75);
-    -webkit-animation: all 0.5s  both;
-    -moz-animation: all 0.5s  both;
-    animation: all 0.5s  both;
+    -webkit-box-shadow: 0 0.05vw 2.5vw 0.05vw rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0 0.05vw 2.5vw 0.05vw rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0.05vw 2.5vw 0.05vw rgba(0, 0, 0, 0.75);
+    -webkit-animation: all 0.5s both;
+    -moz-animation: all 0.5s both;
+    animation: all 0.5s both;
     animation-name: menu;
 }
 
@@ -88,9 +86,7 @@ body {
 }
 
 #botonNavegacionBajado {
-    /*
-    display: none; !*---- Botón deshabilitado temporalmente ---*!
-    */
+    display: none; /*---- Botón deshabilitado temporalmente ---*/
     position: absolute;
     top: 10%;
     right: 5%;
@@ -98,10 +94,8 @@ body {
 }
 
 .idiomaBajado {
-    /*
-    display: none; !*---- Botón deshabilitado temporalmente ---*!
-    */
-    display: flex;
+    display: none; /*---- Botón deshabilitado temporalmente ---*/
+    /*display: flex;*/
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -125,7 +119,7 @@ body {
     position: absolute;
     left: 2%;
     bottom: -5%;
-    width: 30%;
+    width: 35%;
     height: auto;
 }
 
@@ -157,14 +151,12 @@ body {
     }
 
     #telefono {
-        bottom: -5%;
-        width: 45%;
+        width: 55%;
     }
 }
 
 @media (max-width: 425px) {
     .Menu {
-        height: 20vw;
         background-color: white;
     }
 
@@ -204,6 +196,7 @@ body {
 .Referencias {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 3.5%;
     width: 100%;
 }
 
@@ -211,13 +204,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-basis: 65%;
+    flex-basis: 60%;
 }
 
 .Texto h1 {
     margin: 0 auto;
     text-align: center;
-    font-size: 4.3vw;
+    font-size: 3.5vw;
     text-transform: uppercase;
     font-weight: 900;
     color: #5a5a5a;
@@ -225,14 +218,14 @@ body {
 
 .Texto p {
     text-align: center;
-    font-size: 1.45vw;
+    font-size: 1.25vw;
     font-weight: 500;
     font-style: italic;
     color: #5E8633;
 }
 
 .Tiendas {
-    flex-basis: 35%;
+    flex-basis: 40%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -240,8 +233,7 @@ body {
 }
 
 #android {
-    width: 42.5%;
-    height: auto;
+    width: 40%;
 }
 
 #android img {
@@ -249,8 +241,7 @@ body {
 }
 
 #iOS {
-    width: 47.5%;
-    height: auto;
+    width: 42.5%;
 }
 
 #iOS img {
@@ -258,6 +249,10 @@ body {
 }
 
 @media (max-width: 768px) {
+    .Referencias {
+        margin-bottom: 0;
+    }
+
     .Texto {
         flex-basis: 100%;
         margin-bottom: 4%;
@@ -280,7 +275,7 @@ body {
     }
 
     #android {
-        width: 25%;
+        width: 27%;
         margin-right: 5%;
     }
 
@@ -290,28 +285,41 @@ body {
 }
 
 .CompartirRedesSociales {
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    margin: 5% 0;
-}
-
-.CompartirRedesSociales p {
     display: none;
+    justify-content: center;
+    margin: 3.5% 0;
 }
 
-.CompartirRedesSociales div, .CompartirRedesSociales a {
-    margin: 0 2%;
+.fb-like, .twitter-follow-button {
+    margin: 0 1%;
 }
 
-@media (max-width: 480px) {
-    .CompartirRedesSociales p {
-        display: none;
+@media (max-width: 768px) {
+    .CompartirRedesSociales {
+        display: flex;
     }
 }
 
-/*-------------------- SECCIÓN 1 --------------------*/
+/*-------------------- Sección 1 --------------------*/
+
+
+
+
+
+
+
+
+
+#tituloDeSeccion1 {
+    background-color: #5E8633;
+    text-align: center;
+    height: 8vw;
+    line-height: 8vw;
+    font-size: 3.5vw;
+    font-weight: 900;
+    color: white;
+}
+
 /*----- FUENTES -----*/
 .claseTemporal h1 {
     font-family: 'Roboto-Black', arial, serif;
@@ -321,17 +329,11 @@ body {
     font-family: 'Roboto-MediumItalic', arial, serif;
 }
 
-.tituloDeSeccion1 h1, .tituloDeSeccion2 p {
+#tituloDeSeccion1 h1, .tituloDeSeccion2 p {
     font-family: 'Roboto-Black', arial, serif;
 }
 
-.tituloDeSeccion1 {
-    background-color: #5E8633;
-    text-align: center;
-    height: 6vw;
-}
-
-.tituloDeSeccion1 h1 {
+#tituloDeSeccion1 h1 {
     color: #ffffff;
     font-size: 3vw;
     line-height: 6vw;
@@ -414,9 +416,6 @@ body {
 }
 
 /*-------------------- SECCIÓN 2 --------------------*/
-/*.seccionSegunda2 .row {
-    margin-left: 2%;
-}*/
 
 .logoSecS1, .logoSecS2, .logoSecS3 {
     width: 75%;
@@ -461,15 +460,14 @@ body {
 }
 
 @media (max-width: 1280px) {
-/*    .logoSecS1, .logoSecS2, .logoSecS3 {
-        !*position: absolute;  podría ser relative *!
-        width: 600px;
-        height: auto;
-        left: 100px;
-        top: 50px;
-        margin: 0 20% 10%;
-    }*/
-
+    /*    .logoSecS1, .logoSecS2, .logoSecS3 {
+            !*position: absolute;  podría ser relative *!
+            width: 600px;
+            height: auto;
+            left: 100px;
+            top: 50px;
+            margin: 0 20% 10%;
+        }*/
     .espacio5, .espacio6, .espacio7 {
         flex-basis: 100%;
         width: 100%;
@@ -490,195 +488,17 @@ body {
     }
 }
 
-/*@media (max-width: 991px) {
 
-    .logoSecP1, .logoSecP3 {
-        position: relative;
-        width: 20%;
-        height: auto;
-        margin: 2% 42%;
-    }
 
-    .tituloDeSeccion2 p {
-        font-size: 35pt !important;
-    }
 
-    .logoSecP4 {
-        position: relative;
-        width: 20%;
-        height: auto;
-        margin: 2% 40%;
-    }
 
-    .logoSecP2 {
-        position: relative;
-        width: 16%;
-        height: auto;
-        margin: 2% 44%;
-    }
 
-    .logoSecS1, .logoSecS2, .logoSecS3 {
-        !*position: absolute;  podría ser relative *!
-        width: 500px;
-        height: auto;
-        left: 100px;
-        top: 50px;
-        margin-left: 20%;
-        margin-right: 20%;
-    }
 
-    .logoSecP1 {
-        content: url("../img/icono_360@2x.png");
-    }
 
-    .logoSecP2 {
-        content: url("../img/icono_camaras@2x.png");
-    }
 
-    .logoSecP3 {
-        content: url("../img/icono_recomendacion@2x.png");
-    }
 
-    .logoSecP4 {
-        content: url("../img/icono_pez@2x.png");
-    }
 
-    .logoSecS1 {
-        content: url("../img/360@2x.png");
-    }
-
-    .logoSecS2 {
-        content: url("../img/sub@2x.png");
-    }
-
-    .logoSecS3 {
-        content: url("../img/comunidad@2x.png");
-    }
-
-}
-
-@media (max-width: 767px) {
-
-    .tituloDeSeccion1 {
-        height: 80px;
-        width: 100%;
-    }
-
-    .tituloDeSeccion2 p {
-        font-size: 30pt !important;
-    }
-
-    .logoSecP1, .logoSecP3, .logoSecP4 {
-        display: table;
-        width: 140px;
-        margin: 2% 38.5%;
-    }
-
-    .tituloDeSeccion1 h1 {
-        line-height: 80px;
-        font-size: 35px;
-    }
-
-    .tituloDeSeccion2 {
-        justify-content: space-around;
-    }
-
-    .tituloDeSeccion2 div {
-        font-size: 20pt;
-    }
-
-    .seccionSegunda2 {
-        padding-top: 5%;
-    }
-
-    .seccionSegunda2 h3 {
-        font-size: 14pt;
-    }
-
-    .espacio1 p, .espacio2 p, .espacio4 p {
-        font-size: 10pt;
-        padding: 2.5% 15%;
-    }
-
-    .espacio3 p {
-        font-size: 10pt;
-        padding: 6% 15%;
-    }
-
-    !*.titulosSeccionP h2 {
-        font-size: 13pt;
-        padding: 0 8%;
-    }
-
-    .titulosSeccionP {
-        height: 35px;
-    }*!
-
-    .logoSecP1 {
-        content: url("../img/icono_360@3x.png");
-        height: auto;
-        width: 26.2%;
-    }
-
-    .logoSecP2 {
-        content: url("../img/icono_camaras.png");
-        height: auto;
-        width: 20%;
-        margin: 2% 41.5%;
-    }
-
-    .logoSecP3 {
-        content: url("../img/icono_recomendacion.png");
-        height: auto;
-        width: 25%;
-    }
-
-    .logoSecP4 {
-        content: url("../img/icono_pez.png");
-        height: auto;
-        width: 25%;
-    }
-
-    .logoSecS1 {
-        content: url("../img/360.png");
-        width: 70%;
-        height: auto;
-    }
-
-    .logoSecS2 {
-        content: url("../img/sub.png");
-        width: 70%;
-        height: auto;
-    }
-
-    .logoSecS3 {
-        content: url("../img/comunidad.png");
-        width: 70%;
-        height: auto;
-    }
-
-    .espacio1, .espacio2, .espacio3, .espacio4 {
-        margin-top: 5%;
-        line-height: 16px;
-    }
-
-    .espacio5, .espacio6, .espacio7 {
-        text-align: center;
-    }
-
-}
-
-@media (max-width: 480px) {
-    .tituloDeSeccion2 p {
-        font-size: 20pt !important;
-    }
-
-    .tituloDeSeccion1 h1 {
-        font-size: 25px;
-    }
-}*/
-
-/*-------------------- FOOTER --------------------*/
+/*-------------------- Pie de página --------------------*/
 footer {
     display: flex;
     flex-wrap: wrap;

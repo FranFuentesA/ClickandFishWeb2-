@@ -1,10 +1,11 @@
 * {
-    max-height: 100vh;
+    max-height: calc(100vh - 5vw);
 }
 
 #carrusel {
-    height: 100vh;
-    background-image: url("../img/ayuda/ayuda_web_back.jpg");
+    top: 5vw;
+    height: calc(100vh - 5vw);
+    background-image: url("../img/ayuda/fondo_ayuda.jpg");
     background-position: center;
     background-size: cover;
 }
@@ -27,11 +28,109 @@
 }
 
 .item img {
-    padding: 5%;
+    padding: 2% 0;
 }
 
-@media (orientation: portrait) and (max-width: 425px){
+@media (max-width: 768px) {
+    * {
+        max-height: calc(100vh - 10vw);
+    }
+
+    #carrusel {
+        top: 10vw;
+        height: calc(100vh - 10vw);
+    }
+
     .item img {
-        margin-top: 10vh;
+        padding: 2% 0 4% 0;
+    }
+}
+
+@media (max-width: 425px) {
+    * {
+        max-height: calc(100vh - 15vw);
+    }
+
+    #carrusel {
+        top: 15vw;
+        height: calc(100vh - 15vw);
+    }
+}
+
+@media (orientation: portrait) and (max-width: 425px) {
+    .item img {
+        margin-top: 5vh;
+    }
+}
+
+#Menu {
+    z-index: 1;
+    position: fixed;
+    width: 100vw;
+    height: 5vw;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0.05vw 2.5vw 0.05vw rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0 0.05vw 2.5vw 0.05vw rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0.05vw 2.5vw 0.05vw rgba(0, 0, 0, 0.75);
+}
+
+#logo {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    height: 80%;
+}
+
+#botonNavegacion {
+    display: none; /*---- Botón deshabilitado temporalmente ---*/
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    height: 80%;
+}
+
+#idioma {
+    display: none; /*---- Botón deshabilitado temporalmente ---*/
+    /*display: flex;*/
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    height: 80%;
+    font-size: 2vw;
+    font-weight: bold;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    #Menu {
+        height: 10vw;
+    }
+
+    #idioma {
+        right: 15%;
+        font-size: 3vw;
+    }
+}
+
+@media (max-width: 425px) {
+    #Menu {
+        height: 15vw;
+    }
+
+    #logo {
+        top: 20%;
+        height: 60%;
+    }
+
+    #idioma {
+        right: 16%;
+        font-size: 4vw;
+    }
+
+    #botonNavegacion {
+        top: 20%;
+        height: 60%;
     }
 }
