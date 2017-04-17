@@ -1,14 +1,13 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 
     <title>Politica de pivacidad</title>
 
     <!-- Icono -->
-    <link rel="icon" type="image/png" href="img/Clic-&-Fish.png">
+    <link rel="icon" type="image/png" href="img/icono_Click&Fish.png">
 
     <!-- Estilos -->
     <link rel="stylesheet" href="css/EstilosDocumentosLegales.css" type="text/css">
@@ -17,39 +16,62 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i" rel="stylesheet">
 
     <!-- Efectos -->
-    <script class="DeshabilitarZoom">
-        document.addEventListener('gesturestart', function (e) {
-            e.preventDefault();
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > $('.Menu').outerHeight()) {
+                $('#menuBajado').addClass('MenuBajadoFijado');
+                $('.OcultarNo').addClass('OcultarSi');
+                $('.Ocultado').removeClass('OcultarSi');
+            }
+            else {
+                $('#menuBajado').removeClass('MenuBajadoFijado');
+                $('.OcultarNo').removeClass('OcultarSi');
+                $('.Ocultado').addClass('OcultarSi');
+            }
         });
     </script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"
-            charset="utf-8">
-    </script>
-    <script id="scriptScrollPrivacidad">
+    <script type="text/javascript" charset="UTF-8" src="js/css-animations.js"></script>
+    <script>
         $(function () {
-            $('a[href=#avisoLegalPoliticaPrivacidad]').click(function () {
-                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
-                    && location.hostname == this.hostname) {
-                    var $target = $(this.hash);
-                    $target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
-                    if ($target.length) {
-                        var targetOffset = $target.offset().top;
-                        $('html,body').animate({scrollTop: targetOffset}, 1000);
-                        return false;
+            $('a[href*=#]').click(function () {
+
+                var windowWidth = $(window).width();
+                var windowHeight = $(window).height();
+
+                function saberOrientacion(windowWidth, windowHeight) {
+                    if (windowWidth > windowHeight) {
+                        return "landscape";
+                    }
+                    else {
+                        return "portrait";
                     }
                 }
-            });
-        });
-    </script>
-    <script id="scriptScrollUso">
-        $(function () {
-            $('a[href=#condicionesUso]').click(function () {
+
+                var animation;
+                if (windowWidth <= 768 && saberOrientacion(windowWidth, windowHeight) !== "landscape" && windowWidth > 425) {
+                    animation = CSSAnimations.get('menu768px').getKeyframe('100%').css['height'];
+                }
+                else if (windowWidth <= 768 && saberOrientacion(windowWidth, windowHeight) === "landscape" && windowWidth > 425) {
+                    animation = CSSAnimations.get('menu768pxlandscape').getKeyframe('100%').css['height'];
+                }
+                else if (windowWidth <= 425) {
+                    animation = CSSAnimations.get('menu425px').getKeyframe('100%').css['height'];
+                }
+                else {
+                    animation = CSSAnimations.get('menu').getKeyframe('100%').css['height'];
+                }
+
+                var desplazamiento = windowWidth * parseInt (animation) / 100;
+
+                var margin = windowWidth * 0.025;
+
                 if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
                     && location.hostname == this.hostname) {
                     var $target = $(this.hash);
                     $target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
                     if ($target.length) {
-                        var targetOffset = $target.offset().top;
+                        var targetOffset = $target.offset().top - desplazamiento - margin;
                         $('html,body').animate({scrollTop: targetOffset}, 1000);
                         return false;
                     }
@@ -59,22 +81,46 @@
     </script>
 </head>
 <body>
-<header id="menuCondiciones">
-    <h1>Condiciones Clic&amp;Fish</h1>
-    <p>
-        En esta página puedes encontrar todas las condiciones de nuestro servicio, están divididas en dos
-        partes: términos y condiciones generales, y condiciones de la suscripción.
-    </p>
-    <section>
-        <a href="#avisoLegalPoliticaPrivacidad" class="Boton" id="botonIzquierdo"><input type="button"
-                                                                                         value="Aviso Legal y Politica de Privacidad"></a>
-        <a href="#condicionesUso" class="Boton"><input type="button" value="Condiciones de uso"></a>
-    </section>
+
+<header>
+
+    <div id="menu">
+        <a href="Index.html"><img src="img/logo_negro.png" class="OcultarNo" id="logo"></a>
+        <img src="img/boton_navegacion.png" class="OcultarNo" id="botonNavegacion">
+        <div class="OcultarNo" id="idioma">ES/EN</div>
+    </div>
+
+    <div id="menuBajado">
+        <a href="Index.html"><img src="img/logo_negro.png" class="Ocultado OcultarSi" id="logoBajado"></a>
+        <img src="img/boton_navegacion.png" class="Ocultado OcultarSi" id="botonNavegacionBajado">
+        <div class="Ocultado OcultarSi" id="idiomaBajado">ES/EN</div>
+    </div>
+
 </header>
+
+<section id="menuCondiciones">
+
+    <h1>Condiciones generales</h1>
+
+    <p>
+        En esta página puedes encontrar todas las condiciones de nuestro servicio, están divididas en dos partes:
+        términos y condiciones generales, y condiciones de la suscripción.
+    </p>
+
+    <section>
+        <a href="#objetivoBotonIzquierdo" class="Boton" id="botonIzquierdo">
+            <input type="button" value="Aviso legal y Política de privacidad">
+        </a>
+        <a href="#objetivoBotonDerecho" class="Boton" id="botonDerecho">
+            <input type="button" value="Condiciones de uso">
+        </a>
+    </section>
+
+</section>
 
 <section>
 
-    <h1 id="avisoLegalPoliticaPrivacidad">AVISO LEGAL, POLITICA DE PRIVACIDAD Y CONDICIONES GENERALES DE USO</h1>
+    <h1 id="objetivoBotonIzquierdo">AVISO LEGAL, POLITICA DE PRIVACIDAD Y CONDICIONES GENERALES DE USO</h1>
 
     <h2>1. Objeto</h2>
 
@@ -134,11 +180,9 @@
     </ol>
 
     <p>
-        2. Durante la navegación y uso de la Aplicación, AQUADATA S.L. puede recabar y
-        almacenar información de su dispositivo para generar estadísticas
-        de uso que permitan mejorar los productos o servicios y dar un mejor
-        servicio, así como para operaciones de soporte y mantenimiento. Nos
-        referimos a:
+        2. Durante la navegación y uso de la Aplicación, AQUADATA S.L. puede recabar y almacenar información de su
+        dispositivo para generar estadísticas de uso que permitan mejorar los productos o servicios y dar un mejor
+        servicio, así como para operaciones de soporte y mantenimiento. Nos referimos a:
     </p>
 
     <ol>
@@ -149,30 +193,26 @@
         <li>Idioma</li>
         <li>La marca y modelo de Smartphone/Tablet</li>
         <li>Los datos de geolocalización del dispositivo</li>
-        <li>Los datos de uso de la Aplicación por parte de los usuarios. Se
-            podrá recabar información anónima sobre el uso de la Aplicación
-            con objeto de mejorar la calidad, fiabilidad y rendimiento de la
-            aplicación.
+        <li>
+            Los datos de uso de la Aplicación por parte de los usuarios. Se podrá recabar información anónima sobre el
+            uso de la Aplicación con objeto de mejorar la calidad, fiabilidad y rendimiento de la aplicación.
         </li>
     </ol>
 
     <p>
-        3. Para el mantenimiento y seguimiento de la atención al usuario
-        AQUADATA S.L. puede mantener un registro de la correspondencia que
-        este haya mantenido AQUADATA S.L.
+        3. Para el mantenimiento y seguimiento de la atención al usuario AQUADATA S.L. puede mantener un registro de la
+        correspondencia que este haya mantenido AQUADATA S.L.
     </p>
 
     <p>
-        4. Las respuestas del Usuario a encuestas o cuestionarios, como
-        evaluaciones sobre los servicios que comparta con otros miembros de
-        la comunidad podrán ser empleados para fines de análisis y estudio
-        de las conductas de los usuarios.
+        4. Las respuestas del Usuario a encuestas o cuestionarios, como evaluaciones sobre los servicios que comparta
+        con otros miembros de la comunidad podrán ser empleados para fines de análisis y estudio de las conductas de los
+        usuarios.
     </p>
 
     <p>
-        5. Información que se pueda solicitar al Usuario cuando este informe
-        acerca de un problema con la Aplicación, como, por ejemplo, la causa
-        de tu solicitud de asistencia.
+        5. Información que se pueda solicitar al Usuario cuando este informe acerca de un problema con la Aplicación,
+        como, por ejemplo, la causa de tu solicitud de asistencia.
     </p>
 
     <p>
@@ -184,207 +224,178 @@
 
     <h2>3. Consentimiento sobre la incorporación de datos de carácter personal</h2>
 
-    <p> 3.1. AQUADATA S.L. informa a los usuarios que cumple con la normativa de
-        protección de datos vigente y, en concreto, con la Ley Orgánica
-        15/1999, de 13 de Diciembre de Protección de Datos de Carácter
-        Personal, la Ley 34/2002 de Servicios de la Sociedad de la
-        Información y el Comercio Electrónico y el Real Decreto 1720/2007,
-        de 21 de diciembre de Desarrollo de la LOPD. De acuerdo con lo
-        dispuesto en la referida normativa, AQUADATA S.L. manifiesta que sólo
-        recoge los datos estrictamente necesarios para ofrecer los servicios
-        derivados de la Aplicación, en los términos contenidos en la
-        presente Política de Privacidad, si bien se reserva el derecho de
-        utilizar los datos que consten en sus bases de datos para realizar
-        estudios estadísticos de los usuarios registrados y del uso que dan
-        a la Aplicación. </p>
-
-    <p> 3.2. A tal efecto, por medio de la presente y, en cualquier caso, mediante
-        la introducción voluntaria de cualesquiera datos de carácter
-        personal en cualquier formulario electrónico u hoja de captación
-        facilitada en la Aplicación, ya sea tanto el proceso de registro
-        como durante el uso de la Aplicación en los términos expuestos en
-        la Cláusula 2 precedente, los cuales resultan necesarios para la
-        tramitación y gestión de su solicitud de servicio o información,
-        el usuario queda informado y presta su consentimiento para la
-        incorporación de los datos de carácter personal que facilite a la
-        compañía al fichero automatizado titularidad de AQUADATA S.L., con
-        domicilio social en Calle Las Carbazas número 5
-        de Rioseco de Tapia en León, CP: 24275 (España),
-        debidamente inscrito ante el Registro General de Protección de Datos
-        de Carácter Personal. </p>
-
-    <p> 3.3. Asimismo, el usuario presta su consentimiento expreso a AQUADATA S.L.
-        para el tratamiento de sus datos, consecuencia de la consulta,
-        solicitud o contratación de cualquier servicio, o de cualquier
-        operación realizada, al objeto de acceder a la información y a los
-        servicios facilitados por AQUADATA S.L., a través de la Aplicación
-        y, en su caso, para el mantenimiento de la relación contractual, así
-        como para el envío de ofertas o comunicaciones publicitarias y
-        promocionales por cualquier medio incluido el electrónico. </p>
-
-    <p> 3.4. El usuario, mediante la aceptación de los términos contenidos en la
-        presente Cláusula, se compromete a cumplir durante su navegación
-        y/o uso de la Aplicación sus obligaciones contenidas en la presente
-        Política de Privacidad y a asumir el alcance de las garantías de
-        AQUADATA S.L. otorgadas a través de la misma o de la que resulte
-        vigente en cada momento. >
-
+    <p>
+        3.1. AQUADATA S.L. informa a los usuarios que cumple con la normativa de protección de datos vigente y, en
+        concreto, con la Ley Orgánica 15/1999, de 13 de Diciembre de Protección de Datos de Carácter Personal, la Ley
+        34/2002 de Servicios de la Sociedad de la Información y el Comercio Electrónico y el Real Decreto 1720/2007, de
+        21 de diciembre de Desarrollo de la LOPD. De acuerdo con lo dispuesto en la referida normativa, AQUADATA S.L.
+        manifiesta que sólo recoge los datos estrictamente necesarios para ofrecer los servicios derivados de la
+        Aplicación, en los términos contenidos en la presente Política de Privacidad, si bien se reserva el derecho de
+        utilizar los datos que consten en sus bases de datos para realizar estudios estadísticos de los usuarios
+        registrados y del uso que dan a la Aplicación.
     </p>
 
-    <p> 3.5. AQUADATA S.L. se compromete y garantiza el tratamiento de los datos
-        de carácter personal con arreglo a lo dispuesto en la normativa de
-        Aplicación ya citada y a la que resulte vigente en cada momento, así
-        como la máxima confidencialidad con respecto a los datos de carácter
-        personal facilitados, tanto por parte de AQUADATA S.L. como de los
-        empleados de la compañía que tengan o pudieran tener acceso a los
-        referidos datos. </p>
+    <p>
+        3.2. A tal efecto, por medio de la presente y, en cualquier caso, mediante la introducción voluntaria de
+        cualesquiera datos de carácter personal en cualquier formulario electrónico u hoja de captación facilitada en la
+        Aplicación, ya sea tanto el proceso de registro como durante el uso de la Aplicación en los términos expuestos
+        en la Cláusula 2 precedente, los cuales resultan necesarios para la tramitación y gestión de su solicitud de
+        servicio o información, el usuario queda informado y presta su consentimiento para la incorporación de los datos
+        de carácter personal que facilite a la compañía al fichero automatizado titularidad de AQUADATA S.L., con
+        domicilio social en Calle Las Carbazas número 5 de Rioseco de Tapia en León, CP: 24275 (España), debidamente
+        inscrito ante el Registro General de Protección de Datos de Carácter Personal.
+    </p>
 
-    <p> 3.6. AQUADATA S.L. garantiza, asimismo, que cumple con normas de seguridad
-        aceptadas de manera general para proteger la información que se le
-        facilita por el Usuario, tanto durante la transmisión como durante
-        la recepción de ésta y su almacenamiento. Informamos al Usuario de
-        que tiene implantadas las medidas de seguridad de índole técnica y
-        organizativas necesarias que garanticen la seguridad de sus datos de
-        carácter personal y eviten su alteración, pérdida, tratamiento y/o
-        acceso no autorizado, habida cuenta del estado de la tecnología, la
-        naturaleza de los datos almacenados y los riesgos a que están
-        expuestos, ya provengan de la acción humana o del medio físico o
-        natural. Métodos que se consignan en el preceptivo Documento de
-        Seguridad con arreglo a Ley Orgánica 15/1999, de 13 de Diciembre de
-        Protección de Datos de Carácter Personal. Sin embargo, se pone de
-        manifiesto y el Usuario admite y asume conocer que ningún método de
-        transmisión o almacenamiento electrónico es cien por cien (100%)
-        seguro. Por lo tanto, AQUADATA S.L. no puede garantizar su absoluta
-        seguridad, sino solo la máxima diligencia en cuanto a la misma y
-        hasta ese límite se hace responsable. </p>
+    <p>
+        3.3. Asimismo, el usuario presta su consentimiento expreso a AQUADATA S.L. para el tratamiento de sus datos,
+        consecuencia de la consulta, solicitud o contratación de cualquier servicio, o de cualquier operación realizada,
+        al objeto de acceder a la información y a los servicios facilitados por AQUADATA S.L., a través de la Aplicación
+        y, en su caso, para el mantenimiento de la relación contractual, así como para el envío de ofertas o
+        comunicaciones publicitarias y promocionales por cualquier medio incluido el electrónico.
+    </p>
 
-    <p> 3.7. Nota relativa a la descarga y utilización de la Aplicación por menores. Con carácter
-        general, para la descarga y uso de los Servicios de la Aplicación,
-        los menores de edad deben haber obtenido previamente la autorización
-        de sus padres, tutores o representantes legales, quienes serán
-        responsables de todos los actos realizados a través de la Aplicación
-        por los menores a su cargo, incluso de la descarga de la misma. En
-        cualquier caso, para usar el Servicio gratuito deberá ser mayor de
-        14 años y para inscribirse en una suscripción de pago, debe ser
-        mayor de 18 años, o mayor de 14 años y tener el consentimiento del
-        padre o tutor, el cual deberá suscribir el contrato en su nombre.
-        En aquellos Servicios en los que expresamente se señale, el acceso
-        quedará restringido única y exclusivamente a mayores de 18 años.
-        En cualquier caso, rogamos a los representantes legales de los
-        menores de edad, que lean la presente Política de Privacidad y
-        asistan a sus representados en el uso de la Aplicación y a la hora
-        de facilitar los datos personales de registro. </p>
+    <p>
+        3.4. El usuario, mediante la aceptación de los términos contenidos en la presente Cláusula, se compromete a
+        cumplir durante su navegación y/o uso de la Aplicación sus obligaciones contenidas en la presente Política de
+        Privacidad y a asumir el alcance de las garantías de AQUADATA S.L. otorgadas a través de la misma o de la que
+        resulte vigente en cada momento.
+    </p>
+
+    <p>
+        3.5. AQUADATA S.L. se compromete y garantiza el tratamiento de los datos de carácter personal con arreglo a lo
+        dispuesto en la normativa de Aplicación ya citada y a la que resulte vigente en cada momento, así como la máxima
+        confidencialidad con respecto a los datos de carácter personal facilitados, tanto por parte de AQUADATA S.L.
+        como de los empleados de la compañía que tengan o pudieran tener acceso a los referidos datos.
+    </p>
+
+    <p> 3.6. AQUADATA S.L. garantiza, asimismo, que cumple con normas de seguridad aceptadas de manera general para
+        proteger la información que se le facilita por el Usuario, tanto durante la transmisión como durante la
+        recepción de ésta y su almacenamiento. Informamos al Usuario de que tiene implantadas las medidas de seguridad
+        de índole técnica y organizativas necesarias que garanticen la seguridad de sus datos de carácter personal y
+        eviten su alteración, pérdida, tratamiento y/o acceso no autorizado, habida cuenta del estado de la tecnología,
+        la naturaleza de los datos almacenados y los riesgos a que están expuestos, ya provengan de la acción humana o
+        del medio físico o natural. Métodos que se consignan en el preceptivo Documento de Seguridad con arreglo a Ley
+        Orgánica 15/1999, de 13 de Diciembre de Protección de Datos de Carácter Personal. Sin embargo, se pone de
+        manifiesto y el Usuario admite y asume conocer que ningún método de transmisión o almacenamiento electrónico es
+        cien por cien (100%) seguro. Por lo tanto, AQUADATA S.L. no puede garantizar su absoluta seguridad, sino solo la
+        máxima diligencia en cuanto a la misma y hasta ese límite se hace responsable.
+    </p>
+
+    <p>
+        3.7. Nota relativa a la descarga y utilización de la Aplicación por menores. Con carácter general, para la
+        descarga y uso de los Servicios de la Aplicación, los menores de edad deben haber obtenido previamente la
+        autorización de sus padres, tutores o representantes legales, quienes serán responsables de todos los actos
+        realizados a través de la Aplicación por los menores a su cargo, incluso de la descarga de la misma. En
+        cualquier caso, para usar el Servicio gratuito deberá ser mayor de 14 años y para inscribirse en una suscripción
+        de pago, debe ser mayor de 18 años, o mayor de 14 años y tener el consentimiento del padre o tutor, el cual
+        deberá suscribir el contrato en su nombre. En aquellos Servicios en los que expresamente se señale, el acceso
+        quedará restringido única y exclusivamente a mayores de 18 años. En cualquier caso, rogamos a los representantes
+        legales de los menores de edad, que lean la presente Política de Privacidad y asistan a sus representados en el
+        uso de la Aplicación y a la hora de facilitar los datos personales de registro.
+    </p>
 
 
     <h2>4. Veracidad de los Datos facilitados</h2>
 
-    <p> 4.1. El Usuario manifiesta que todos los datos facilitados por él durante
-        el proceso de Registro son ciertos y correctos, y se compromete a
-        comunicar a AQUADATA S.L. los cambios que se produzcan en los mismos. </p>
+    <p>
+        4.1. El Usuario manifiesta que todos los datos facilitados por él durante el proceso de Registro son ciertos y
+        correctos, y se compromete a comunicar a AQUADATA S.L. los cambios que se produzcan en los mismos.
+    </p>
 
-    <p> 4.2. En el caso de que el Usuario facilite datos de terceros durante el
-        proceso de registro o uso de la Aplicación, AQUADATA S.L. no se
-        responsabilizará del cumplimiento de los principios de información
-        y consentimiento, por lo que deberá ser el Usuario quien garantice
-        haber informado previamente y obtenido el consentimiento del titular
-        de los mismos para comunicar sus datos. </p>
+    <p>
+        4.2. En el caso de que el Usuario facilite datos de terceros durante el proceso de registro o uso de la
+        Aplicación, AQUADATA S.L. no se responsabilizará del cumplimiento de los principios de información y
+        consentimiento, por lo que deberá ser el Usuario quien garantice haber informado previamente y obtenido el
+        consentimiento del titular de los mismos para comunicar sus datos.
+    </p>
 
-
-    <p>4.3. Por otra parte, la entrega de los datos es absolutamente
-        voluntaria para el Usuario, si bien la carencia de entrega de
-        determinados datos o respuestas a preguntas que pudieren formularse
-        en los procesos de registro o en los formularios electrónicos que se
-        le presenten al Usuario puede provocar la imposibilidad de acceso a
-        los servicios para cuya prestación se han solicitado los datos de
-        carácter personal, si bien AQUADATA S.L. , en todo caso, informará
-        del carácter obligatorio y/o necesario de la entrega de los datos
-        para el funcionamiento del servicio. </p>
+    <p>
+        4.3. Por otra parte, la entrega de los datos es absolutamente voluntaria para el Usuario, si bien la carencia de
+        entrega de determinados datos o respuestas a preguntas que pudieren formularse en los procesos de registro o en
+        los formularios electrónicos que se le presenten al Usuario puede provocar la imposibilidad de acceso a los
+        servicios para cuya prestación se han solicitado los datos de carácter personal, si bien AQUADATA S.L. , en todo
+        caso, informará del carácter obligatorio y/o necesario de la entrega de los datos para el funcionamiento del
+        servicio.
+    </p>
 
     <h2>5. Consentimiento sobre la cesión de Datos de carácter personal</h2>
 
-    <p>5.1. El Usuario asume, admite que conoce y consiente que AQUADATA S.L., al
-        amparo de lo dispuesto en el artículo 21 del Real Decreto 1720/2007,
-        de 21 de diciembre de Desarrollo de la LOPD, subcontrate el
-        almacenamiento y procesamiento de los datos, contenidos e
-        informaciones subidos y/o compartidos a través de la aplicación sin
-        que en ningún caso tal comunicación constituya una cesión de
-        datos, garantizando a los clientes y usuarios de la Aplicación que
-        los datos facilitados no se aplicarán ni utilizarán con un fin
-        distinto al establecido. </p>
+    <p>
+        5.1. El Usuario asume, admite que conoce y consiente que AQUADATA S.L., al amparo de lo dispuesto en el artículo
+        21 del Real Decreto 1720/2007, de 21 de diciembre de Desarrollo de la LOPD, subcontrate el almacenamiento y
+        procesamiento de los datos, contenidos e informaciones subidos y/o compartidos a través de la aplicación sin que
+        en ningún caso tal comunicación constituya una cesión de datos, garantizando a los clientes y usuarios de la
+        Aplicación que los datos facilitados no se aplicarán ni utilizarán con un fin distinto al establecido.
+    </p>
 
-    <p> 5.2. La cesión así operada quedará regulada, en todo caso, en un
-        Contrato suscrito entre AQUADATA S.L. y el cesionario en el que quede
-        claramente diferenciada la finalidad para la que se produce la cesión
-        de los datos. </p>
+    <p>
+        5.2. La cesión así operada quedará regulada, en todo caso, en un Contrato suscrito entre AQUADATA S.L. y el
+        cesionario en el que quede claramente diferenciada la finalidad para la que se produce la cesión de los datos.
+    </p>
 
-    <p> 5.3. A salvo de lo dispuesto en las Cláusulas 5.1. y 5.2,
-        AQUADATA S.L. en ningún caso revelará la información personal que
-        conste en sus ficheros a terceros sin contar para ello con el
-        consentimiento expreso del Usuario y únicamente utilizará los datos
-        incorporados a los ficheros al objeto de facilitar al Usuario el
-        acceso al servicio y para el envío de comunicaciones comerciales,
-        información del producto y servicio, y/o ofertas y promociones. </p>
+    <p>
+        5.3. A salvo de lo dispuesto en las Cláusulas 5.1. y 5.2, AQUADATA S.L. en ningún caso revelará la información
+        personal que conste en sus ficheros a terceros sin contar para ello con el consentimiento expreso del Usuario y
+        únicamente utilizará los datos incorporados a los ficheros al objeto de facilitar al Usuario el acceso al
+        servicio y para el envío de comunicaciones comerciales, información del producto y servicio, y/o ofertas y
+        promociones.
+    </p>
 
-    <p> 5.4. Igualmente, AQUADATA S.L. garantiza que no venderá, alquilará o, de
-        cualquier forma lucrativa, cederá los datos personales de los
-        Usuarios, ni los instrumentos o direcciones para comunicarse con los
-        mismos, salvo en aquellos supuestos en los que sea necesario para la
-        propia prestación del servicio. </p>
+    <p>
+        5.4. Igualmente, AQUADATA S.L. garantiza que no venderá, alquilará o, de cualquier forma lucrativa, cederá los
+        datos personales de los Usuarios, ni los instrumentos o direcciones para comunicarse con los mismos, salvo en
+        aquellos supuestos en los que sea necesario para la propia prestación del servicio.
+    </p>
 
-    <p> 5.5. Con carácter general, AQUADATA S.L. no revelará información
-        personal que conste en sus ficheros a terceros sin contar para ello
-        con el consentimiento expreso del Usuario, a excepción de los
-        siguientes casos: </p>
+    <p>
+        5.5. Con carácter general, AQUADATA S.L. no revelará información personal que conste en sus ficheros a terceros
+        sin contar para ello con el consentimiento expreso del Usuario, a excepción de los siguientes casos:
+    </p>
 
-    <p> a) Cuando así sea requerido por ley; </p>
-
-    <p> b) Cuando, de buena fe, sea necesario para hacer cumplir esta Política
-        de Privacidad de la Aplicación; </p>
-
-    <p> c) Cuando, de buena fe, sea necesario para proteger la vida, propiedad,
-        o seguridad de nosotros, o de uno o más usuarios; </p>
-
-    <p> d) Cuando, de buena fe, sea especialmente necesario para proteger los
-        derechos, propiedad, o seguridad del público (por ejemplo, responder
-        ante una emergencia); </p>
-
-    <p> e) Cuando sea necesario para cumplir con un procedimiento legal
-        (incluyendo una orden judicial o citación para comparecer ante un
-        juzgado o tribunal) y cooperar con un requisito legal; </p>
-
-    <p> f) Cuando AQUADATA, S.L., o partes de SU negocio sean vendidas o
-        transferidas a, fusionadas con, o adquiridas por, un tercero. </p>
+    <ol>
+        <li>Cuando así sea requerido por ley;</li>
+        <li>Cuando, de buena fe, sea necesario para hacer cumplir esta Política de Privacidad de la Aplicación;</li>
+        <li>Cuando, de buena fe, sea necesario para proteger la vida, propiedad, o seguridad de nosotros, o de uno o más
+            usuarios;
+        </li>
+        <li>Cuando, de buena fe, sea especialmente necesario para proteger los derechos, propiedad, o seguridad del
+            público (por ejemplo, responder ante una emergencia);
+        </li>
+        <li>Cuando sea necesario para cumplir con un procedimiento legal (incluyendo una orden judicial o citación para
+            comparecer ante un juzgado o tribunal) y cooperar con un requisito legal;
+        </li>
+        <li>Cuando AQUADATA, S.L., o partes de SU negocio sean vendidas o transferidas a, fusionadas con, o adquiridas
+            por, un tercero.
+        </li>
+    </ol>
 
     <h2>6. Derechos del Usuario</h2>
 
-    <p> 6.1. El Usuario tiene derecho a oponerse al tratamiento de cualquiera de
-        sus datos que no sean imprescindibles para la celebración del
-        Contrato y a su utilización para cualquier finalidad distinta del
-        mantenimiento de su relación contractual en su caso, como puedan ser
-        los tratamientos con fines publicitarios. Si el Usuario no estuviera
-        conforme con alguno de los tratamientos indicados en la presente
-        Política de Privacidad, el Usuario podrá dirigirse a AQUADATA, S.L.
-        con el fin de que su derecho de oposición a los tratamientos se haga
-        efectivo. </p>
+    <p>
+        6.1. El Usuario tiene derecho a oponerse al tratamiento de cualquiera de sus datos que no sean imprescindibles
+        para la celebración del Contrato y a su utilización para cualquier finalidad distinta del mantenimiento de su
+        relación contractual en su caso, como puedan ser los tratamientos con fines publicitarios. Si el Usuario no
+        estuviera conforme con alguno de los tratamientos indicados en la presente Política de Privacidad, el Usuario
+        podrá dirigirse a AQUADATA, S.L. con el fin de que su derecho de oposición a los tratamientos se haga efectivo.
+    </p>
 
-    <p>6.2. Asimismo, para que el Usuario pueda ejercitar su derecho de acceso,
-        rectificación, cancelación, oposición de sus datos y demás
-        contenidos
-        en el Título III de la Ley Orgánica 15/1999, de 13 de Diciembre de
-        Protección de Datos de Carácter Personal, deberá dirigirse a la
-        siguiente dirección de correo electrónico
-        info@clicandfish.com o a la siguiente dirección postal: Calle
-        Las Carbazas nº 5, 24275, Rioseco de Tapia
-        (León). </p>
+    <p>
+        6.2. Asimismo, para que el Usuario pueda ejercitar su derecho de acceso, rectificación, cancelación, oposición
+        de sus datos y demás contenidos en el Título III de la Ley Orgánica 15/1999, de 13 de Diciembre de Protección de
+        Datos de Carácter Personal, deberá dirigirse a la siguiente dirección de correo electrónico info@clicandfish.com
+        o a la siguiente dirección postal: Calle Las Carbazas nº 5, 24275, Rioseco de Tapia (León).
+    </p>
 
-    <p> 6.3. El Usuario tiene derecho a modificar toda la información de registro
-        de la Aplicación (por ejemplo su Nombre de Usuario y clave de
-        acceso) en cualquier momento. </p>
+    <p>
+        6.3. El Usuario tiene derecho a modificar toda la información de registro de la Aplicación (por ejemplo su
+        Nombre de Usuario y clave de acceso) en cualquier momento.
+    </p>
 
-    <p> 6.4. El Usuario tiene derecho a cancelar la cuenta en cualquier momento.
-        Los datos personales serán conservados únicamente durante el
-        periodo que marquen las obligaciones legalmente establecidas al
-        efecto y sólo para dar cumplimiento a exigencias legales. </p>
+    <p>
+        6.4. El Usuario tiene derecho a cancelar la cuenta en cualquier momento. Los datos personales serán conservados
+        únicamente durante el periodo que marquen las obligaciones legalmente establecidas al efecto y sólo para dar
+        cumplimiento a exigencias legales.
+    </p>
 
     <h2>7. Remisión de Ofertas y/o Comunicaciones</h2>
 
@@ -688,8 +699,7 @@
         de León.
     </p>
 
-
-    <h1 id="condicionesUso">CONDICIONES DE USO </h1>
+    <h1 id="objetivoBotonDerecho">CONDICIONES DE USO </h1>
 
     <h2>1. Cuestiones Generales</h2>
 
@@ -938,9 +948,10 @@
     <P>El usuario declara haber leído, conocer y aceptar las presentes
         condiciones en toda su extensión.</p>
 
-    <p id="copyright">Copyright © AQUADATA, S.L Todos los derechos reservados. Prohibida su
+    <p id="copyright">Copyright © AQUADATA S.L. Todos los derechos reservados. Prohibida su
         reproducción total o parcial. 2017.
     </p>
 </section>
+
 </body>
 </html>

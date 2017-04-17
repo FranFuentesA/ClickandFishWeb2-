@@ -34,7 +34,7 @@ body {
     height: 50%;
 }
 
-.idioma {
+.Idioma {
     display: none; /*---- Botón deshabilitado temporalmente ---*/
     /*display: flex;*/
     justify-content: center;
@@ -53,7 +53,7 @@ body {
 }
 
 .MenuBajadoFijado {
-    z-index: 1;
+    z-index: 2;
     position: fixed;
     width: 100vw;
     background-color: #fff;
@@ -93,7 +93,7 @@ body {
     height: 80%;
 }
 
-.idiomaBajado {
+.IdiomaBajado {
     display: none; /*---- Botón deshabilitado temporalmente ---*/
     /*display: flex;*/
     justify-content: center;
@@ -107,7 +107,7 @@ body {
     color: black;
 }
 
-.ocultarSi {
+.OcultarSi {
     display: none;
 }
 
@@ -128,7 +128,7 @@ body {
         height: 15vw;
     }
 
-    .idioma {
+    .Idioma {
         right: 15%;
         font-size: 4vw;
     }
@@ -145,7 +145,7 @@ body {
         }
     }
 
-    .idiomaBajado {
+    .IdiomaBajado {
         right: 15%;
         font-size: 3vw;
     }
@@ -155,12 +155,26 @@ body {
     }
 }
 
+@media (max-width: 768px) and (orientation: landscape) {
+    @keyframes menu {
+        from {
+            height: 0;
+            opacity: 0;
+        }
+
+        to {
+            height: 7.5vw;
+            opacity: 1;
+        }
+    }
+}
+
 @media (max-width: 425px) {
     .Menu {
         background-color: white;
     }
 
-    .idioma {
+    .Idioma {
         right: 17.5%;
         color: black;
     }
@@ -182,7 +196,7 @@ body {
         height: 60%;
     }
 
-    .idiomaBajado {
+    .IdiomaBajado {
         right: 16%;
         font-size: 4vw;
     }
@@ -255,12 +269,12 @@ body {
 
     .Texto {
         flex-basis: 100%;
-        margin-bottom: 4%;
+        margin-bottom: 7%;
     }
 
     .Texto h1 {
-        margin: 0 15% 2.5% 15%;
-        font-size: 8vw;
+        margin: 2.5% 15%;
+        font-size: 7vw;
     }
 
     .Texto p {
@@ -284,10 +298,19 @@ body {
     }
 }
 
+@media (max-width: 425px) {
+    #android {
+        width: 32%;
+    }
+
+    #iOS {
+        width: 33%;
+    }
+}
+
 .CompartirRedesSociales {
     display: none;
     justify-content: center;
-    margin: 3.5% 0;
 }
 
 .fb-like, .twitter-follow-button {
@@ -297,6 +320,7 @@ body {
 @media (max-width: 768px) {
     .CompartirRedesSociales {
         display: flex;
+        margin: 7% 0;
     }
 }
 
@@ -503,8 +527,8 @@ footer {
     display: flex;
     flex-wrap: wrap;
     padding: 5% 0;
-    text-align: center;
     background: rgb(94, 134, 51);
+    text-align: center;
     color: #fff;
 }
 
@@ -602,7 +626,7 @@ footer {
     font-size: 2.5vw;
     background: none;
     color: white;
-    z-index: 2;
+    z-index: 1;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -o-transition: all 0.3s;
@@ -680,6 +704,12 @@ footer {
     #Copyright {
         justify-content: flex-end;
         font-size: 3.5vw;
+    }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+    footer {
+        min-height: 90vh;
     }
 }
 

@@ -1,19 +1,17 @@
-/*-------------------- Estilos generales --------------------*/
-*, *:before, *:after {
-    box-sizing: inherit;
-}
-
+/*-------------------- Estilos globales --------------------*/
 body {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0 auto;
     padding: 0 5%;
-    font-family: 'Roboto', arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 h1 {
     margin-bottom: 5%;
-    text-align: center;
     font-size: 3vw;
+    text-align: center;
     color: #5E8633;
     text-decoration: underline;
 }
@@ -25,9 +23,9 @@ h2 {
 }
 
 p {
-    text-align: justify;
-    font-size: 2vw;
     line-height: 2.5vw;
+    font-size: 2vw;
+    text-align: justify;
 }
 
 span {
@@ -50,8 +48,8 @@ li {
 #copyright {
     margin-top: 10%;
     font-size: 1.9vw;
-    font-style: italic;
     font-weight: bold;
+    font-style: italic;
 }
 
 @media (max-width: 768px) {
@@ -64,31 +62,39 @@ li {
     }
 
     p {
-        font-size: 2.5vw;
         line-height: 3vw;
+        font-size: 2.5vw;
     }
 
     ol {
+        font-size: 2.5vw;
+    }
+
+    #copyright {
         font-size: 2.5vw;
     }
 }
 
-@media (max-width: 426px) {
+@media (max-width: 425px) {
     h1 {
-        font-size: 4vw;
+        font-size: 4.5vw;
     }
 
     h2 {
-        font-size: 3.5vw;
+        font-size: 4vw;
     }
 
     p {
-        font-size: 3vw;
-        line-height: 3.5vw;
+        line-height: 4vw;
+        font-size: 3.5vw;
     }
 
     ol {
-        font-size: 3vw;
+        font-size: 3.5vw;
+    }
+
+    #copyright {
+        font-size: 3.45vw;
     }
 }
 
@@ -125,12 +131,13 @@ li {
 
 .Boton input {
     padding: 1vw;
-    background: transparent;
-    color: #5E8633;
+    border-radius: 4vw;
+    outline: none;
     border-color: #5E8633;
-    border-radius: 2vw;
-    font-size: 1.5vw;
+    background: transparent;
+    font-size: 2vw;
     font-weight: bold;
+    color: #5E8633;
 }
 
 .Boton input:hover {
@@ -144,12 +151,278 @@ li {
 
 @media (max-width: 768px) {
     #menuCondiciones h1 {
-        font-size: 5.5vw;
+        font-size: 8.5vw;
+    }
+
+    #menuCondiciones p {
+        margin: 5% 2.5%;
+        line-height: 4.5vw;
+        font-size: 4vw;
+        text-align: justify;
+    }
+
+    .Boton input {
+        padding: 1.5vw;
+        border-radius: 6vw;
+        font-size: 3vw;
     }
 }
 
-@media (max-width: 426px) {
-    #menuCondiciones h1 {
-        font-size: 6vw;
+@media (max-width: 425px) {
+    #menuCondiciones p {
+        line-height: 5.5vw;
+        font-size: 5vw;
+    }
+
+    #menuCondiciones section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Boton input {
+        padding: 2vw 11vw;
+        border-radius: 8vw;
+        font-size: 4vw;
+    }
+
+    #botonIzquierdo {
+        margin: 0 0 5% 0;
+    }
+
+    #botonDerecho input {
+        padding: 2vw 26vw;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+header {
+    position: absolute;
+    left: 0;
+}
+
+#menu {
+    position: absolute;
+    width: 100vw;
+    height: 10vw;
+}
+
+#logo {
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    height: 50%;
+}
+
+#botonNavegacion {
+    display: none; /*---- Botón deshabilitado temporalmente ---*/
+    position: absolute;
+    top: 25%;
+    right: 5%;
+    height: 50%;
+}
+
+#idioma {
+    display: none; /*---- Botón deshabilitado temporalmente ---*/
+    /*display: flex;*/
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 25%;
+    right: 12.5%;
+    height: 50%;
+    font-size: 3vw;
+    font-weight: bold;
+    color: white;
+}
+
+#menuBajado {
+    opacity: 0;
+}
+
+.MenuBajadoFijado {
+    z-index: 2;
+    position: fixed;
+    width: 100vw;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0.05vw 2.5vw 0.05vw rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0 0.05vw 2.5vw 0.05vw rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0.05vw 2.5vw 0.05vw rgba(0, 0, 0, 0.75);
+    -webkit-animation: all 0.5s both;
+    -moz-animation: all 0.5s both;
+    animation: all 0.5s both;
+    animation-name: menu;
+}
+
+@keyframes menu {
+    from {
+        height: 0;
+        opacity: 0;
+    }
+
+    to {
+        height: 5vw;
+        opacity: 1;
+    }
+}
+
+@keyframes menu768px {
+    from {
+        height: 0;
+        opacity: 0;
+    }
+
+    to {
+        height: 10vw;
+        opacity: 1;
+    }
+}
+
+@keyframes menu768pxlandscape {
+    from {
+        height: 0;
+        opacity: 0;
+    }
+
+    to {
+        height: 7.5vw;
+        opacity: 1;
+    }
+}
+
+@keyframes menu425px {
+    from {
+        height: 0;
+        opacity: 0;
+    }
+
+    to {
+        height: 15vw;
+        opacity: 1;
+    }
+}
+
+#logoBajado {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    height: 80%;
+}
+
+#botonNavegacionBajado {
+    display: none; /*---- Botón deshabilitado temporalmente ---*/
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    height: 80%;
+}
+
+#idiomaBajado {
+    display: none; /*---- Botón deshabilitado temporalmente ---*/
+    /*display: flex;*/
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    height: 80%;
+    font-size: 2vw;
+    font-weight: bold;
+    color: black;
+}
+
+.OcultarSi {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #menu {
+        height: 15vw;
+    }
+
+    #idioma {
+        right: 15%;
+        font-size: 4vw;
+    }
+
+    .MenuBajadoFijado {
+        animation-name: menu768px;
+    }
+
+    #idiomaBajado {
+        right: 15%;
+        font-size: 3vw;
+    }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+    .MenuBajadoFijado {
+        animation-name: menu768pxlandscape;
+    }
+}
+
+@media (max-width: 425px) {
+    header {
+        max-height: 50vw;
+    }
+
+    #menu {
+        background-color: white;
+    }
+
+    #idioma {
+        right: 17.5%;
+        color: black;
+    }
+
+    .MenuBajadoFijado {
+        animation-name: menu425px;
+    }
+
+    #logoBajado {
+        top: 20%;
+        height: 60%;
+    }
+
+    #idiomaBajado {
+        right: 16%;
+        font-size: 4vw;
+    }
+
+    #botonNavegacionBajado {
+        top: 20%;
+        height: 60%;
     }
 }

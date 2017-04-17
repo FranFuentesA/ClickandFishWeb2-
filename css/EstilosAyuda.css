@@ -2,68 +2,7 @@
     max-height: calc(100vh - 5vw);
 }
 
-#carrusel {
-    top: 5vw;
-    height: calc(100vh - 5vw);
-    background-image: url("../img/ayuda/fondo_ayuda.jpg");
-    background-position: center;
-    background-size: cover;
-}
-
-.carousel-indicators {
-    bottom: 0;
-}
-
-.carousel-indicators li {
-    margin: 0;
-    width: 3vh;
-    height: 3vh;
-    border-radius: 3vh;
-}
-
-.carousel-indicators .active {
-    width: 3vh;
-    height: 3vh;
-    border-radius: 3vh;
-}
-
-.item img {
-    padding: 2% 0;
-}
-
-@media (max-width: 768px) {
-    * {
-        max-height: calc(100vh - 10vw);
-    }
-
-    #carrusel {
-        top: 10vw;
-        height: calc(100vh - 10vw);
-    }
-
-    .item img {
-        padding: 2% 0 4% 0;
-    }
-}
-
-@media (max-width: 425px) {
-    * {
-        max-height: calc(100vh - 15vw);
-    }
-
-    #carrusel {
-        top: 15vw;
-        height: calc(100vh - 15vw);
-    }
-}
-
-@media (orientation: portrait) and (max-width: 425px) {
-    .item img {
-        margin-top: 5vh;
-    }
-}
-
-#Menu {
+#menu {
     z-index: 1;
     position: fixed;
     width: 100vw;
@@ -103,8 +42,41 @@
     color: black;
 }
 
+#carrusel {
+    top: 5vw;
+    height: calc(100vh - 5vw);
+    background-image: url("../img/ayuda/fondo_ayuda.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.carousel-indicators {
+    bottom: 0;
+}
+
+.carousel-indicators li {
+    margin: 0;
+    width: 3vh;
+    height: 3vh;
+    border-radius: 3vh;
+}
+
+.carousel-indicators .active {
+    width: 3vh;
+    height: 3vh;
+    border-radius: 3vh;
+}
+
+.item img {
+    padding: 2% 0;
+}
+
 @media (max-width: 768px) {
-    #Menu {
+    * {
+        max-height: calc(100vh - 10vw);
+    }
+
+    #menu {
         height: 10vw;
     }
 
@@ -112,10 +84,38 @@
         right: 15%;
         font-size: 3vw;
     }
+
+    #carrusel {
+        top: 10vw;
+        height: calc(100vh - 10vw);
+    }
+
+    .item img {
+        padding: 2% 0 4% 0;
+    }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+    * {
+        max-height: calc(100vh - 7.5vw);
+    }
+
+    #menu {
+        height: 7.5vw;
+    }
+
+    #carrusel {
+        top: 7.5vw;
+        height: calc(100vh - 7.5vw);
+    }
 }
 
 @media (max-width: 425px) {
-    #Menu {
+    * {
+        max-height: calc(100vh - 15vw);
+    }
+
+    #menu {
         height: 15vw;
     }
 
@@ -132,5 +132,16 @@
     #botonNavegacion {
         top: 20%;
         height: 60%;
+    }
+
+    #carrusel {
+        top: 15vw;
+        height: calc(100vh - 15vw);
+    }
+}
+
+@media (orientation: portrait) and (max-width: 425px) {
+    .item img {
+        margin-top: 5vh;
     }
 }
