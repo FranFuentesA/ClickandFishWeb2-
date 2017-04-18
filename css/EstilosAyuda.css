@@ -138,10 +138,9 @@
         top: 15vw;
         height: calc(100vh - 15vw);
     }
-}
 
-@media (orientation: portrait) and (max-width: 425px) {
     .item img {
-        margin-top: 5vh;
+        padding: 5% 0;
+        height: 88vh !important;
     }
 }
