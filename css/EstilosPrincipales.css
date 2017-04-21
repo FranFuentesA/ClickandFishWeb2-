@@ -13,7 +13,7 @@ body {
     margin-bottom: 3.5%;
 }
 
-.Menu {
+#menu {
     position: absolute;
     width: 100vw;
     height: 10vw;
@@ -34,7 +34,7 @@ body {
     height: 50%;
 }
 
-.Idioma {
+#idioma {
     display: none; /*---- Botón deshabilitado temporalmente ---*/
     /*display: flex;*/
     justify-content: center;
@@ -48,13 +48,10 @@ body {
     color: white;
 }
 
-.MenuBajado {
-    opacity: 0;
-}
-
 .MenuBajadoFijado {
     z-index: 2;
     position: fixed;
+    height: 5vw;
     width: 100vw;
     background-color: #fff;
     -webkit-box-shadow: 0 0.05vw 2.5vw 0.05vw rgba(0, 0, 0, 0.75);
@@ -68,12 +65,12 @@ body {
 
 @keyframes menu {
     from {
-        height: 0;
+        top:-10%;
         opacity: 0;
     }
 
     to {
-        height: 5vw;
+        top:0;
         opacity: 1;
     }
 }
@@ -93,7 +90,7 @@ body {
     height: 80%;
 }
 
-.IdiomaBajado {
+#idiomaBajado {
     display: none; /*---- Botón deshabilitado temporalmente ---*/
     /*display: flex;*/
     justify-content: center;
@@ -124,28 +121,32 @@ body {
 }
 
 @media (max-width: 768px) {
-    .Menu {
+    #menu {
         height: 15vw;
     }
 
-    .Idioma {
+    #idioma {
         right: 15%;
         font-size: 4vw;
     }
 
+    .MenuBajadoFijado {
+        height: 10vw;
+    }
+
     @keyframes menu {
         from {
-            height: 0;
+            top:-10%;
             opacity: 0;
         }
 
         to {
-            height: 10vw;
+            top:0;
             opacity: 1;
         }
     }
 
-    .IdiomaBajado {
+    #idiomaBajado {
         right: 15%;
         font-size: 3vw;
     }
@@ -156,37 +157,45 @@ body {
 }
 
 @media (max-width: 768px) and (orientation: landscape) {
+    .MenuBajadoFijado {
+        height: 7.5vw;
+    }
+
     @keyframes menu {
         from {
-            height: 0;
+            top:-10%;
             opacity: 0;
         }
 
         to {
-            height: 7.5vw;
+            top:0;
             opacity: 1;
         }
     }
 }
 
 @media (max-width: 425px) {
-    .Menu {
+    #menu {
         background-color: white;
     }
 
-    .Idioma {
+    #idioma {
         right: 17.5%;
         color: black;
     }
 
+    .MenuBajadoFijado {
+        height: 15vw;
+    }
+
     @keyframes menu {
         from {
-            height: 0;
+            top:-10%;
             opacity: 0;
         }
 
         to {
-            height: 15vw;
+            top:0;
             opacity: 1;
         }
     }
@@ -196,7 +205,7 @@ body {
         height: 60%;
     }
 
-    .IdiomaBajado {
+    #idiomaBajado {
         right: 16%;
         font-size: 4vw;
     }
@@ -208,46 +217,51 @@ body {
 }
 
 .Referencias {
-    display: flex;
-    flex-wrap: wrap;
     margin-bottom: 3.5%;
     width: 100%;
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .Texto {
+    width: 60%;
+    flex-basis: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-basis: 60%;
 }
 
 .Texto h1 {
     margin: 0 auto;
-    text-align: center;
     font-size: 3.5vw;
     text-transform: uppercase;
+    text-align: center;
     font-weight: 900;
     color: #5a5a5a;
 }
 
 .Texto p {
-    text-align: center;
     font-size: 1.25vw;
-    font-weight: 500;
+    text-align: center;
     font-style: italic;
+    font-weight: 500;
     color: #5E8633;
 }
 
 .Tiendas {
-    flex-basis: 40%;
+    margin-right: 2%;
+    width: 38%;
+    flex-basis: 38%;
     display: flex;
-    flex-flow: row wrap;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 }
 
 #android {
-    width: 40%;
+    width: 45%;
+    flex-basis: 45%;
 }
 
 #android img {
@@ -255,7 +269,8 @@ body {
 }
 
 #iOS {
-    width: 42.5%;
+    width: 45%;
+    flex-basis: 45%;
 }
 
 #iOS img {
@@ -268,8 +283,8 @@ body {
     }
 
     .Texto {
-        flex-basis: 100%;
         margin-bottom: 7%;
+        flex-basis: 100%;
     }
 
     .Texto h1 {
@@ -283,28 +298,34 @@ body {
     }
 
     .Tiendas {
+        margin: 0;
+        width: 100%;
+        flex-basis: 100%;
         justify-content: center;
         align-items: flex-start;
-        flex-basis: 100%;
     }
 
     #android {
-        width: 27%;
         margin-right: 5%;
+        width: 30%;
+        flex-basis: 30%;
     }
 
     #iOS {
-        width: 28%;
+        width: 30%;
+        flex-basis: 30%;
     }
 }
 
 @media (max-width: 425px) {
     #android {
-        width: 32%;
+        width: 35%;
+        flex-basis: 35%;
     }
 
     #iOS {
-        width: 33%;
+        width: 35%;
+        flex-basis: 35%;
     }
 }
 
@@ -319,8 +340,8 @@ body {
 
 @media (max-width: 768px) {
     .CompartirRedesSociales {
-        display: flex;
         margin: 7% 0;
+        display: flex;
     }
 }
 
@@ -737,4 +758,26 @@ footer {
     footer {
         min-height: 30vh;
     }
+}
+
+/*---------- Patrocinios ----------*/
+#patrocinios {
+    margin: 5vh 0 2.5vh 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#patrocinios h1 {
+    width: 100%;
+    flex-basis: 100%;
+    text-align: center;
+    font-size: 2vw;
+    font-weight: 700;
+    color: #5a5a5a;
+}
+
+#patrocinios img {
+    width: 50vw;
 }
