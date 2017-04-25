@@ -133,7 +133,7 @@ header {
 
 #menu {
     position: absolute;
-    width: 100vw;
+    width: 99vw;
     height: 10vw;
     max-height: 20vh;
 }
