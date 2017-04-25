@@ -4,7 +4,7 @@ body {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0 auto;
-    padding: 0 5%;
+    padding: 0 10%;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -12,19 +12,19 @@ h1 {
     margin-bottom: 5%;
     font-size: 3vw;
     text-align: center;
-    color: #5E8633;
     text-decoration: underline;
+    color: #5E8633;
 }
 
 h2 {
     margin-top: 5%;
-    font-size: 2.5vw;
+    font-size: 2.25vw;
     color: #5E8633;
 }
 
 p {
-    line-height: 2.5vw;
-    font-size: 2vw;
+    line-height: 2vw;
+    font-size: 1.5vw;
     text-align: justify;
 }
 
@@ -37,7 +37,7 @@ a {
 }
 
 ol {
-    font-size: 2vw;
+    font-size: 1.5vw;
     list-style-type: lower-latin;
 }
 
@@ -45,20 +45,34 @@ li {
     margin: 0.25% 0;
 }
 
+#botonSubir {
+    display: none;
+    position: fixed;
+    right: 2vw;
+    bottom: 5vh;
+    background: #5E8633;
+    border-radius: 3vw;
+    outline: none;
+    padding: 1.25vw;
+    font-size: 2vw;
+    color:#fff;
+    cursor: pointer;
+}
+
 #copyright {
     margin-top: 10%;
-    font-size: 1.9vw;
+    font-size: 1.69vw;
     font-weight: bold;
     font-style: italic;
 }
 
 @media (max-width: 768px) {
     h1 {
-        font-size: 3.5vw;
+        font-size: 4vw;
     }
 
     h2 {
-        font-size: 3vw;
+        font-size: 3.25vw;
     }
 
     p {
@@ -70,18 +84,35 @@ li {
         font-size: 2.5vw;
     }
 
+    #botonSubir {
+        display: none;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 7.5vw;
+        background: #5E8633;
+        border-radius: 0;
+        outline: none;
+        padding: 1.25vw;
+        text-align: center;
+        font-size: 7.5vw;
+        color:#fff;
+        cursor: pointer;
+    }
+
     #copyright {
-        font-size: 2.5vw;
+        margin-bottom: 10vw;
     }
 }
 
 @media (max-width: 425px) {
     h1 {
-        font-size: 4.5vw;
+        font-size: 5vw;
     }
 
     h2 {
-        font-size: 4vw;
+        font-size: 4.25vw;
     }
 
     p {
@@ -91,10 +122,6 @@ li {
 
     ol {
         font-size: 3.5vw;
-    }
-
-    #copyright {
-        font-size: 3.45vw;
     }
 }
 
@@ -108,39 +135,40 @@ header {
     position: absolute;
     width: 100vw;
     height: 10vw;
+    max-height: 20vh;
 }
 
 #logo {
     position: absolute;
-    top: 25%;
     left: 5%;
+    top: 25%;
     height: 50%;
 }
 
 #botonNavegacion {
-    display: none; /*---- Botón deshabilitado temporalmente ---*/
     position: absolute;
-    top: 25%;
     right: 5%;
+    top: 25%;
     height: 50%;
+    display: none; /*---- Botón deshabilitado temporalmente ---*/
 }
 
 #idioma {
+    position: absolute;
+    right: 12.5%;
+    top: 25%;
+    height: 50%;
     display: none; /*---- Botón deshabilitado temporalmente ---*/
     /*display: flex;*/
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 25%;
-    right: 12.5%;
-    height: 50%;
     font-size: 3vw;
     font-weight: bold;
     color: white;
 }
 
 #menuBajado {
-    opacity: 0;
+    height: 5vw;
 }
 
 .MenuBajadoFijado {
@@ -159,76 +187,41 @@ header {
 
 @keyframes menu {
     from {
-        height: 0;
         opacity: 0;
+        top:-10%;
     }
 
     to {
-        height: 5vw;
         opacity: 1;
-    }
-}
-
-@keyframes menu768px {
-    from {
-        height: 0;
-        opacity: 0;
-    }
-
-    to {
-        height: 10vw;
-        opacity: 1;
-    }
-}
-
-@keyframes menu768pxlandscape {
-    from {
-        height: 0;
-        opacity: 0;
-    }
-
-    to {
-        height: 7.5vw;
-        opacity: 1;
-    }
-}
-
-@keyframes menu425px {
-    from {
-        height: 0;
-        opacity: 0;
-    }
-
-    to {
-        height: 15vw;
-        opacity: 1;
+        top:0;
     }
 }
 
 #logoBajado {
     position: absolute;
-    top: 10%;
     left: 5%;
+    top: 10%;
     height: 80%;
 }
 
 #botonNavegacionBajado {
-    display: none; /*---- Botón deshabilitado temporalmente ---*/
     position: absolute;
-    top: 10%;
     right: 5%;
+    top: 10%;
     height: 80%;
+    display: none; /*---- Botón deshabilitado temporalmente ---*/
+
 }
 
 #idiomaBajado {
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    height: 80%;
     display: none; /*---- Botón deshabilitado temporalmente ---*/
     /*display: flex;*/
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 10%;
-    right: 10%;
-    height: 80%;
     font-size: 2vw;
     font-weight: bold;
     color: black;
@@ -248,8 +241,8 @@ header {
         font-size: 4vw;
     }
 
-    .MenuBajadoFijado {
-        animation-name: menu768px;
+    #menuBajado {
+        height: 10vw;
     }
 
     #idiomaBajado {
@@ -259,8 +252,8 @@ header {
 }
 
 @media (max-width: 768px) and (orientation: landscape) {
-    .MenuBajadoFijado {
-        animation-name: menu768pxlandscape;
+    #menuBajado {
+        height: 7.5vw;
     }
 }
 
@@ -278,8 +271,8 @@ header {
         color: black;
     }
 
-    .MenuBajadoFijado {
-        animation-name: menu425px;
+    #menuBajado {
+        height: 15vw;
     }
 
     #logoBajado {
@@ -309,19 +302,21 @@ header {
 
 #menuCondiciones h1 {
     margin: 0;
-    font-size: 5vw;
-    color: #5E8633;
+    font-size: 7.3vw;
     text-decoration: none;
+    color: #5E8633;
 }
 
 #menuCondiciones p {
-    margin: 5% 10%;
+    margin: 5%;
+    line-height: 3vw;
+    font-size: 2.5vw;
 }
 
 #menuCondiciones section {
+    width: 100%;
     display: flex;
     justify-content: center;
-    width: 100%;
 }
 
 .Boton {
@@ -329,14 +324,15 @@ header {
 }
 
 .Boton input {
-    padding: 1vw;
-    border-radius: 4vw;
     outline: none;
+    border-radius: 4vw;
     border-color: #5E8633;
+    padding: 1vw;
     background: transparent;
-    font-size: 2vw;
+    font-size: 2.5vw;
     font-weight: bold;
     color: #5E8633;
+    cursor: pointer;
 }
 
 .Boton input:hover {
@@ -350,27 +346,27 @@ header {
 
 @media (max-width: 768px) {
     #menuCondiciones h1 {
-        font-size: 8.5vw;
+        font-size: 7.9vw;
     }
 
     #menuCondiciones p {
-        margin: 5% 2.5%;
-        line-height: 4.5vw;
-        font-size: 4vw;
+        margin: 5% 0;
+        line-height: 4vw;
+        font-size: 3.5vw;
         text-align: justify;
     }
 
     .Boton input {
-        padding: 1.5vw;
         border-radius: 6vw;
-        font-size: 3vw;
+        padding: 1.5vw;
+        font-size: 2.7vw;
     }
 }
 
 @media (max-width: 425px) {
     #menuCondiciones p {
-        line-height: 5.5vw;
-        font-size: 5vw;
+        line-height: 5vw;
+        font-size: 4.5vw;
     }
 
     #menuCondiciones section {
@@ -379,9 +375,9 @@ header {
     }
 
     .Boton input {
-        padding: 2vw 11vw;
         border-radius: 8vw;
-        font-size: 4vw;
+        padding: 2vw 11vw;
+        font-size: 3.5vw;
     }
 
     #botonIzquierdo {
@@ -389,6 +385,17 @@ header {
     }
 
     #botonDerecho input {
-        padding: 2vw 26vw;
+        padding: 2vw 24vw;
+    }
+}
+
+/*-------------------- Política de cookies y Aviso legal --------------------*/
+#seccionMargen {
+    padding-top: 10vw;
+}
+
+@media (max-width: 768px) {
+    #seccionMargen {
+        padding-top: 15vw;
     }
 }

@@ -134,18 +134,6 @@ body {
         height: 10vw;
     }
 
-    @keyframes menu {
-        from {
-            top:-10%;
-            opacity: 0;
-        }
-
-        to {
-            top:0;
-            opacity: 1;
-        }
-    }
-
     #idiomaBajado {
         right: 15%;
         font-size: 3vw;
@@ -159,18 +147,6 @@ body {
 @media (max-width: 768px) and (orientation: landscape) {
     .MenuBajadoFijado {
         height: 7.5vw;
-    }
-
-    @keyframes menu {
-        from {
-            top:-10%;
-            opacity: 0;
-        }
-
-        to {
-            top:0;
-            opacity: 1;
-        }
     }
 }
 
@@ -186,18 +162,6 @@ body {
 
     .MenuBajadoFijado {
         height: 15vw;
-    }
-
-    @keyframes menu {
-        from {
-            top:-10%;
-            opacity: 0;
-        }
-
-        to {
-            top:0;
-            opacity: 1;
-        }
     }
 
     #logoBajado {

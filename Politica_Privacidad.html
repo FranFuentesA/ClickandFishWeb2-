@@ -10,75 +10,11 @@
     <link rel="icon" type="image/png" href="img/icono_Click&Fish.png">
 
     <!-- Estilos -->
-    <link rel="stylesheet" href="css/EstilosDocumentosLegales.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/Estilos_Documentos_Legales.css" >
 
     <!-- Fuentes -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i" rel="stylesheet">
-
-    <!-- Efectos -->
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script>
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > $('#menu').outerHeight()) {
-                $('#menuBajado').addClass('MenuBajadoFijado');
-                $('.OcultarNo').addClass('OcultarSi');
-                $('.Ocultado').removeClass('OcultarSi');
-            }
-            else {
-                $('#menuBajado').removeClass('MenuBajadoFijado');
-                $('.OcultarNo').removeClass('OcultarSi');
-                $('.Ocultado').addClass('OcultarSi');
-            }
-        });
-    </script>
-    <script type="text/javascript" charset="UTF-8" src="js/css-animations.js"></script>
-    <script>
-        $(function () {
-            $('a[href*=#]').click(function () {
-
-                var windowWidth = $(window).width();
-                var windowHeight = $(window).height();
-
-                function saberOrientacion(windowWidth, windowHeight) {
-                    if (windowWidth > windowHeight) {
-                        return "landscape";
-                    }
-                    else {
-                        return "portrait";
-                    }
-                }
-
-                var animation;
-                if (windowWidth <= 768 && saberOrientacion(windowWidth, windowHeight) !== "landscape" && windowWidth > 425) {
-                    animation = CSSAnimations.get('menu768px').getKeyframe('100%').css['height'];
-                }
-                else if (windowWidth <= 768 && saberOrientacion(windowWidth, windowHeight) === "landscape" && windowWidth > 425) {
-                    animation = CSSAnimations.get('menu768pxlandscape').getKeyframe('100%').css['height'];
-                }
-                else if (windowWidth <= 425) {
-                    animation = CSSAnimations.get('menu425px').getKeyframe('100%').css['height'];
-                }
-                else {
-                    animation = CSSAnimations.get('menu').getKeyframe('100%').css['height'];
-                }
-
-                var desplazamiento = windowWidth * parseInt (animation) / 100;
-
-                var margin = windowWidth * 0.025;
-
-                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
-                    && location.hostname == this.hostname) {
-                    var $target = $(this.hash);
-                    $target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
-                    if ($target.length) {
-                        var targetOffset = $target.offset().top - desplazamiento - margin;
-                        $('html,body').animate({scrollTop: targetOffset}, 1000);
-                        return false;
-                    }
-                }
-            });
-        });
-    </script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i" >
+    <link rel="stylesheet" type="text/css" href="css/font_iconmoon.css">
 </head>
 <body>
 
@@ -119,6 +55,8 @@
 </section>
 
 <section>
+
+    <a id="botonSubir" class="icon-keyboard_arrow_up"></a>
 
     <h1 id="objetivoBotonIzquierdo">AVISO LEGAL, POLITICA DE PRIVACIDAD Y CONDICIONES GENERALES DE USO</h1>
 
@@ -952,6 +890,62 @@
         reproducción total o parcial. 2017.
     </p>
 </section>
+
+<!-- Efectos -->
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > $('#menu').outerHeight()) {
+            $('#menuBajado').addClass('MenuBajadoFijado');
+            $('.OcultarNo').addClass('OcultarSi');
+            $('.Ocultado').removeClass('OcultarSi');
+        }
+        else {
+            $('#menuBajado').removeClass('MenuBajadoFijado');
+            $('.OcultarNo').removeClass('OcultarSi');
+            $('.Ocultado').addClass('OcultarSi');
+        }
+    });
+</script>
+<script>
+    $(function () {
+        $('a[href*=#]').click(function () {
+            var desplazamiento = parseInt($('#menuBajado').css('height'));
+
+            var margin = $(window).height() * 0.02;
+
+            if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '')
+                && location.hostname === this.hostname) {
+                var $target = $(this.hash);
+                $target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
+                if ($target.length) {
+                    var targetOffset = $target.offset().top - desplazamiento - margin;
+                    $('html,body').animate({scrollTop: targetOffset}, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+</script>
+<script>
+    $(document).ready(function(){
+
+        $('#botonSubir').click(function(){
+            $('body, html').animate({
+                scrollTop: '0px'
+            }, 1000);
+        });
+
+        $(window).scroll(function(){
+            if( $(this).scrollTop() > $(this).height() - $(this).height() * 0.1){
+                $('#botonSubir').slideDown(500);
+            } else {
+                $('#botonSubir').slideUp(500);
+            }
+        });
+
+    });
+</script>
 
 </body>
 </html>

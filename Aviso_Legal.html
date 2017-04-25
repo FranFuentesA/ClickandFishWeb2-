@@ -10,14 +10,34 @@
     <link rel="icon" type="image/png" href="img/icono_Click&Fish.png">
 
     <!-- Estilos -->
-    <link rel="stylesheet" href="css/EstilosDocumentosLegales.css" type="text/css">
+    <link rel="stylesheet" href="css/Estilos_Documentos_Legales.css" type="text/css">
 
     <!-- Fuentes -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/font_iconmoon.css">
 </head>
 <body>
 
-<section>
+<header>
+
+    <div id="menu">
+        <a href="index.html"><img src="img/logo_negro.png" class="OcultarNo" id="logo"></a>
+        <img src="img/boton_navegacion.png" class="OcultarNo" id="botonNavegacion">
+        <div class="OcultarNo" id="idioma">ES/EN</div>
+    </div>
+
+    <div id="menuBajado">
+        <a href="index.html"><img src="img/logo_negro.png" class="Ocultado OcultarSi" id="logoBajado"></a>
+        <img src="img/boton_navegacion.png" class="Ocultado OcultarSi" id="botonNavegacionBajado">
+        <div class="Ocultado OcultarSi" id="idiomaBajado">ES/EN</div>
+    </div>
+
+</header>
+
+<section id="seccionMargen">
+
+    <a id="botonSubir" class="icon-keyboard_arrow_up"></a>
+
     <h1>DATOS GENERALES</h1>
 
     <p><span>De acuerdo con el artículo 10
@@ -25,14 +45,14 @@
         Información y de Comercio Electrónico ponemos a su disposición los siguientes
         datos:</span></p>
 
-    <p><span>AQUADATA S.L.</span> con domicilio Social en la Calle Las Carbazas 5,&nbsp; Rioseco de
+    <p><span>AQUADATA S.L.</span> con domicilio Social en la Calle Las Carbazas 5, Rioseco de
         Tapia, CP: 24275 León, (España), con Número de Identificación Fiscal B24655037
         e inscrita en el Registro Mercantil de León, en el Tomo 1260, folio 77, hoja
         LE-22386 es la propietaria y titular de la aplicación/sitio web <span>Clic&amp;Fish</span>
         a través del cual pone determinada información a disposición de sus usuarios. </p>
 
-    <p >El SITIO WEB es accesible desde varios dominios o direcciones de Internet, entre otros:&nbsp;
-        www.clicandfish.com,&nbsp;www.clicandfish.es,&nbsp;www.clickandfish.es,ww.clickandfish.net o www.aquadata.es</p>
+    <p >El SITIO WEB es accesible desde varios dominios o direcciones de Internet, entre otros:
+        www.clicandfish.com, www.clicandfish.es, www.clickandfish.es, www.clickandfish.net o www.aquadata.es</p>
 
     <p >En adelante, para referirnos a <span>Clic&amp;Fish</span> y sus diferentes denominaciones, utilizaremos
         el nombre de <span>AQUADATA</span>.</p>
@@ -86,7 +106,7 @@
         No se permiten conductas que vayan contra la ley, los derechos o intereses de
         terceros.</p>
 
-    <p >Ser usuario de la web de www.clicandfish.com, www.clicandfish.com,&nbsp;www.clicandfish.es,&nbsp;www.clickandfish.es,
+    <p >Ser usuario de la web de www.clicandfish.com, www.clicandfish.com, www.clicandfish.es, www.clickandfish.es,
         ww.clickandfish.net, www.aquadata.es o de la
         App de <span>Clic&amp;Fish</span> implica que reconoce haber leído
         y aceptado las presentes condiciones y lo que las extienda la normativa legal
@@ -181,6 +201,42 @@
         reproducción total o parcial. 2017.
     </p>
 </section>
+
+<!-- Efectos -->
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > $('#menu').outerHeight()) {
+            $('#menuBajado').addClass('MenuBajadoFijado');
+            $('.OcultarNo').addClass('OcultarSi');
+            $('.Ocultado').removeClass('OcultarSi');
+        }
+        else {
+            $('#menuBajado').removeClass('MenuBajadoFijado');
+            $('.OcultarNo').removeClass('OcultarSi');
+            $('.Ocultado').addClass('OcultarSi');
+        }
+    });
+</script>
+<script>
+    $(document).ready(function(){
+
+        $('#botonSubir').click(function(){
+            $('body, html').animate({
+                scrollTop: '0px'
+            }, 1000);
+        });
+
+        $(window).scroll(function(){
+            if( $(this).scrollTop() > $('#menu').outerHeight()){
+                $('#botonSubir').slideDown(500);
+            } else {
+                $('#botonSubir').slideUp(500);
+            }
+        });
+
+    });
+</script>
 
 </body>
 </html>
