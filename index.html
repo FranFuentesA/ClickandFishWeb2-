@@ -28,10 +28,10 @@
         <div id="menu">
             <picture>
                 <source srcset="img/logo_negro.png" media="(max-width: 425px)">
-                <img src="img/logo_blanco.png" class="OcultarNo" id="logo">
+                <img src="img/logo_blanco.svg" class="OcultarNo" id="logo">
             </picture>
 
-            <img src="img/boton_navegacion.png" class="OcultarNo" id="botonNavegacion">
+            <img src="img/boton_navegacion.svg" class="OcultarNo" id="botonNavegacion">
 
             <div class="OcultarNo" id="idioma">ES/EN</div>
         </div>
@@ -39,7 +39,7 @@
         <div id="menuBajado">
             <img src="img/logo_negro.png" class="Ocultado OcultarSi" id="logoBajado">
 
-            <img src="img/boton_navegacion.png" class="Ocultado OcultarSi" id="botonNavegacionBajado">
+            <img src="img/boton_navegacion.svg" class="Ocultado OcultarSi" id="botonNavegacionBajado">
 
             <div class="Ocultado OcultarSi" id="idiomaBajado">ES/EN</div>
         </div>
@@ -49,11 +49,7 @@
             <img src="img/portada.jpg" id="fondo">
         </picture>
 
-        <picture>
-            <source srcset="img/mockup.png" media="(max-width: 425px)">
-            <source srcset="img/mockup@2x.png" media="(max-width: 768px)">
-            <img src="img/mockup@3x.png" id="telefono">
-        </picture>
+        <img src="img/mockup.svg" id="telefono">
 
     </section>
 
@@ -86,75 +82,84 @@
            data-show-screen-name="false">Follow @ClicAndFish</a>
 
     </section>
+
 </header>
 
-<section id="seccion1">
-    <div id="tituloDeSeccion1">otra forma de vivir tu pesca</div>
-    <div class="containerSeccion1">
+<section id="seccion1">otra forma de vivir tu pesca</section>
 
-        <div class="espacio1">
-            <img src="img/icono_360.png" class="logoSecP1"/>
+<section id="seccion2">
 
-            <h2>tus tramos preferidos en 360º</h2>
+    <div class="contenedor">
+        <img src="img/icono_360.png" class="ImagenPNG">
 
-            <p>Puedes recorrer el río desde dentro, como si estuvieras allí mismo. En cada tramo puedes revisar
-                sus orillas, escoger los mejores accesos al río y descubrir los rincones más
-                adecuados para tus preferencias.
-            </p>
-        </div>
-        <div class="espacio2">
-            <img src="img/icono_camara.png" class="logoSecP2" id="jojojo"/>
+        <h2>Tus tramos preferidos en 360º</h2>
 
-            <h2>cámaras exteriores y subacuáticas</h2>
-
-            <p>Mediante nuestras estaciones de captura puedes ver qué está pasando ahora mismo en cada tramo de río.
-                Podrás consultar en todo momento tanto dentro como fuera del rio datos, tales como: la temperatura
-                del agua,
-                humedad, temperatura exterior, velocidad del viento y presión atmosferica.</p>
-        </div>
-        <div class="espacio3">
-            <img src="img/icono_recomendacion.png" class="logoSecP3"/>
-
-            <h2 id="jajaja">recomendaciones basadas en datos históricos</h2>
-
-            <p>Repasando los datos de semanas, meses y temporadas pasadas, y observando lo que está pasando
-                ahora mismo, podrás anticipar y escoger los mejores tramos y momentos para pescar y
-                los señuelos con mayor probabilidad de captura.
-            </p>
-        </div>
-        <div class="espacio4">
-            <img src="img/icono_pez.png" class="logoSecP4"/>
-
-            <h2>tu comunidad de pesca</h2>
-
-            <p>Conoce nuevos compañeros de pesca, comparte experiencias, logros y consejos con ellos.
-                Disfruta de tu pasión por la pesca, en nuevos ríos y tramos, con pescadores que sienten y piensan
-                como tú.
-            </p>
-        </div>
-
+        <p>
+            Puedes recorrer el río desde dentro, como si estuvieras allí mismo. En cada tramo puedes revisar sus
+            orillas, escoger los mejores accesos al río y descubrir los rincones más adecuados para tus preferencias.
+        </p>
     </div>
+
+    <div class="contenedor">
+        <img src="img/icono_camara.svg" class="ImagenSVG">
+
+        <h2>Cámaras exteriores y subacuáticas</h2>
+
+        <p>
+            Mediante nuestras estaciones de captura puedes ver qué está pasando ahora mismo en cada tramo de río. Podrás
+            consultar en todo momento tanto dentro como fuera del rio datos, tales como: la temperatura del agua,
+            humedad, temperatura exterior, velocidad del viento y presión atmosferica.
+        </p>
+    </div>
+
+    <div class="contenedor">
+        <img src="img/icono_recomendacion.svg" class="ImagenSVG">
+
+        <h2 id="tituloEspecial">Recomendaciones basadas en datos históricos</h2>
+
+        <p>
+            Repasando los datos de semanas, meses y temporadas pasadas, y observando lo que está pasando ahora mismo,
+            podrás anticipar y escoger los mejores tramos y momentos para pescar y los señuelos con mayor probabilidad
+            de captura.
+        </p>
+    </div>
+
+    <div class="contenedor">
+        <img src="img/icono_pez.svg" class="ImagenSVG">
+
+        <h2>Tu comunidad de pesca</h2>
+
+        <p>
+            Conoce nuevos compañeros de pesca, comparte experiencias, logros y consejos con ellos. Disfruta de tu pasión
+            por la pesca, en nuevos ríos y tramos, con pescadores que sienten y piensan como tú.
+        </p>
+    </div>
+
 </section>
 
-<section class="seccionSegunda2">
-    <div class="tituloDeSeccion2">
+<section id="seccion3">
+
+    <div id="tituloSeccion3">
         <p>desde donde quieras, cuando te apetezca</p>
     </div>
 
-    <div class="container2">
-        <div class="espacio5">
+    <div id="containerCapturas">
+        <div class="Captura">
             <h3>360º/mapa</h3>
-            <img src="img/360@3x.png" class="logoSecS1"/>
+            <img src="img/360.svg">
         </div>
-        <div class="espacio6">
-            <h3>Cámaras Ext. &Sub.</h3>
-            <img src="img/sub@3x.png" class="logoSecS2"/>
+
+        <div class="Captura">
+            <h3>Cámaras Ext. y Sub.</h3>
+            <img src="img/camaras.svg">
         </div>
-        <div class="espacio7">
+
+        <div class="Captura">
             <h3>Comunidad</h3>
-            <img src="img/comunidad@3x.png" class="logoSecS3"/>
+            <img src="img/comunidad.svg">
         </div>
     </div>
+
 </section>
 
 <footer>
@@ -198,41 +203,41 @@
 <!-- Efectos -->
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script>
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > $('#menu').outerHeight()) {
-            $('#menuBajado').addClass('MenuBajadoFijado');
-            $('.OcultarNo').addClass('OcultarSi');
-            $('.Ocultado').removeClass('OcultarSi');
-        }
-        else {
-            $('#menuBajado').removeClass('MenuBajadoFijado');
-            $('.OcultarNo').removeClass('OcultarSi');
-            $('.Ocultado').addClass('OcultarSi');
-        }
-    });
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > $('#menu').outerHeight()) {
+      $('#menuBajado').addClass('MenuBajadoFijado');
+      $('.OcultarNo').addClass('OcultarSi');
+      $('.Ocultado').removeClass('OcultarSi');
+    }
+    else {
+      $('#menuBajado').removeClass('MenuBajadoFijado');
+      $('.OcultarNo').removeClass('OcultarSi');
+      $('.Ocultado').addClass('OcultarSi');
+    }
+  });
 </script>
 
 <!-- Botones sociales -->
 <script>
-    (function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.8";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
+  (function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.8";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
 </script>
 <script>
-    !function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
-        if (!d.getElementById(id)) {
-            js = d.createElement(s);
-            js.id = id;
-            js.src = p + '://platform.twitter.com/widgets.js';
-            fjs.parentNode.insertBefore(js, fjs);
-        }
-    }(document, 'script', 'twitter-wjs');
+  !function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+    if (!d.getElementById(id)) {
+      js = d.createElement(s);
+      js.id = id;
+      js.src = p + '://platform.twitter.com/widgets.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }
+  }(document, 'script', 'twitter-wjs');
 </script>
 
 </body>
