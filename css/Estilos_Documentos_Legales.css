@@ -55,7 +55,7 @@ li {
     outline: none;
     padding: 1.25vw;
     font-size: 2vw;
-    color:#fff;
+    color: #fff;
     cursor: pointer;
 }
 
@@ -97,7 +97,7 @@ li {
         padding: 1.25vw;
         text-align: center;
         font-size: 7.5vw;
-        color:#fff;
+        color: #fff;
         cursor: pointer;
     }
 
@@ -188,12 +188,12 @@ header {
 @keyframes menu {
     from {
         opacity: 0;
-        top:-10%;
+        top: -10%;
     }
 
     to {
         opacity: 1;
-        top:0;
+        top: 0;
     }
 }
 
