@@ -247,17 +247,18 @@ body {
     }
 
     .Texto {
-        margin-bottom: 7%;
+        margin-bottom: 5vh;
+        width: 100%;
         flex-basis: 100%;
     }
 
     .Texto h1 {
-        margin: 2.5% 15%;
+        margin: 2.5vh 15vw;
         font-size: 7vw;
     }
 
     .Texto p {
-        margin: 0 9%;
+        margin: 0 9vw;
         font-size: 2.6vw;
     }
 
@@ -304,7 +305,7 @@ body {
 
 @media (max-width: 768px) {
     .CompartirRedesSociales {
-        margin: 7% 0;
+        margin: 5vh 0;
         display: flex;
     }
 }
