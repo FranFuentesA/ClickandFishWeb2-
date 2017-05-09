@@ -125,7 +125,7 @@ li {
     }
 }
 
-/*-------------------- Política de privacidad --------------------*/
+/*-------------------- Política de privacidad y Cabecera--------------------*/
 header {
     position: absolute;
     left: 0;
@@ -175,6 +175,7 @@ header {
     z-index: 2;
     position: fixed;
     width: 100vw;
+    border-bottom: thick solid #76A840;
     background-color: #fff;
     -webkit-box-shadow: 0 0.05vw 2.5vw 0.05vw rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0 0.05vw 2.5vw 0.05vw rgba(0, 0, 0, 0.75);

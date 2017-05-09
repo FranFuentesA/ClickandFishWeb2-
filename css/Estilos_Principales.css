@@ -26,6 +26,30 @@ body {
     height: 50%;
 }
 
+#opcionesNavegacion {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    height: 80%;
+    font-size: 1.5vw;
+    font-weight: bold;
+
+}
+
+#opcionesNavegacion > a {
+    text-decoration: none !important;
+    color: #76A840;
+}
+
+#opcionesNavegacion > a:hover {
+    text-decoration: none !important;
+    color: black !important;
+}
+
 #botonNavegacion {
     display: none; /*---- Botón deshabilitado temporalmente ---*/
     position: absolute;
@@ -53,6 +77,7 @@ body {
     position: fixed;
     height: 5vw;
     width: 100vw;
+    border-bottom: thick solid #76A840;
     background-color: #fff;
     -webkit-box-shadow: 0 0.05vw 2.5vw 0.05vw rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0 0.05vw 2.5vw 0.05vw rgba(0, 0, 0, 0.75);
@@ -105,7 +130,7 @@ body {
 }
 
 .OcultarSi {
-    display: none;
+    display: none !important;
 }
 
 #fondo {
