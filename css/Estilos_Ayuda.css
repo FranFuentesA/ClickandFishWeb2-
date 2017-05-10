@@ -2,8 +2,13 @@
     max-height: calc(100vh - 5vw);
 }
 
+body {
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+}
+
 #menu {
-    z-index: 1;
+    z-index: 25;
     position: fixed;
     width: 100vw;
     height: 5vw;
@@ -21,7 +26,8 @@
     height: 80%;
 }
 
-#opcionesNavegacion {
+.opcionesNavegacionPC {
+    z-index: 35;
     position: absolute;
     top: 10%;
     right: 5%;
@@ -35,12 +41,12 @@
 
 }
 
-#opcionesNavegacion > a {
+.opcionesNavegacionPC > a {
     text-decoration: none !important;
     color: #76A840;
 }
 
-#opcionesNavegacion > a:hover {
+.opcionesNavegacionPC > a:hover {
     text-decoration: none !important;
     color: black !important;
 }
@@ -94,6 +100,10 @@
 
 .item img {
     padding: 2% 0;
+}
+
+.OcultarSiPC, .OcultarSiMovil {
+    display: none !important;
 }
 
 @media (max-width: 768px) {
@@ -167,5 +177,28 @@
     .item img {
         padding: 5% 0;
         height: 88vh !important;
+    }
+}
+
+/*-------------------- Menú deslizable --------------------*/
+#fondoNegativo {
+    z-index: 20 !important;
+}
+
+@media (max-width: 768px) {
+    .cd-stretchy-nav ul a {
+        font-size: 2.4rem !important;
+    }
+
+    .cd-stretchy-nav .stretchy-nav-bg {
+        top: -0.5% !important;
+    }
+
+    .cd-stretchy-nav.nav-is-visible .stretchy-nav-bg {
+        height: 98% !important;
+    }
+
+    .cd-nav-trigger {
+        top: 0.25vw !important;
     }
 }

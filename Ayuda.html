@@ -12,15 +12,18 @@
     <link rel="icon" type="image/png" href="img/icono_Click&Fish.png">
 
     <!-- Fuentes -->
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:500,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 
     <!-- CSS de Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 
     <!-- Estilos -->
     <link rel="stylesheet" href="css/Estilos_Ayuda.css" type="text/css">
+    <link rel="stylesheet" href="css/Estilos_ Menu_Deslizable.css" type="text/css">
 
     <!-- Efectos -->
+    <link rel="stylesheet" href="css/hover-min.css">
     <script class="DeshabilitarZoom">
       document.addEventListener('gesturestart', function (e) {
         e.preventDefault();
@@ -34,18 +37,35 @@
 
     <a href="index.html"><img src="img/logo_negro.png" id="logo"></a>
 
-    <div class="Ocultado OcultarSi" id="opcionesNavegacion">
-        <a href="http://www.clicandfish.com/areapromociones/#/LoginTienda" class="hvr-grow">Usuarios</a>
+    <div class="opcionesNavegacionPC OcultadoPCFijo OcultarSiPC">
+        <a href="http://www.clicandfish.com/areapromociones/#/loginTienda" class="hvr-grow">Usuarios</a>
         <a href="http://www.clicandfish.com/areapromociones/#/promociones" class="hvr-grow">Promociones</a>
-        <a href="http://www.clicandfish.com/Ayuda.html" class="hvr-grow">La app</a>
+        <a href="Ayuda.html" class="hvr-grow">La app</a>
         <a href="http://www.clicandfish.com/areapromociones/#/map" class="hvr-grow">Establecimientos oficiales</a>
     </div>
 
-    <img src="img/boton_navegacion.svg" id="botonNavegacion">
+    <!--<img src="img/boton_navegacion.svg" id="botonNavegacion">-->
+
+    <nav class="cd-stretchy-nav OcultadoMovilFijo OcultarSiMovil">
+        <a class="cd-nav-trigger">
+            <span aria-hidden="true"></span>
+        </a>
+
+        <ul>
+            <li><a href="http://www.clicandfish.com/areapromociones/#/loginTienda" class="users" data-background-icon="&#xf007;"><span>Usuarios</span></a></li>
+            <li><a href="http://www.clicandfish.com/areapromociones/#/promociones" class="discounts" data-background-icon="&#xf07a;"><span>Promociones</span></a></li>
+            <li><a href="Ayuda.html" data-background-icon="&#xf10b;" class="app"><span>La app</span></a></li>
+            <li><a href="http://www.clicandfish.com/areapromociones/#/map" class="shops" data-background-icon="&#xf277;"><span>Establecimientos</span></a></li>
+        </ul>
+
+        <span aria-hidden="true" class="stretchy-nav-bg"></span>
+    </nav>
 
     <div id="idioma">ES/EN</div>
 
 </div>
+
+<div id="fondoNegativo"></div>
 
 <div id="carrusel" class="carousel slide" data-ride="carousel" data-interval="3000">
 
@@ -84,6 +104,54 @@
 
 </div>
 
+<!-- Efectos -->
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+  function CambiarAtributos () {
+    if ($(window).width() > 768) {
+      $('.OcultadoPCFijo').removeClass('OcultarSiPC');
+      $('.OcultadoMovilFijo').addClass('OcultarSiMovil');
+    }
+    else {
+      $('.OcultadoMovilFijo').removeClass('OcultarSiMovil');
+      $('.OcultadoPCFijo').addClass('OcultarSiPC');
+    }
+  }
+
+  $(document).ready(function () {
+    CambiarAtributos ();
+
+    $(window).resize(function() {
+      CambiarAtributos ();
+    });
+  });
+</script>
+<script>
+  $(document).ready(function(){
+    var stretchyNavs = $('.cd-stretchy-nav');
+    var negativeBackground = $('#fondoNegativo');
+
+    if( stretchyNavs.length > 0 ) {
+
+      stretchyNavs.each(function(){
+        var stretchyNav = $(this),
+            stretchyNavTrigger = stretchyNav.find('.cd-nav-trigger');
+
+        stretchyNavTrigger.on('click', function(event){
+          event.preventDefault();
+          stretchyNav.toggleClass('nav-is-visible');
+          negativeBackground.toggleClass('back-is-visible');
+        });
+      });
+
+      $(document).on('click', function(event){
+        ( !$(event.target).is('.cd-nav-trigger') && !$(event.target).is('.cd-nav-trigger span') ) && stretchyNavs.removeClass('nav-is-visible') && negativeBackground.removeClass('back-is-visible');
+      });
+    }
+  });
+</script>
+
+<!-- Libre -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 

@@ -7,6 +7,10 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+a, a:hover {
+    text-decoration: none;
+}
+
 /*-------------------- Cabecera --------------------*/
 #Portada {
     position: relative;
@@ -14,40 +18,20 @@ body {
 }
 
 #menu {
+    z-index: 5;
     position: absolute;
     width: 100%;
-    height: 10vw;
+    height: 5vw;
+    border-bottom: thick solid #76A840;
+    background-color: white;
+
 }
 
 #logo {
     position: absolute;
-    top: 25%;
-    left: 5%;
-    height: 50%;
-}
-
-#opcionesNavegacion {
-    position: absolute;
     top: 10%;
-    right: 5%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 60%;
+    left: 5%;
     height: 80%;
-    font-size: 1.5vw;
-    font-weight: bold;
-
-}
-
-#opcionesNavegacion > a {
-    text-decoration: none !important;
-    color: #76A840;
-}
-
-#opcionesNavegacion > a:hover {
-    text-decoration: none !important;
-    color: black !important;
 }
 
 #botonNavegacion {
@@ -73,7 +57,7 @@ body {
 }
 
 .MenuBajadoFijado {
-    z-index: 2;
+    z-index: 5;
     position: fixed;
     height: 5vw;
     width: 100vw;
@@ -90,12 +74,12 @@ body {
 
 @keyframes menu {
     from {
-        top:-10%;
+        top: -10%;
         opacity: 0;
     }
 
     to {
-        top:0;
+        top: 0;
         opacity: 1;
     }
 }
@@ -107,8 +91,29 @@ body {
     height: 80%;
 }
 
+.opcionesNavegacionPC {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    height: 80%;
+    font-size: 1.5vw;
+    font-weight: bold;
+
+}
+
+.opcionesNavegacionPC > a {
+    color: #76A840;
+}
+
+.opcionesNavegacionPC > a:hover {
+    color: black;
+}
+
 #botonNavegacionBajado {
-    display: none; /*---- Botón deshabilitado temporalmente ---*/
     position: absolute;
     top: 10%;
     right: 5%;
@@ -129,7 +134,7 @@ body {
     color: black;
 }
 
-.OcultarSi {
+.OcultarSi, .OcultarSiPC, .OcultarSiMovil {
     display: none !important;
 }
 
@@ -147,7 +152,7 @@ body {
 
 @media (max-width: 768px) {
     #menu {
-        height: 15vw;
+        height: 10vw;
     }
 
     #idioma {
@@ -169,15 +174,14 @@ body {
     }
 }
 
-@media (max-width: 768px) and (orientation: landscape) {
-    .MenuBajadoFijado {
-        height: 7.5vw;
-    }
-}
-
 @media (max-width: 425px) {
     #menu {
-        background-color: white;
+        height: 15vw;
+    }
+
+    #logo {
+        top: 20%;
+        height: 60%;
     }
 
     #idioma {
@@ -607,11 +611,9 @@ footer {
 
 #Avisos div a {
     color: #fff;
-    text-decoration: none;
 }
 
 #Avisos div a:hover {
-    text-decoration: none;
     text-shadow: 0.3vw 0.3vw 0.5vw rgba(0, 0, 0, 1);
     -webkit-transition: text-shadow 0.3s ease-in-out;
     -moz-transition: text-shadow 0.3s ease-in-out;

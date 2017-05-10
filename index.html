@@ -16,6 +16,7 @@
 
     <!-- Estilos -->
     <link rel="stylesheet" href="css/Estilos_Principales.css" type="text/css">
+    <link rel="stylesheet" href="css/Estilos_ Menu_Deslizable.css" type="text/css">
 
     <!-- Efectos -->
     <link rel="stylesheet" href="css/hover-min.css">
@@ -28,12 +29,31 @@
     <section id="Portada">
 
         <div id="menu">
-            <picture>
-                <source srcset="img/logo_negro.png" media="(max-width: 425px)">
-                <img src="img/logo_blanco.svg" class="OcultarNo" id="logo">
-            </picture>
+            <img src="img/logo_negro.png" class="OcultarNo" id="logo">
 
-            <img src="img/boton_navegacion.svg" class="OcultarNo" id="botonNavegacion">
+            <div class="opcionesNavegacionPC OcultadoPCFijo OcultarSiPC">
+                <a href="http://www.clicandfish.com/areapromociones/#/loginTienda" class="hvr-grow">Usuarios</a>
+                <a href="http://www.clicandfish.com/areapromociones/#/promociones" class="hvr-grow">Promociones</a>
+                <a href="Ayuda.html" class="hvr-grow">La app</a>
+                <a href="http://www.clicandfish.com/areapromociones/#/map" class="hvr-grow">Establecimientos oficiales</a>
+            </div>
+
+            <!--<img src="img/boton_navegacion.svg" class="OcultarNo" id="botonNavegacion">-->
+
+            <nav class="cd-stretchy-nav OcultadoMovilFijo OcultarSiMovil">
+                <a class="cd-nav-trigger">
+                    <span aria-hidden="true"></span>
+                </a>
+
+                <ul>
+                    <li><a href="http://www.clicandfish.com/areapromociones/#/loginTienda" class="users" data-background-icon="&#xf007;"><span>Usuarios</span></a></li>
+                    <li><a href="http://www.clicandfish.com/areapromociones/#/promociones" class="discounts" data-background-icon="&#xf07a;"><span>Promociones</span></a></li>
+                    <li><a href="Ayuda.html" data-background-icon="&#xf10b;" class="app"><span>La app</span></a></li>
+                    <li><a href="http://www.clicandfish.com/areapromociones/#/map" class="shops" data-background-icon="&#xf277;"><span>Establecimientos</span></a></li>
+                </ul>
+
+                <span aria-hidden="true" class="stretchy-nav-bg"></span>
+            </nav>
 
             <div class="OcultarNo" id="idioma">ES/EN</div>
         </div>
@@ -41,14 +61,30 @@
         <div id="menuBajado">
             <img src="img/logo_negro.png" class="Ocultado OcultarSi" id="logoBajado">
 
-            <div class="Ocultado OcultarSi" id="opcionesNavegacion">
-                <a href="http://www.clicandfish.com/areapromociones/#/LoginTienda" class="hvr-grow">Usuarios</a>
+            <div class="opcionesNavegacionPC OcultadoPC OcultarSiPC">
+                <a href="http://www.clicandfish.com/areapromociones/#/loginTienda" class="hvr-grow">Usuarios</a>
                 <a href="http://www.clicandfish.com/areapromociones/#/promociones" class="hvr-grow">Promociones</a>
-                <a href="http://www.clicandfish.com/Ayuda.html" class="hvr-grow">La app</a>
+                <a href="Ayuda.html" class="hvr-grow">La app</a>
                 <a href="http://www.clicandfish.com/areapromociones/#/map" class="hvr-grow">Establecimientos oficiales</a>
             </div>
 
-            <img src="img/boton_navegacion.svg" class="Ocultado OcultarSi" id="botonNavegacionBajado">
+            <!--<img src="img/boton_navegacion.svg" class="OcultadoMovil OcultarSiMovil" id="botonNavegacionBajado">-->
+
+            <nav class="cd-stretchy-nav OcultadoMovil OcultarSiMovil">
+                <a class="cd-nav-trigger" href="#0">
+                    Menu
+                    <span aria-hidden="true"></span>
+                </a>
+
+                <ul>
+                    <li><a href="http://www.clicandfish.com/areapromociones/#/loginTienda" class="users" data-background-icon="&#xf007;"><span>Usuarios</span></a></li>
+                    <li><a href="http://www.clicandfish.com/areapromociones/#/promociones" class="discounts" data-background-icon="&#xf07a;"><span>Promociones</span></a></li>
+                    <li><a href="Ayuda.html" data-background-icon="&#xf10b;" class="app"><span>La app</span></a></li>
+                    <li><a href="http://www.clicandfish.com/areapromociones/#/map" class="shops" data-background-icon="&#xf19c;"><span>Establecimientos</span></a></li>
+                </ul>
+
+                <span aria-hidden="true" class="stretchy-nav-bg"></span>
+            </nav>
 
             <div class="Ocultado OcultarSi" id="idiomaBajado">ES/EN</div>
         </div>
@@ -93,6 +129,8 @@
     </section>
 
 </header>
+
+<div id="fondoNegativo"></div>
 
 <section id="seccion1">otra forma de vivir tu pesca</section>
 
@@ -212,16 +250,75 @@
 <!-- Efectos -->
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script>
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > $('#menu').outerHeight()) {
-      $('#menuBajado').addClass('MenuBajadoFijado');
-      $('.OcultarNo').addClass('OcultarSi');
-      $('.Ocultado').removeClass('OcultarSi');
+  function CambiarAtributos () {
+    if ($(window).width() > 768) {
+      $('.OcultadoPCFijo').removeClass('OcultarSiPC');
+      $('.OcultadoMovilFijo').addClass('OcultarSiMovil');
     }
     else {
-      $('#menuBajado').removeClass('MenuBajadoFijado');
-      $('.OcultarNo').removeClass('OcultarSi');
-      $('.Ocultado').addClass('OcultarSi');
+      $('.OcultadoMovilFijo').removeClass('OcultarSiMovil');
+      $('.OcultadoPCFijo').addClass('OcultarSiPC');
+    }
+  }
+
+  $(document).ready(function () {
+
+    CambiarAtributos ();
+
+    $(window).resize(function() {
+      CambiarAtributos ();
+    });
+
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > $('#menu').outerHeight()) {
+        console.log($(this).width());
+        if ($(this).width() > 768) {
+          console.log('pc');
+          $('#menuBajado').addClass('MenuBajadoFijado');
+          $('.OcultarNo').addClass('OcultarSi');
+          $('.Ocultado').removeClass('OcultarSi');
+          $('.OcultadoPC').removeClass('OcultarSiPC');
+        }
+        else {
+          console.log('movil');
+          $('#menuBajado').addClass('MenuBajadoFijado');
+          $('.OcultarNo').addClass('OcultarSi');
+          $('.Ocultado').removeClass('OcultarSi');
+          $('.OcultadoMovil').removeClass('OcultarSiMovil');
+        }
+      }
+      else {
+        $('#menuBajado').removeClass('MenuBajadoFijado');
+        $('.OcultarNo').removeClass('OcultarSi');
+        $('.Ocultado').addClass('OcultarSi');
+        $('.OcultadoPC').addClass('OcultarSiPC');
+        $('.OcultadoMovil').addClass('OcultarSiMovil');
+      }
+    });
+
+  });
+</script>
+<script>
+  $(document).ready(function(){
+    var stretchyNavs = $('.cd-stretchy-nav');
+    var negativeBackground = $('#fondoNegativo');
+
+    if( stretchyNavs.length > 0 ) {
+
+      stretchyNavs.each(function(){
+        var stretchyNav = $(this),
+            stretchyNavTrigger = stretchyNav.find('.cd-nav-trigger');
+
+        stretchyNavTrigger.on('click', function(event){
+          event.preventDefault();
+          stretchyNav.toggleClass('nav-is-visible');
+          negativeBackground.toggleClass('back-is-visible');
+        });
+      });
+
+      $(document).on('click', function(event){
+        ( !$(event.target).is('.cd-nav-trigger') && !$(event.target).is('.cd-nav-trigger span') ) && stretchyNavs.removeClass('nav-is-visible') && negativeBackground.removeClass('back-is-visible');
+      });
     }
   });
 </script>
