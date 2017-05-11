@@ -580,7 +580,8 @@ add-content navigation style
 }
 
 .users::after {
-    right: 3.75vw;
+    right: 2.75vw;
+    font-size: 5.5vw !important;
 }
 
 .discounts::after {
@@ -617,7 +618,8 @@ add-content navigation style
     }
 
     .users::after {
-        right: 2.25vw;
+        right: 1.25vw;
+        font-size: 4.5vw !important;
     }
 
     .discounts::after {
