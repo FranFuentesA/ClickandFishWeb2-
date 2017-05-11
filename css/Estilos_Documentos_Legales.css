@@ -39,10 +39,12 @@ a {
 ol, ul {
     font-size: 1.5vw;
     list-style-type: lower-latin;
+    text-align: justify;
 }
 
 li {
     margin: 0.25% 0;
+    text-align: justify;
 }
 
 #botonSubir {
