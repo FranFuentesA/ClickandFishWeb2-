@@ -32,7 +32,7 @@
             <img src="img/logo_negro.png" class="OcultarNo" id="logo">
 
             <div class="opcionesNavegacionPC OcultadoPCFijo OcultarSiPC">
-                <a href="http://www.clicandfish.com/areapromociones/#/loginTienda" class="hvr-grow">Tiendas</a>
+                <a href="http://www.clicandfish.com/areapromociones/#/loginTienda" class="hvr-grow">Inicio sesión</a>
                 <a href="http://www.clicandfish.com/areapromociones/#/promociones" class="hvr-grow">Promociones</a>
                 <a href="Ayuda.html" class="hvr-grow">La app</a>
                 <a href="http://www.clicandfish.com/areapromociones/#/map" class="hvr-grow">Establecimientos oficiales</a>
@@ -46,10 +46,27 @@
                 </a>
 
                 <ul>
-                    <li><a href="http://www.clicandfish.com/areapromociones/#/loginTienda" class="users" data-background-icon="&#xf19c;"><span>Tiendas</span></a></li>
-                    <li><a href="http://www.clicandfish.com/areapromociones/#/promociones" class="discounts" data-background-icon="&#xf07a;"><span>Promociones</span></a></li>
-                    <li><a href="Ayuda.html" data-background-icon="&#xf10b;" class="app"><span>La app</span></a></li>
-                    <li><a href="http://www.clicandfish.com/areapromociones/#/map" class="shops" data-background-icon="&#xf277;"><span>Establecimientos</span></a></li>
+                    <li>
+                        <a href="http://www.clicandfish.com/areapromociones/#/loginTienda" class="users">
+                            <span>Inicio sesión</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.clicandfish.com/areapromociones/#/promociones" class="discounts">
+                            <span>Promociones</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Ayuda.html" class="app">
+                            <span>La app</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.clicandfish.com/areapromociones/#/map"
+                           class="shops">
+                            <span>Establecimientos</span>
+                        </a>
+                    </li>
                 </ul>
 
                 <span aria-hidden="true" class="stretchy-nav-bg"></span>
@@ -62,7 +79,7 @@
             <img src="img/logo_negro.png" class="Ocultado OcultarSi" id="logoBajado">
 
             <div class="opcionesNavegacionPC OcultadoPC OcultarSiPC">
-                <a href="http://www.clicandfish.com/areapromociones/#/loginTienda" class="hvr-grow">Tiendas</a>
+                <a href="http://www.clicandfish.com/areapromociones/#/loginTienda" class="hvr-grow">Inicio sesión</a>
                 <a href="http://www.clicandfish.com/areapromociones/#/promociones" class="hvr-grow">Promociones</a>
                 <a href="Ayuda.html" class="hvr-grow">La app</a>
                 <a href="http://www.clicandfish.com/areapromociones/#/map" class="hvr-grow">Establecimientos oficiales</a>
@@ -72,15 +89,30 @@
 
             <nav class="cd-stretchy-nav OcultadoMovil OcultarSiMovil">
                 <a class="cd-nav-trigger">
-                    Menu
                     <span aria-hidden="true"></span>
                 </a>
 
                 <ul>
-                    <li><a href="http://www.clicandfish.com/areapromociones/#/loginTienda" class="users" data-background-icon="&#xf19c;"><span>Tiendas</span></a></li>
-                    <li><a href="http://www.clicandfish.com/areapromociones/#/promociones" class="discounts" data-background-icon="&#xf07a;"><span>Promociones</span></a></li>
-                    <li><a href="Ayuda.html" data-background-icon="&#xf10b;" class="app"><span>La app</span></a></li>
-                    <li><a href="http://www.clicandfish.com/areapromociones/#/map" class="shops" data-background-icon="&#xf277;"><span>Establecimientos</span></a></li>
+                    <li>
+                        <a href="http://www.clicandfish.com/areapromociones/#/loginTienda" class="users">
+                            <span>Inicio sesión</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.clicandfish.com/areapromociones/#/promociones" class="discounts">
+                            <span>Promociones</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Ayuda.html" class="app">
+                            <span>La app</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.clicandfish.com/areapromociones/#/map" class="shops">
+                            <span>Establecimientos</span>
+                        </a>
+                    </li>
                 </ul>
 
                 <span aria-hidden="true" class="stretchy-nav-bg"></span>
@@ -271,16 +303,13 @@
 
     $(window).scroll(function () {
       if ($(this).scrollTop() > $('#menu').outerHeight()) {
-        console.log($(this).width());
         if ($(this).width() > 768) {
-          console.log('pc');
           $('#menuBajado').addClass('MenuBajadoFijado');
           $('.OcultarNo').addClass('OcultarSi');
           $('.Ocultado').removeClass('OcultarSi');
           $('.OcultadoPC').removeClass('OcultarSiPC');
         }
         else {
-          console.log('movil');
           $('#menuBajado').addClass('MenuBajadoFijado');
           $('.OcultarNo').addClass('OcultarSi');
           $('.Ocultado').removeClass('OcultarSi');
@@ -299,24 +328,24 @@
   });
 </script>
 <script>
-  $(document).ready(function(){
+  $(document).ready(function () {
     var stretchyNavs = $('.cd-stretchy-nav');
     var negativeBackground = $('#fondoNegativo');
 
-    if( stretchyNavs.length > 0 ) {
+    if (stretchyNavs.length > 0) {
 
-      stretchyNavs.each(function(){
+      stretchyNavs.each(function () {
         var stretchyNav = $(this),
             stretchyNavTrigger = stretchyNav.find('.cd-nav-trigger');
 
-        stretchyNavTrigger.on('click', function(event){
+        stretchyNavTrigger.on('click', function (event) {
           event.preventDefault();
           stretchyNav.toggleClass('nav-is-visible');
           negativeBackground.toggleClass('back-is-visible');
         });
       });
 
-      $(document).on('click', function(event){
+      $(document).on('click', function (event) {
         ( !$(event.target).is('.cd-nav-trigger') && !$(event.target).is('.cd-nav-trigger span') ) && stretchyNavs.removeClass('nav-is-visible') && negativeBackground.removeClass('back-is-visible');
       });
     }
