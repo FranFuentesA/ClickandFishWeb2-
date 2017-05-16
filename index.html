@@ -4,6 +4,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="theme-color" content="#76A840">
 
     <title>Clic&amp;Fish</title>
 
@@ -72,7 +73,7 @@
                 <span aria-hidden="true" class="stretchy-nav-bg"></span>
             </nav>
 
-            <div class="OcultarNo" id="idioma">ES/EN</div>
+            <!--<div class="OcultarNo" id="idioma">ES/EN</div>-->
         </div>
 
         <div id="menuBajado">
@@ -118,7 +119,7 @@
                 <span aria-hidden="true" class="stretchy-nav-bg"></span>
             </nav>
 
-            <div class="Ocultado OcultarSi" id="idiomaBajado">ES/EN</div>
+            <!--<div class="Ocultado OcultarSi" id="idiomaBajado">ES/EN</div>-->
         </div>
 
         <picture>
@@ -139,11 +140,11 @@
         </div>
 
         <div class="Tiendas">
-            <a id="android" href='https://goo.gl/yRMr0h' target="_blank">
+            <a id="android" href='https://goo.gl/yRMr0h'>
                 <img class="hvr-grow-shadow" src='img/google_play.png'/>
             </a>
 
-            <a id="iOS" href="https://goo.gl/0lLSUh" target="_blank">
+            <a id="iOS" href="https://goo.gl/0lLSUh">
                 <img class="hvr-grow-shadow" src="img/app_store.svg">
             </a>
         </div>
@@ -242,30 +243,41 @@
 </section>
 
 <footer>
+
     <section id="ContactoRedesSociales">
         <a href="https://www.facebook.com/ClicandFish" class="BotonesIconos" id="facebook">
             <i class="fa fa-facebook" aria-hidden="true"></i><span onclick=""></span>
         </a>
+
         <a href="https://twitter.com/ClicAndFish" class="BotonesIconos" id="twitter">
             <i class="fa fa-twitter" aria-hidden="true"></i><span onclick=""></span>
         </a>
+
         <a href="https://instagram.com/clicandfish" class="BotonesIconos" id="instagram">
             <i class="fa fa-instagram" aria-hidden="true"></i><span onclick=""></span>
         </a>
+
         <a href="https://www.youtube.com/user/ClicAndFish" class="BotonesIconos" id="youtube">
             <i class="fa fa-youtube-play" aria-hidden="true"></i><span onclick=""></span>
         </a>
+
         <a href="https://vimeo.com/user23168600" class="BotonesIconos" id="vimeo">
             <i class="fa fa-vimeo" aria-hidden="true"></i><span onclick=""></span>
         </a>
     </section>
+
     <section id="Avisos">
-        <div><a href="Politica_Cookies.html">Política de Cookies</a></div>
-        <div><a href="Aviso_Legal.html">Aviso Legal</a></div>
+        <div><a href="http://www.clicandfish.com/areapromociones/#/politicacookies">Política de Cookies</a></div>
+
+        <div><a href="http://www.clicandfish.com/areapromociones/#/avisolegal">Aviso Legal</a></div>
+
         <div><a href="Politica_Privacidad.html">Política de Privacidad</a></div>
+
         <!--<div><a href="Ayuda.html">Ayuda</a></div>-->
     </section>
+
     <section id="Copyright">AquaData &copy; 2017</section>
+
 </footer>
 
 <section id="patrocinios">
@@ -277,6 +289,7 @@
             <img src="img/patrocinio_gobierno.svg">
         </a>
     </div>
+
 </section>
 
 <!-- Efectos -->
@@ -329,6 +342,9 @@
 </script>
 <script>
   $(document).ready(function () {
+
+    var menuDesplegado = false
+
     var stretchyNavs = $('.cd-stretchy-nav');
     var negativeBackground = $('#fondoNegativo');
 
@@ -342,6 +358,14 @@
           event.preventDefault();
           stretchyNav.toggleClass('nav-is-visible');
           negativeBackground.toggleClass('back-is-visible');
+
+          menuDesplegado = !menuDesplegado
+
+          if (menuDesplegado) {
+            document.getElementsByTagName('html')[0].style.overflow = 'hidden'
+          } else {
+            document.getElementsByTagName('html')[0].style.overflow = 'auto'
+          }
         });
       });
 

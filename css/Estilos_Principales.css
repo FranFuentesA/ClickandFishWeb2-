@@ -64,11 +64,12 @@ a, a:hover {
     border-bottom: thick solid #76A840;
     background-color: #fff;
     -webkit-box-shadow: 0 0.05vw 2.5vw 0.05vw rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0 0.05vw 2.5vw 0.05vw rgba(0, 0, 0, 0.75);
+    /*-moz-box-shadow: 0 0.05vw 2.5vw 0.05vw rgba(0, 0, 0, 0.75);*/
     box-shadow: 0 0.05vw 2.5vw 0.05vw rgba(0, 0, 0, 0.75);
     -webkit-animation: all 0.5s both;
-    -moz-animation: all 0.5s both;
+    /*-moz-animation: all 0.5s both;*/
     animation: all 0.5s both;
+    -webkit-animation-name: menu;
     animation-name: menu;
 }
 
@@ -516,6 +517,7 @@ footer {
     text-align: center;
     font-size: 1.5vw;
     background-color: rgb(118, 164, 64);
+    outline: none;
     cursor: pointer;
 }
 
